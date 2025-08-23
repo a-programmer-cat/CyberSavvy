@@ -1,0 +1,191 @@
+{
+  "home": "首页",
+  "learning": "学习中心",
+  "test": "网络安全测试",
+  "stories": "真实案例",
+  "welcome": "CyberSavvy - 安全上网",
+  "login": "登录",
+  "subtitle": "为马来西亚人提供网络安全知识，抵御数字威胁",
+  "whyChooseUs": "为什么选择我们的平台？",
+  "feature1": "数据驱动的学习",
+  "feature1Desc": "根据马来西亚最新网络威胁趋势更新的内容",
+  "feature2": "现实世界保护",
+  "feature2Desc": "防御常见诈骗和欺诈的实用技能",
+  "feature3": "社区支持",
+  "feature3Desc": "从马来西亚同胞分享的真实经验中学习",
+  "alertMessage": "警告：发现针对马来西亚银行客户的新钓鱼诈骗！",
+  "quickStart": "快速开始",
+  "startLearning": "开始您的网络安全学习之旅",
+  "getStarted": "开始学习",
+  "takeTest": "参加测试",
+  "testYourKnowledge": "测试您的网络安全知识",
+  "startTest": "开始测试",
+  "readStories": "阅读真实案例",
+  "learnFromOthers": "从他人经验中学习",
+  "viewStories": "查看案例",
+  "comingSoon": "内容即将上线...",
+  "studentModule": "学生专区",
+  "seniorModule": "老年人专区",
+  "studentTitle": "学生网络安全指南",
+  "seniorTitle": "老年人防诈骗指南",
+  "studentContent": "学生常见网络安全风险包括...",
+  "seniorContent": "老年人常见诈骗类型包括...",
+  "loading": "正在加载内容...",
+  "parentModule": "家长专区",
+  "businessModule": "小企业专区",
+  "socialMediaSafety": "社交媒体安全",
+  "paymentSecurity": "支付安全",
+  "childProtection": "儿童保护",
+  "phoneScams": "电话诈骗",
+  "section": "章节",
+  "sections": "章节",
+  "cyberTips": [
+    "使用强密码并定期更换 🔑",
+    "开启双重身份验证 🛡️",
+    "不要点击可疑链接 ⚠️",
+    "定期更新软件和系统 💻",
+    "公共Wi-Fi谨慎使用 📶",
+    "备份重要数据 📂",
+    "启用防火墙和杀毒软件 🔒"
+  ],
+  "intro": {
+    "digitalShield": "数字护盾已激活",
+    "encryptionActive": "256位加密实时保护您的数据",
+    "threatNeutralized": "威胁已消除",
+    "realTimeProtection": "实时防护应对新兴风险",
+    "globalDefense": "全球防御网络",
+    "secureNetwork": "保障五大洲的连接安全",
+    "enterSite": "进入CyberSavvy"
+  },
+  "learningHub": {
+    "title": "学习中心",
+    "subtitle": "为所有马来西亚人量身定制的在线安全学习路径",
+    "categories": {
+      "students": "学生专区",
+      "parents": "家长专区",
+      "seniors": "乐龄专区",
+      "business": "企业专区"
+    },
+    "categoryDescriptions": {
+      "students": "学习如何保护自己免受网络威胁",
+      "parents": "保护您的家人在数字世界中的安全",
+      "seniors": "简单易懂的防诈骗指南",
+      "business": "保护您的企业免受网络攻击"
+    },
+    "quizCard": {
+      "title": "网络安全知识测验",
+      "description": "完成快速评估，了解网络防护准备程度"
+    },
+    "clickToLearn": "开始学习 →",
+    "howItWorks": "学习中心使用指南",
+    "step1": "选择您的路径",
+    "step1Desc": "选择最适合您的类别",
+    "step2": "按自己的节奏学习",
+    "step2Desc": "学习专为您设计的互动模块",
+    "step3": "测试您的知识",
+    "step3Desc": "完成测验以巩固所学知识"
+  },
+  "quiz": {
+    "loading": "加载题目中...",
+    "empty": "暂无题目数据",
+    "title": "网络安全测试",
+    "counter": "题目 {{current}}/{{total}}",
+    "score": "得分: {{score}}",
+    "nextButton": "下一题 →",
+    "results": {
+      "good": "🎉 表现不错！",
+      "improve": "⚠️ 需要加强哦",
+      "score": "你的得分: {{score}}/{{total}}",
+      "riskLow": "安全风险: 低",
+      "riskHigh": "安全风险: 高"
+    }
+  },
+  "cyberTest": {
+    "title": "网络安全测验",
+    "subtitle": "为所有马来西亚人量身定制的网络安全评估",
+    "categories": {
+      "students": "学生专区",
+      "parents": "家长专区",
+      "seniors": "乐龄专区",
+      "business": "企业专区"
+    },
+    "categoryDescriptions": {
+      "students": "测试您作为学生在网络安全方面的知识",
+      "parents": "检查您能否有效保护家人在数字世界的安全",
+      "seniors": "简单测验帮助识别和避免网络诈骗",
+      "business": "测试您的企业应对网络攻击的准备程度"
+    },
+    "quizCard": {
+      "title": "网络安全快速测验",
+      "description": "回答几个问题，测量您的网络安全意识"
+    },
+    "clickToLearn": "开始测验 →",
+    "howItWorks": "网络安全测验使用指南",
+    "step1": "选择您的路径",
+    "step1Desc": "选择最适合您的类别",
+    "step2": "按自己的节奏答题",
+    "step2Desc": "回答专为您设计的问题",
+    "step3": "查看您的结果",
+    "step3Desc": "立即获得反馈和提升网络安全的建议"
+  },
+  "help": {
+    "title": "帮助与举报",
+    "emergency": {
+      "title": "紧急联系方式",
+      "police": "警方紧急热线",
+      "cybersecurity": "网络安全帮助台",
+      "bnm": "马来西亚国家银行",
+      "police_details": "全马紧急热线",
+      "cybersecurity_phone": "1-300-88-2999",
+      "bnm_phone": "1-300-88-5465",
+      "phone": "电话"
+    },
+    "links": {
+      "cybersecurity": "CyberSecurity Malaysia",
+      "bnm": "马来西亚国家银行",
+      "scam_report": "https://www.aduan.skmm.gov.my",
+      "scam_report_text": "MCMC投诉平台",
+      "fraud_report": "https://www.rmp.gov.my",
+      "fraud_report_text": "商业罪案调查部",
+      "phishing_email": "phishing@cybersecurity.my"
+    },
+    "report": {
+      "title": "举报渠道",
+      "scam": "网络诈骗",
+      "scam_desc": "向马来西亚通讯与多媒体委员会(MCMC)举报网络诈骗",
+      "fraud": "金融诈骗",
+      "fraud_desc": "向商业罪案调查部(CCID)举报金融诈骗",
+      "phishing": "钓鱼邮件",
+      "phishing_desc": "将可疑邮件转发至CyberSecurity Malaysia"
+    },
+    "faq": {
+      "title": "常见问题",
+      "q1": "如果我被骗了该怎么办？",
+      "a1": "如果涉及金钱，请立即联系您的银行，然后向警方和CyberSecurity Malaysia报告。",
+      "q2": "如何验证网站是否合法？",
+      "a2": "1. 检查网址是否正确(注意拼写错误)\n2. 查找安全锁图标和https://前缀\n3. 通过官方渠道验证联系方式\n4. 警惕要求过多个人信息的网站",
+      "q3": "点击短信中的链接安全吗？",
+      "a3": "不建议点击未经请求的短信中的链接。即使是看似来自银行的短信，也应通过官方应用或网站直接登录账户确认。"
+    },
+    "tips": {
+      "title": "网络安全小贴士",
+      "tip1": "切勿向任何人分享您的OTP或银行资料",
+      "tip2": "在输入敏感信息前验证网站URL",
+      "tip3": "为不同账户使用强大且独特的密码",
+      "tip4": "尽可能启用双重认证"
+    }
+  },
+  "nav": {
+    "learning": "学习中心",
+    "test": "网络安全测试",
+    "stories": "真实案例",
+    "help": "帮助与举报",
+    "login": "登录"
+  },
+  "alert": {
+    "message": "警告：针对马来西亚银行用户的新钓鱼诈骗！",
+    "dismiss": "关闭"
+  },
+  "readMore": "了解更多",
+  "tags": "标签"
+}

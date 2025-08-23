@@ -1,0 +1,191 @@
+{
+  "home": "Home",
+  "learning": "Learning Hub",
+  "test": "Cyber Test",
+  "stories": "Real Stories",
+  "welcome": "CyberSavvy - Stay Safe Online",
+  "login": "Login",
+  "subtitle": "Empowering Malaysians with cybersecurity knowledge to combat digital threats",
+  "whyChooseUs": "Why Choose Our Platform?",
+  "feature1": "Data-Driven Learning",
+  "feature1Desc": "Content updated based on latest cyber threat trends in Malaysia",
+  "feature2": "Real-World Protection",
+  "feature2Desc": "Practical skills to defend against common scams and frauds",
+  "feature3": "Community-Powered",
+  "feature3Desc": "Learn from real experiences shared by fellow Malaysians",
+  "alertMessage": "Warning: New phishing scam targeting Malaysian bank customers detected!",
+  "quickStart": "Quick Start",
+  "startLearning": "Begin your cybersecurity learning journey",
+  "getStarted": "Get Started",
+  "takeTest": "Take the Test",
+  "testYourKnowledge": "Test your cybersecurity knowledge",
+  "startTest": "Start Test",
+  "readStories": "Read Real Stories",
+  "learnFromOthers": "Learn from others' experiences",
+  "viewStories": "View Stories",
+  "comingSoon": "Content coming soon...",
+  "studentModule": "For Students",
+  "seniorModule": "For Senior Citizens",
+  "studentTitle": "Cybersecurity Guide for Students",
+  "seniorTitle": "Anti-Scam Guide for Seniors",
+  "studentContent": "Common cybersecurity risks for students include...",
+  "seniorContent": "Common scam types targeting seniors include...",
+  "loading": "Loading content...",
+  "parentModule": "For Parents",
+  "businessModule": "For Small Businesses",
+  "socialMediaSafety": "Social Media Safety",
+  "paymentSecurity": "Payment Security",
+  "childProtection": "Child Protection",
+  "phoneScams": "Phone Scams",
+  "section": "section",
+  "sections": "sections",
+  "cyberTips": [
+    "Use strong passwords and change them regularly 🔑",
+    "Enable two-factor authentication 🛡️",
+    "Do not click on suspicious links ⚠️",
+    "Keep your software and system up to date 💻",
+    "Be cautious when using public Wi-Fi 📶",
+    "Backup important data 📂",
+    "Enable firewall and antivirus protection 🔒"
+  ],
+  "intro": {
+    "digitalShield": "DIGITAL SHIELD ACTIVATED",
+    "encryptionActive": "256-bit encryption actively securing your data",
+    "threatNeutralized": "THREATS NEUTRALIZED",
+    "realTimeProtection": "Real-time protection against emerging risks",
+    "globalDefense": "GLOBAL DEFENSE NETWORK",
+    "secureNetwork": "Securing connections across 5 continents",
+    "enterSite": "Enter CyberSavvy"
+  },
+  "learningHub": {
+    "title": "Learning Hub",
+    "subtitle": "Tailored learning paths for all Malaysians to stay safe online",
+    "categories": {
+      "students": "For Students",
+      "parents": "For Parents",
+      "seniors": "For Seniors",
+      "business": "For Businesses"
+    },
+    "categoryDescriptions": {
+      "students": "Learn how to protect yourself from online threats as a student",
+      "parents": "Keep your family safe in the digital world",
+      "seniors": "Simple guides to avoid online scams",
+      "business": "Protect your business from cyber attacks"
+    },
+    "quizCard": {
+      "title": "Test Your Cybersecurity Knowledge",
+      "description": "Take this quick assessment to evaluate your cyber readiness"
+    },
+    "clickToLearn": "Explore Module →",
+    "howItWorks": "How Our Learning Hub Works",
+    "step1": "Choose Your Path",
+    "step1Desc": "Select the category that best describes you",
+    "step2": "Learn at Your Pace",
+    "step2Desc": "Go through interactive modules designed for your needs",
+    "step3": "Test Your Knowledge",
+    "step3Desc": "Complete quizzes to reinforce what you've learned"
+  },
+  "quiz": {
+    "loading": "Loading questions...",
+    "empty": "No quiz data available",
+    "title": "Cyber Security Test",
+    "counter": "Question {{current}}/{{total}}",
+    "score": "Score: {{score}}",
+    "nextButton": "Next Question →",
+    "results": {
+      "good": "🎉 Well done!",
+      "improve": "⚠️ Needs improvement",
+      "score": "Your score: {{score}}/{{total}}",
+      "riskLow": "Risk level: Low",
+      "riskHigh": "Risk level: High"
+    }
+  },
+  "cyberTest": {
+    "title": "Cyber Test",
+    "subtitle": "Tailored assessments for all Malaysians to stay safe online",
+    "categories": {
+      "students": "For Students",
+      "parents": "For Parents",
+      "seniors": "For Seniors",
+      "business": "For Businesses"
+    },
+    "categoryDescriptions": {
+      "students": "Assess your knowledge on staying safe as a student online",
+      "parents": "Check how well you can protect your family in the digital world",
+      "seniors": "Simple tests to identify and avoid online scams",
+      "business": "Test your company’s readiness against cyber attacks"
+    },
+    "quizCard": {
+      "title": "Cyber Safety Quick Test",
+      "description": "Answer a few questions to measure your cyber awareness"
+    },
+    "clickToLearn": "Start Test →",
+    "howItWorks": "How Our Cyber Test Works",
+    "step1": "Choose Your Path",
+    "step1Desc": "Select the category that best describes you",
+    "step2": "Answer at Your Pace",
+    "step2Desc": "Go through tailored questions designed for your needs",
+    "step3": "See Your Results",
+    "step3Desc": "Get instant feedback and tips to improve your cyber safety"
+  },
+  "help": {
+    "title": "Help & Report",
+    "emergency": {
+      "title": "Emergency Contacts",
+      "police": "Police Emergency",
+      "cybersecurity": "Cybersecurity Helpdesk",
+      "bnm": "Bank Negara Malaysia",
+      "police_details": "Nationwide emergency hotline",
+      "cybersecurity_phone": "1-300-88-2999",
+      "bnm_phone": "1-300-88-5465",
+      "phone": "Phone"
+    },
+    "links": {
+      "cybersecurity": "CyberSecurity Malaysia",
+      "bnm": "Bank Negara Malaysia",
+      "scam_report": "https://www.aduan.skmm.gov.my",
+      "scam_report_text": "Aduan SKMM",
+      "fraud_report": "https://www.rmp.gov.my",
+      "fraud_report_text": "Commercial Crime Investigation Department",
+      "phishing_email": "phishing@cybersecurity.my"
+    },
+    "report": {
+      "title": "Reporting Channels",
+      "scam": "Online Scams",
+      "scam_desc": "Report online scams to MCMC",
+      "fraud": "Financial Fraud",
+      "fraud_desc": "Report financial fraud to CCID",
+      "phishing": "Phishing Emails",
+      "phishing_desc": "Forward suspicious emails to CyberSecurity Malaysia"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What should I do if I've been scammed?",
+      "a1": "Immediately contact your bank if money was involved, then report to police and CyberSecurity Malaysia.",
+      "q2": "How can I verify if a website is legitimate?",
+      "a2": "1. Check the URL for misspellings\n2. Look for the padlock icon and https:// prefix\n3. Verify contact details through official channels\n4. Be wary of websites asking for too much personal information",
+      "q3": "Is it safe to click links in SMS messages?",
+      "a3": "It's not recommended to click links in unsolicited SMS. Even if it appears to be from your bank, log in directly through the official app or website to verify."
+    },
+    "tips": {
+      "title": "Cybersecurity Tips",
+      "tip1": "Never share your OTP or banking details with anyone",
+      "tip2": "Verify website URLs before entering sensitive information",
+      "tip3": "Use strong, unique passwords for different accounts",
+      "tip4": "Enable two-factor authentication where possible"
+    }
+  },
+  "nav": {
+    "learning": "Learning Hub",
+    "test": "Cyber Test",
+    "stories": "Real Stories",
+    "help": "Help & Report",
+    "login": "Login"
+  },
+  "alert": {
+    "message": "Warning: New phishing scam targeting Malaysian bank users!",
+    "dismiss": "Dismiss"
+  },
+  "readMore": "Read More",
+  "tags": "Tag"
+}

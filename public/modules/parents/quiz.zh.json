@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "cn_q1",
+      "text": "为了保护孩子在社交媒体的隐私，家长应该怎么做？",
+      "options": [
+        {"text": "将孩子账号设为私密", "correct": true, "feedback": "✅ 正确！私密账号可以减少陌生人接触孩子内容。"},
+        {"text": "允许任何人查看和评论", "correct": false, "feedback": "❌ 这样会增加风险。"},
+        {"text": "公开孩子的位置信息", "correct": false, "feedback": "❌ 位置共享会暴露孩子的安全。"}
+      ]
+    },
+    {
+      "id": "cn_q2",
+      "text": "以下哪一项属于账号共享的风险？",
+      "options": [
+        {"text": "朋友可能盗用账号", "correct": true, "feedback": "✅ 正确！朋友或他人可能利用账号发布不当内容。"},
+        {"text": "账号更安全", "correct": false, "feedback": "❌ 共享只会降低安全性。"},
+        {"text": "可以增加粉丝", "correct": false, "feedback": "❌ 增加粉丝并不能抵消风险。"}
+      ]
+    },
+    {
+      "id": "cn_q3",
+      "text": "防止孩子被骗购买虚拟游戏道具的最佳做法是：",
+      "options": [
+        {"text": "告诉孩子不要相信“免费送皮肤”", "correct": true, "feedback": "✅ 正确！这是常见诈骗手法。"},
+        {"text": "让孩子随便接受陌生人交易", "correct": false, "feedback": "❌ 这会带来财产和账号风险。"},
+        {"text": "把支付信息公开", "correct": false, "feedback": "❌ 这是非常危险的做法。"}
+      ]
+    },
+    {
+      "id": "cn_q4",
+      "text": "以下哪一项是家长应采取的安全措施？",
+      "options": [
+        {"text": "开启支付验证功能", "correct": true, "feedback": "✅ 正确！这样可以防止未经许可的消费。"},
+        {"text": "关闭所有安全设置", "correct": false, "feedback": "❌ 这样会增加风险。"},
+        {"text": "允许孩子无限制上网", "correct": false, "feedback": "❌ 长时间无监管上网存在安全隐患。"}
+      ]
+    },
+    {
+      "id": "cn_q5",
+      "text": "孩子在社交平台收到陌生人好友请求时应该：",
+      "options": [
+        {"text": "直接接受", "correct": false, "feedback": "❌ 这样可能引入诈骗或骚扰。"},
+        {"text": "拒绝并告知家长", "correct": true, "feedback": "✅ 正确！这是最安全的做法。"},
+        {"text": "先透露家庭信息再决定", "correct": false, "feedback": "❌ 透露隐私非常危险。"}
+      ]
+    },
+    {
+      "id": "cn_q6",
+      "text": "为什么不应在社交媒体发布孩子的校服照片？",
+      "options": [
+        {"text": "可能暴露学校位置", "correct": true, "feedback": "✅ 正确！背景信息可能泄露位置。"},
+        {"text": "照片会变模糊", "correct": false, "feedback": "❌ 清晰度与安全无关。"},
+        {"text": "不够漂亮", "correct": false, "feedback": "❌ 外观不是安全考虑的重点。"}
+      ]
+    },
+    {
+      "id": "cn_q7",
+      "text": "在孩子发帖前让家长先查看的好处是：",
+      "options": [
+        {"text": "减少敏感信息被公开", "correct": true, "feedback": "✅ 正确！可以提前防范风险。"},
+        {"text": "让家长删除所有内容", "correct": false, "feedback": "❌ 并不是删除所有，而是筛查风险。"},
+        {"text": "增加点赞数", "correct": false, "feedback": "❌ 审核与点赞无直接关系。"}
+      ]
+    },
+    {
+      "id": "cn_q8",
+      "text": "防止网购诈骗的一个重要方法是：",
+      "options": [
+        {"text": "不点击陌生来源的链接", "correct": true, "feedback": "✅ 正确！这是防范钓鱼的基本方法。"},
+        {"text": "购买价格极低的商品", "correct": false, "feedback": "❌ 超低价往往是陷阱。"},
+        {"text": "直接输入银行卡信息", "correct": false, "feedback": "❌ 千万不要随意泄露支付信息。"}
+      ]
+    },
+    {
+      "id": "cn_q9",
+      "text": "孩子收到“包裹未送达”并附有链接的短信，应当：",
+      "options": [
+        {"text": "点击链接填写信息", "correct": false, "feedback": "❌ 这可能是钓鱼短信。"},
+        {"text": "拨打快递公司官方电话确认", "correct": true, "feedback": "✅ 正确！应通过官方渠道核实。"},
+        {"text": "转发给朋友帮忙点击", "correct": false, "feedback": "❌ 这样只会扩大风险。"}
+      ]
+    },
+    {
+      "id": "cn_q10",
+      "text": "为什么建议关闭孩子社交软件的定位功能？",
+      "options": [
+        {"text": "防止陌生人获取位置信息", "correct": true, "feedback": "✅ 正确！这是保护孩子隐私的重要措施。"},
+        {"text": "节省流量", "correct": false, "feedback": "❌ 虽然会省流量，但主要是出于安全考虑。"},
+        {"text": "让孩子找不到朋友", "correct": false, "feedback": "❌ 关闭定位与找朋友无关。"}
+      ]
+    }
+  ]
+}

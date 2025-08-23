@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "en_q1",
+      "text": "What is a common sign of email fraud?",
+      "options": [
+        {"text": "Spoofed email domains like '@micr0soft.com'", "correct": true, "feedback": "✅ Correct! Slight domain changes are a common trick."},
+        {"text": "Email from a known contact with normal tone", "correct": false, "feedback": "❌ This is not suspicious by itself."},
+        {"text": "Messages with no links or attachments", "correct": false, "feedback": "❌ Email fraud usually contains links or files."}
+      ]
+    },
+    {
+      "id": "en_q2",
+      "text": "Business Email Compromise (BEC) often targets which department?",
+      "options": [
+        {"text": "Finance and procurement", "correct": true, "feedback": "✅ Correct! These teams handle money and payments."},
+        {"text": "Catering", "correct": false, "feedback": "❌ BEC targets those with payment authority."},
+        {"text": "Maintenance", "correct": false, "feedback": "❌ Not typically the main target."}
+      ]
+    },
+    {
+      "id": "en_q3",
+      "text": "Which of the following is a consequence of ransomware attacks?",
+      "options": [
+        {"text": "System downtime", "correct": true, "feedback": "✅ Correct! Ransomware can halt operations."},
+        {"text": "Free software updates", "correct": false, "feedback": "❌ There’s nothing free about ransomware."},
+        {"text": "Better system performance", "correct": false, "feedback": "❌ It damages, not improves, performance."}
+      ]
+    },
+    {
+      "id": "en_q4",
+      "text": "How can a fake invoice scam be prevented?",
+      "options": [
+        {"text": "Verify invoice sources", "correct": true, "feedback": "✅ Correct! Always confirm authenticity."},
+        {"text": "Approve all invoices instantly", "correct": false, "feedback": "❌ Rushing increases fraud risk."},
+        {"text": "Ignore changes in vendor account details", "correct": false, "feedback": "❌ Changes must be verified."}
+      ]
+    },
+    {
+      "id": "en_q5",
+      "text": "Which Malaysian law governs personal data protection?",
+      "options": [
+        {"text": "PDPA (Personal Data Protection Act)", "correct": true, "feedback": "✅ Correct! It’s Malaysia’s main data law."},
+        {"text": "GDPR", "correct": false, "feedback": "❌ GDPR is European legislation."},
+        {"text": "HIPAA", "correct": false, "feedback": "❌ HIPAA is for US healthcare."}
+      ]
+    },
+    {
+      "id": "en_q6",
+      "text": "What is the General Principle under PDPA?",
+      "options": [
+        {"text": "Data must be collected with consent", "correct": true, "feedback": "✅ Correct! Consent is mandatory."},
+        {"text": "Data can be collected secretly", "correct": false, "feedback": "❌ This violates PDPA rules."},
+        {"text": "Data must be public by default", "correct": false, "feedback": "❌ Privacy is the default requirement."}
+      ]
+    },
+    {
+      "id": "en_q7",
+      "text": "Which PDPA principle ensures individuals can see and correct their data?",
+      "options": [
+        {"text": "Access Principle", "correct": true, "feedback": "✅ Correct! This principle grants such rights."},
+        {"text": "Disclosure Principle", "correct": false, "feedback": "❌ Disclosure is about sharing with others."},
+        {"text": "Retention Principle", "correct": false, "feedback": "❌ Retention is about data storage limits."}
+      ]
+    },
+    {
+      "id": "en_q8",
+      "text": "What is a potential penalty for PDPA non-compliance?",
+      "options": [
+        {"text": "Fines up to RM 500,000", "correct": true, "feedback": "✅ Correct! Large fines are possible."},
+        {"text": "Free advertising space", "correct": false, "feedback": "❌ There’s no reward for breaking the law."},
+        {"text": "Extra government funding", "correct": false, "feedback": "❌ Non-compliance brings penalties, not rewards."}
+      ]
+    },
+    {
+      "id": "en_q9",
+      "text": "Which PDPA principle limits how long personal data can be stored?",
+      "options": [
+        {"text": "Retention Principle", "correct": true, "feedback": "✅ Correct! Data must not be kept longer than necessary."},
+        {"text": "Security Principle", "correct": false, "feedback": "❌ Security is about protecting data."},
+        {"text": "Integrity Principle", "correct": false, "feedback": "❌ Integrity is about data accuracy."}
+      ]
+    },
+    {
+      "id": "en_q10",
+      "text": "What is a common tactic in email fraud?",
+      "options": [
+        {"text": "Urgent messages demanding immediate action", "correct": true, "feedback": "✅ Correct! Pressure creates mistakes."},
+        {"text": "Polite emails with no urgency", "correct": false, "feedback": "❌ This is less suspicious."},
+        {"text": "Emails with verified digital signatures", "correct": false, "feedback": "❌ Digital signatures indicate authenticity."}
+      ]
+    }
+  ]
+}

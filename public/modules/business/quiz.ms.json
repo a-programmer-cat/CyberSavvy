@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "bm_q1",
+      "text": "Apakah tanda biasa penipuan e-mel?",
+      "options": [
+        {"text": "Domain e-mel palsu seperti '@micr0soft.com'", "correct": true, "feedback": "✅ Betul! Perubahan kecil pada domain adalah taktik biasa."},
+        {"text": "E-mel daripada kenalan yang dikenali dengan nada normal", "correct": false, "feedback": "❌ Tidak mencurigakan secara automatik."},
+        {"text": "Mesej tanpa pautan atau lampiran", "correct": false, "feedback": "❌ Penipuan biasanya ada pautan atau fail."}
+      ]
+    },
+    {
+      "id": "bm_q2",
+      "text": "Business Email Compromise (BEC) sering menyasarkan jabatan mana?",
+      "options": [
+        {"text": "Kewangan dan perolehan", "correct": true, "feedback": "✅ Betul! Jabatan ini mengurus pembayaran."},
+        {"text": "Katering", "correct": false, "feedback": "❌ BEC menyasarkan mereka yang ada kuasa pembayaran."},
+        {"text": "Penyelenggaraan", "correct": false, "feedback": "❌ Bukan sasaran utama."}
+      ]
+    },
+    {
+      "id": "bm_q3",
+      "text": "Apakah kesan serangan ransomware?",
+      "options": [
+        {"text": "Gangguan operasi", "correct": true, "feedback": "✅ Betul! Ransomware boleh hentikan operasi."},
+        {"text": "Kemas kini perisian percuma", "correct": false, "feedback": "❌ Tiada yang percuma tentang ransomware."},
+        {"text": "Prestasi sistem bertambah baik", "correct": false, "feedback": "❌ Ia merosakkan, bukan memperbaiki."}
+      ]
+    },
+    {
+      "id": "bm_q4",
+      "text": "Bagaimana untuk mengelakkan penipuan invois palsu?",
+      "options": [
+        {"text": "Sahkan sumber invois", "correct": true, "feedback": "✅ Betul! Pastikan invois sahih."},
+        {"text": "Luluskan semua invois dengan segera", "correct": false, "feedback": "❌ Terburu-buru meningkatkan risiko penipuan."},
+        {"text": "Abaikan perubahan butiran akaun vendor", "correct": false, "feedback": "❌ Perubahan mesti disahkan."}
+      ]
+    },
+    {
+      "id": "bm_q5",
+      "text": "Undang-undang Malaysia yang mengawal perlindungan data peribadi ialah?",
+      "options": [
+        {"text": "PDPA (Personal Data Protection Act)", "correct": true, "feedback": "✅ Betul! PDPA adalah undang-undang utama Malaysia."},
+        {"text": "GDPR", "correct": false, "feedback": "❌ GDPR ialah undang-undang Eropah."},
+        {"text": "HIPAA", "correct": false, "feedback": "❌ HIPAA adalah untuk penjagaan kesihatan di AS."}
+      ]
+    },
+    {
+      "id": "bm_q6",
+      "text": "Apakah Prinsip Umum di bawah PDPA?",
+      "options": [
+        {"text": "Data mesti dikumpul dengan keizinan", "correct": true, "feedback": "✅ Betul! Keizinan adalah wajib."},
+        {"text": "Data boleh dikumpul secara rahsia", "correct": false, "feedback": "❌ Ini melanggar PDPA."},
+        {"text": "Data mesti didedahkan secara umum", "correct": false, "feedback": "❌ Privasi adalah keutamaan."}
+      ]
+    },
+    {
+      "id": "bm_q7",
+      "text": "Prinsip PDPA manakah yang memastikan individu boleh melihat dan membetulkan data mereka?",
+      "options": [
+        {"text": "Prinsip Akses", "correct": true, "feedback": "✅ Betul! Prinsip ini memberi hak tersebut."},
+        {"text": "Prinsip Pendedahan", "correct": false, "feedback": "❌ Pendedahan ialah tentang perkongsian data."},
+        {"text": "Prinsip Penyimpanan", "correct": false, "feedback": "❌ Penyimpanan ialah tentang tempoh simpanan."}
+      ]
+    },
+    {
+      "id": "bm_q8",
+      "text": "Apakah penalti bagi ketidakpatuhan PDPA?",
+      "options": [
+        {"text": "Denda sehingga RM 500,000", "correct": true, "feedback": "✅ Betul! Denda besar boleh dikenakan."},
+        {"text": "Ruang iklan percuma", "correct": false, "feedback": "❌ Tiada ganjaran untuk melanggar undang-undang."},
+        {"text": "Dana tambahan kerajaan", "correct": false, "feedback": "❌ Ketidakpatuhan membawa hukuman, bukan ganjaran."}
+      ]
+    },
+    {
+      "id": "bm_q9",
+      "text": "Prinsip PDPA manakah yang menghadkan tempoh data peribadi disimpan?",
+      "options": [
+        {"text": "Prinsip Penyimpanan", "correct": true, "feedback": "✅ Betul! Data tidak boleh disimpan lebih lama dari perlu."},
+        {"text": "Prinsip Keselamatan", "correct": false, "feedback": "❌ Keselamatan adalah tentang perlindungan data."},
+        {"text": "Prinsip Integriti", "correct": false, "feedback": "❌ Integriti adalah tentang ketepatan data."}
+      ]
+    },
+    {
+      "id": "bm_q10",
+      "text": "Apakah taktik biasa dalam penipuan e-mel?",
+      "options": [
+        {"text": "Mesej mendesak tindakan segera", "correct": true, "feedback": "✅ Betul! Tekanan boleh menyebabkan kesilapan."},
+        {"text": "E-mel sopan tanpa nada mendesak", "correct": false, "feedback": "❌ Ini kurang mencurigakan."},
+        {"text": "E-mel dengan tandatangan digital yang sah", "correct": false, "feedback": "❌ Tandatangan digital menunjukkan keaslian."}
+      ]
+    }
+  ]
+}

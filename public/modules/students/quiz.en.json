@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "en_q1",
+      "text": "Which of the following is considered personal information?",
+      "options": [
+        {"text": "ID or passport number", "correct": true, "feedback": "✅ Correct! ID numbers are highly sensitive personal information."},
+        {"text": "Favorite color", "correct": false, "feedback": "❌ Favorite colors are not considered sensitive."},
+        {"text": "Game nickname", "correct": false, "feedback": "❌ Game nicknames are not usually personal identifiers."}
+      ]
+    },
+    {
+      "id": "en_q2",
+      "text": "If you receive an email asking you to click a link to log into your bank account, you should:",
+      "options": [
+        {"text": "Click the link immediately", "correct": false, "feedback": "❌ This could be a phishing email."},
+        {"text": "Ignore the email completely", "correct": false, "feedback": "⚠️ Safer than clicking, but best to verify via official channels."},
+        {"text": "Visit the official bank website or call customer service", "correct": true, "feedback": "✅ Correct! Always verify through official sources."}
+      ]
+    },
+    {
+      "id": "en_q3",
+      "text": "What is the correct way to create a strong password?",
+      "options": [
+        {"text": "Use your birthday or phone number", "correct": false, "feedback": "❌ Easy for attackers to guess."},
+        {"text": "Use at least 12 characters with uppercase, lowercase, numbers, and symbols", "correct": true, "feedback": "✅ Correct! This meets strong password standards."},
+        {"text": "Use the same password for all accounts", "correct": false, "feedback": "❌ If one is stolen, all accounts are at risk."}
+      ]
+    },
+    {
+      "id": "en_q4",
+      "text": "The main purpose of Multi-Factor Authentication (MFA) is to:",
+      "options": [
+        {"text": "Avoid remembering passwords", "correct": false, "feedback": "❌ MFA is not a replacement for passwords."},
+        {"text": "Add an extra step of identity verification for more security", "correct": true, "feedback": "✅ Correct! MFA adds a second layer of defense."},
+        {"text": "Allow automatic login", "correct": false, "feedback": "❌ MFA does not make accounts log in automatically."}
+      ]
+    },
+    {
+      "id": "en_q5",
+      "text": "Which action can reduce the risk of phishing attacks?",
+      "options": [
+        {"text": "Clicking unknown short links", "correct": false, "feedback": "❌ Short links can hide malicious URLs."},
+        {"text": "Hovering over links to see the real URL", "correct": true, "feedback": "✅ Correct! This helps detect fake websites."},
+        {"text": "Entering your credentials in email links", "correct": false, "feedback": "❌ This is risky and could lead to account theft."}
+      ]
+    },
+    {
+      "id": "en_q6",
+      "text": "To protect your privacy on social media, you should:",
+      "options": [
+        {"text": "Limit privacy settings so strangers can’t see your info", "correct": true, "feedback": "✅ Correct! This reduces exposure to threats."},
+        {"text": "Share as many life details as possible to gain popularity", "correct": false, "feedback": "❌ Oversharing increases privacy risks."},
+        {"text": "Post pet names, birthdays, or family names", "correct": false, "feedback": "❌ These could be used as password clues."}
+      ]
+    },
+    {
+      "id": "en_q7",
+      "text": "If you get an SMS saying your package delivery failed and includes a link, you should:",
+      "options": [
+        {"text": "Click the link to update your info", "correct": false, "feedback": "❌ This could be SMS phishing."},
+        {"text": "Call the delivery company’s official customer service", "correct": true, "feedback": "✅ Correct! Always verify via official contact."},
+        {"text": "Reply with your verification code", "correct": false, "feedback": "❌ Never give out verification codes."}
+      ]
+    },
+    {
+      "id": "en_q8",
+      "text": "What is the main purpose of a password manager?",
+      "options": [
+        {"text": "Help you store and generate secure passwords", "correct": true, "feedback": "✅ Correct! Password managers keep your passwords safe."},
+        {"text": "Automatically fill in all verification codes", "correct": false, "feedback": "❌ Verification codes usually require manual input or MFA."},
+        {"text": "Let you use one password for everything", "correct": false, "feedback": "❌ This would increase the risk of account breaches."}
+      ]
+    },
+    {
+      "id": "en_q9",
+      "text": "Which is an example of a hardware MFA device?",
+      "options": [
+        {"text": "YubiKey", "correct": true, "feedback": "✅ Correct! YubiKey is a physical security key."},
+        {"text": "SMS verification code", "correct": false, "feedback": "❌ This is a software-based method."},
+        {"text": "Password manager", "correct": false, "feedback": "❌ A password manager is not MFA."}
+      ]
+    },
+    {
+      "id": "en_q10",
+      "text": "Which action can help prevent SIM card swapping attacks?",
+      "options": [
+        {"text": "Use an authenticator app instead of SMS codes", "correct": true, "feedback": "✅ Correct! Authenticator apps are more secure."},
+        {"text": "Change your phone number often", "correct": false, "feedback": "❌ This does not necessarily prevent SIM swapping."},
+        {"text": "Send verification codes to friends", "correct": false, "feedback": "❌ This would expose your security codes."}
+      ]
+    }
+  ]
+}

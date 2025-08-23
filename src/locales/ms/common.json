@@ -1,0 +1,191 @@
+{
+  "home": "Laman Utama",
+  "learning": "Pusat Pembelajaran",
+  "test": "Ujian Siber",
+  "stories": "Kisah Benar",
+  "welcome": "CyberSavvy - Kekal Selamat Dalam Talian",
+  "login": "Log Masuk",
+  "subtitle": "Memperkasa rakyat Malaysia dengan pengetahuan keselamatan siber untuk melawan ancaman digital",
+  "whyChooseUs": "Mengapa Pilih Platform Kami?",
+  "feature1": "Pembelajaran Berasaskan Data",
+  "feature1Desc": "Kandungan dikemas kini berdasarkan trend ancaman siber terkini di Malaysia",
+  "feature2": "Perlindungan Dunia Nyata",
+  "feature2Desc": "Kemahiran praktikal untuk mempertahankan diri daripada scam dan penipuan biasa",
+  "feature3": "Dikuasakan Komuniti",
+  "feature3Desc": "Belajar daripada pengalaman sebenar yang dikongsi rakyat Malaysia",
+  "alertMessage": "Amaran: Penipuan phishing baru mengguna bank Malaysia dikesan!",
+  "quickStart": "Mulakan Cepat",
+  "startLearning": "Mulakan perjalanan pembelajaran keselamatan siber anda",
+  "getStarted": "Mulakan",
+  "takeTest": "Ambil Ujian",
+  "testYourKnowledge": "Uji pengetahuan keselamatan siber anda",
+  "startTest": "Mula Ujian",
+  "readStories": "Baca Kisah Benar",
+  "learnFromOthers": "Belajar dari pengalaman orang lain",
+  "viewStories": "Lihat Kisah",
+  "comingSoon": "Kandungan akan datang...",
+  "studentModule": "Untuk Pelajar",
+  "seniorModule": "Untuk Warga Emas",
+  "studentTitle": "Panduan Keselamatan Siber untuk Pelajar",
+  "seniorTitle": "Panduan Anti-Penipuan untuk Warga Emas",
+  "studentContent": "Risiko keselamatan siber biasa untuk pelajar termasuk...",
+  "seniorContent": "Jenis penipuan biasa terhadap warga emas termasuk...",
+  "loading": "Memuatkan kandungan...",
+  "parentModule": "Untuk Ibu Bapa",
+  "businessModule": "Untuk Perniagaan Kecil",
+  "socialMediaSafety": "Keselamatan Media Sosial",
+  "paymentSecurity": "Keselamatan Pembayaran",
+  "childProtection": "Perlindungan Kanak-Kanak",
+  "phoneScams": "Penipuan Telefon",
+  "section": "bahagian",
+  "sections": "bahagian",
+  "cyberTips": [
+    "Gunakan kata laluan yang kuat dan tukar secara berkala 🔑",
+    "Aktifkan pengesahan dua faktor 🛡️",
+    "Jangan klik pautan yang mencurigakan ⚠️",
+    "Kemas kini perisian dan sistem secara berkala 💻",
+    "Berhati-hati ketika menggunakan Wi-Fi awam 📶",
+    "Sandarkan data penting 📂",
+    "Aktifkan firewall dan perisian antivirus 🔒"
+  ],
+  "intro": {
+    "digitalShield": "数字护盾已激活",
+    "encryptionActive": "256位加密实时保护您的数据",
+    "threatNeutralized": "威胁已消除",
+    "realTimeProtection": "实时防护应对新兴风险",
+    "globalDefense": "全球防御网络",
+    "secureNetwork": "保障五大洲的连接安全",
+    "enterSite": "进入CyberSavvy"
+  },
+  "learningHub": {
+    "title": "Pusat Pembelajaran",
+    "subtitle": "Laluan pembelajaran khusus untuk semua rakyat Malaysia kekal selamat dalam talian",
+    "categories": {
+      "students": "Untuk Pelajar",
+      "parents": "Untuk Ibu Bapa",
+      "seniors": "Untuk Warga Emas",
+      "business": "Untuk Perniagaan"
+    },
+    "categoryDescriptions": {
+      "students": "Belajar cara melindungi diri daripada ancaman dalam talian sebagai pelajar",
+      "parents": "Jaga keselamatan keluarga anda dalam dunia digital",
+      "seniors": "Panduan mudah untuk mengelakkan scam dalam talian",
+      "business": "Lindungi perniagaan anda daripada serangan siber"
+    },
+    "quizCard": {
+      "title": "Uji Pengetahuan Keselamatan Siber Anda",
+      "description": "Lakukan penilaian pantas untuk menilai kesediaan siber anda"
+    },
+    "clickToLearn": "Terokai Modul →",
+    "howItWorks": "Cara Pusat Pembelajaran Kami Berfungsi",
+    "step1": "Pilih Laluan Anda",
+    "step1Desc": "Pilih kategori yang paling menggambarkan anda",
+    "step2": "Belajar Mengikut Kadar Anda",
+    "step2Desc": "Ikuti modul interaktif yang direka untuk keperluan anda",
+    "step3": "Uji Pengetahuan Anda",
+    "step3Desc": "Lengkapkan kuiz untuk mengukuhkan apa yang telah dipelajari"
+  },
+  "quiz": {
+    "loading": "Memuatkan soalan...",
+    "empty": "Tiada data kuiz",
+    "title": "Ujian Keselamatan Siber",
+    "counter": "Soalan {{current}}/{{total}}",
+    "score": "Skor: {{score}}",
+    "nextButton": "Soalan Seterusnya →",
+    "results": {
+      "good": "🎉 Tahniah!",
+      "improve": "⚠️ Perlu diperbaiki",
+      "score": "Skor anda: {{score}}/{{total}}",
+      "riskLow": "Tahap risiko: Rendah",
+      "riskHigh": "Tahap risiko: Tinggi"
+    }
+  },
+  "cyberTest": {
+    "title": "Ujian Siber",
+    "subtitle": "Penilaian khusus untuk semua rakyat Malaysia kekal selamat dalam talian",
+    "categories": {
+      "students": "Untuk Pelajar",
+      "parents": "Untuk Ibu Bapa",
+      "seniors": "Untuk Warga Emas",
+      "business": "Untuk Perniagaan"
+    },
+    "categoryDescriptions": {
+      "students": "Uji pengetahuan anda tentang keselamatan dalam talian sebagai pelajar",
+      "parents": "Semak sejauh mana anda boleh melindungi keluarga dalam dunia digital",
+      "seniors": "Ujian mudah untuk mengenal pasti dan mengelakkan scam dalam talian",
+      "business": "Uji tahap kesiapsiagaan perniagaan anda terhadap serangan siber"
+    },
+    "quizCard": {
+      "title": "Ujian Pantas Keselamatan Siber",
+      "description": "Jawab beberapa soalan untuk mengukur kesedaran siber anda"
+    },
+    "clickToLearn": "Mula Ujian →",
+    "howItWorks": "Cara Ujian Siber Kami Berfungsi",
+    "step1": "Pilih Laluan Anda",
+    "step1Desc": "Pilih kategori yang paling menggambarkan anda",
+    "step2": "Jawab Mengikut Kadar Anda",
+    "step2Desc": "Ikuti soalan khusus yang direka untuk keperluan anda",
+    "step3": "Lihat Keputusan Anda",
+    "step3Desc": "Dapatkan maklum balas segera dan tip untuk meningkatkan keselamatan siber anda"
+  },
+  "help": {
+    "title": "Bantuan & Laporan",
+    "emergency": {
+      "title": "Hubungan Kecemasan",
+      "police": "Polis Kecemasan",
+      "cybersecurity": "Bantuan CyberSecurity Malaysia",
+      "bnm": "Bank Negara Malaysia",
+      "police_details": "Talian kecemasan seluruh negara",
+      "cybersecurity_phone": "1-300-88-2999",
+      "bnm_phone": "1-300-88-5465",
+      "phone": "Telefon"
+    },
+    "links": {
+      "cybersecurity": "CyberSecurity Malaysia",
+      "bnm": "Bank Negara Malaysia",
+      "scam_report": "https://www.aduan.skmm.gov.my",
+      "scam_report_text": "Aduan SKMM",
+      "fraud_report": "https://www.rmp.gov.my",
+      "fraud_report_text": "Jabatan Siasatan Jenayah Komersil",
+      "phishing_email": "phishing@cybersecurity.my"
+    },
+    "report": {
+      "title": "Saluran Laporan",
+      "scam": "Scam Dalam Talian",
+      "scam_desc": "Lapor scam dalam talian kepada MCMC",
+      "fraud": "Penipuan Kewangan",
+      "fraud_desc": "Lapor penipuan kewangan kepada CCID",
+      "phishing": "Email Phishing",
+      "phishing_desc": "Hantar email mencurigakan kepada CyberSecurity Malaysia"
+    },
+    "faq": {
+      "title": "Soalan Lazim",
+      "q1": "Apa yang perlu saya lakukan jika tertipu?",
+      "a1": "Segera hubungi bank anda jika melibatkan wang, kemudian laporkan kepada polis dan CyberSecurity Malaysia.",
+      "q2": "Bagaimana saya boleh mengesahkan kesahihan laman web?",
+      "a2": "1. Periksa URL untuk kesilapan ejaan\n2. Cari ikon kunci dan awalan https://\n3. Sahkan butiran hubungan melalui saluran rasmi\n4. Berhati-hati dengan laman web yang meminta terlalu banyak maklumat peribadi",
+      "q3": "Adakah selamat untuk klik pautan dalam SMS?",
+      "a3": "Tidak digalakkan untuk klik pautan dalam SMS yang tidak diminta. Walaupun kelihatan seperti dari bank anda, log masuk terus melalui apl atau laman web rasmi untuk mengesahkan."
+    },
+    "tips": {
+      "title": "Tip Keselamatan Siber",
+      "tip1": "Jangan kongsi OTP atau butiran perbankan dengan sesiapa",
+      "tip2": "Sahkan URL laman web sebelum masukkan maklumat sensitif",
+      "tip3": "Gunakan kata laluan kuat dan unik untuk akaun berbeza",
+      "tip4": "Aktifkan pengesahan dua faktor jika boleh"
+    }
+  },
+  "nav": {
+    "learning": "Pusat Pembelajaran",
+    "test": "Ujian Cyber",
+    "stories": "Kisah Benar",
+    "help": "Bantuan & Laporan",
+    "login": "Log Masuk"
+  },
+  "alert": {
+    "message": "Amaran: Penipuan phishing baru menargetkan pengguna bank Malaysia!",
+    "dismiss": "Tutup"
+  },
+  "readMore": "Ketahui Lebih Lanjut",
+  "tags": "Tag"
+}

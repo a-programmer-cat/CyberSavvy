@@ -1,0 +1,139 @@
+{
+  "questions": [
+    {
+      "id": "ms_q1",
+      "text": "Apakah definisi penipuan dalam talian?",
+      "options": [
+        {"text": "Cubaan menipu untuk mendapatkan maklumat peribadi atau wang", "correct": true, "feedback": "Betul. Penipuan dalam talian adalah usaha menipu melalui internet atau telefon untuk mendapatkan maklumat atau wang."},
+        {"text": "Pembelian barangan secara dalam talian", "correct": false, "feedback": "Salah. Membeli barangan dalam talian bukanlah penipuan."},
+        {"text": "Menggunakan media sosial untuk berhubung dengan rakan", "correct": false, "feedback": "Salah. Aktiviti media sosial biasa bukan penipuan."}
+      ]
+    },
+    {
+      "id": "ms_q2",
+      "text": "Apakah salah satu taktik biasa penipu dalam talian?",
+      "options": [
+        {"text": "Menyamar sebagai pegawai kerajaan", "correct": true, "feedback": "Betul. Penipu sering menyamar sebagai pegawai kerajaan untuk menakut-nakutkan mangsa."},
+        {"text": "Menawarkan perkhidmatan pelanggan percuma", "correct": false, "feedback": "Salah. Perkhidmatan percuma tidak semestinya penipuan."},
+        {"text": "Menghantar ucapan selamat melalui e-mel", "correct": false, "feedback": "Salah. Menghantar ucapan biasanya tidak berkaitan dengan penipuan."}
+      ]
+    },
+    {
+      "id": "ms_q3",
+      "text": "Maklumat manakah yang tidak boleh dikongsi melalui telefon atau media sosial?",
+      "options": [
+        {"text": "Nombor kad pengenalan", "correct": true, "feedback": "Betul. Nombor kad pengenalan adalah maklumat sensitif."},
+        {"text": "Hobi dan minat peribadi", "correct": false, "feedback": "Salah. Hobi tidak sensitif."},
+        {"text": "Warna kegemaran", "correct": false, "feedback": "Salah. Warna kegemaran tidak boleh digunakan untuk mencuri identiti anda."}
+      ]
+    },
+    {
+      "id": "ms_q4",
+      "text": "Apakah tindakan pertama apabila menerima panggilan mencurigakan?",
+      "options": [
+        {"text": "Bertenang dan tamatkan panggilan", "correct": true, "feedback": "Betul. Sentiasa bertenang dan tamatkan panggilan untuk mengelakkan ditipu."},
+        {"text": "Segera berkongsi maklumat bank", "correct": false, "feedback": "Salah. Jangan sekali-kali berkongsi maklumat bank."},
+        {"text": "Klik pada pautan yang diberikan", "correct": false, "feedback": "Salah. Pautan tersebut mungkin membawa kepada laman penipuan."}
+      ]
+    },
+    {
+      "id": "ms_q5",
+      "text": "Apakah contoh nombor telefon palsu (spoofing)?",
+      "options": [
+        {"text": "Nombor yang hampir sama dengan nombor rasmi bank", "correct": true, "feedback": "Betul. Penipu boleh menggunakan nombor hampir sama untuk mengelirukan mangsa."},
+        {"text": "Nombor yang anda simpan dalam kenalan", "correct": false, "feedback": "Salah. Nombor yang diketahui biasanya selamat."},
+        {"text": "Nombor dari ahli keluarga", "correct": false, "feedback": "Salah. Nombor ahli keluarga jarang digunakan untuk spoofing."}
+      ]
+    },
+    {
+      "id": "ms_q6",
+      "text": "Apakah tujuan nada mendesak dalam panggilan penipuan?",
+      "options": [
+        {"text": "Untuk membuat mangsa panik dan bertindak segera", "correct": true, "feedback": "Betul. Penipu mahu anda bertindak tanpa berfikir panjang."},
+        {"text": "Untuk memaklumkan berita baik", "correct": false, "feedback": "Salah. Nada mendesak biasanya bukan untuk berita baik."},
+        {"text": "Untuk memberikan diskaun", "correct": false, "feedback": "Salah. Diskaun tidak memerlukan nada mendesak yang menakutkan."}
+      ]
+    },
+    {
+      "id": "ms_q7",
+      "text": "Apakah tindakan terbaik apabila menerima SMS dengan pautan mencurigakan?",
+      "options": [
+        {"text": "Abaikan dan jangan klik", "correct": true, "feedback": "Betul. Jangan klik pautan mencurigakan kerana ia mungkin laman penipuan."},
+        {"text": "Klik segera untuk lihat", "correct": false, "feedback": "Salah. Klik boleh mendedahkan anda kepada bahaya."},
+        {"text": "Kongsi pautan tersebut kepada rakan", "correct": false, "feedback": "Salah. Jangan sebarkan pautan mencurigakan."}
+      ]
+    },
+    {
+      "id": "ms_q8",
+      "text": "Bagaimana memeriksa kesahihan laman web pelaburan?",
+      "options": [
+        {"text": "Periksa domain dan pendaftaran rasmi", "correct": true, "feedback": "Betul. Semak domain dan daftar dengan SC atau BNM."},
+        {"text": "Lihat reka bentuk laman web", "correct": false, "feedback": "Salah. Reka bentuk boleh dipalsukan."},
+        {"text": "Percaya jika ada testimoni positif", "correct": false, "feedback": "Salah. Testimoni boleh direka."}
+      ]
+    },
+    {
+      "id": "ms_q9",
+      "text": "Apakah contoh domain laman web palsu?",
+      "options": [
+        {"text": "maybank2u-login-secure.net", "correct": true, "feedback": "Betul. Domain ini mencurigakan dan bukan domain rasmi Maybank."},
+        {"text": "www.maybank2u.com.my", "correct": false, "feedback": "Salah. Ini domain rasmi Maybank."},
+        {"text": "www.google.com", "correct": false, "feedback": "Salah. Google bukan laman pelaburan."}
+      ]
+    },
+    {
+      "id": "ms_q10",
+      "text": "Mengapa laman web tanpa HTTPS berbahaya?",
+      "options": [
+        {"text": "Maklumat boleh dipintas oleh pihak ketiga", "correct": true, "feedback": "Betul. HTTPS melindungi data semasa penghantaran."},
+        {"text": "Laman akan memuat dengan lebih perlahan", "correct": false, "feedback": "Salah. Kelajuan bukan isu utama di sini."},
+        {"text": "Warna latar belakang berubah", "correct": false, "feedback": "Salah. HTTPS tidak mempengaruhi warna latar."}
+      ]
+    },
+    {
+      "id": "ms_q11",
+      "text": "Siapakah yang mengawal pendaftaran syarikat pelaburan di Malaysia?",
+      "options": [
+        {"text": "Suruhanjaya Sekuriti Malaysia (SC)", "correct": true, "feedback": "Betul. SC bertanggungjawab mengawal selia syarikat pelaburan."},
+        {"text": "Kementerian Pelancongan", "correct": false, "feedback": "Salah. Kementerian Pelancongan tidak berkaitan."},
+        {"text": "Persatuan Bola Sepak Malaysia", "correct": false, "feedback": "Salah. Persatuan Bola Sepak tidak terlibat."}
+      ]
+    },
+    {
+      "id": "ms_q12",
+      "text": "Apakah yang perlu dilakukan jika meragui laman web pelaburan?",
+      "options": [
+        {"text": "Hentikan semua transaksi segera", "correct": true, "feedback": "Betul. Berhenti serta-merta untuk elakkan kerugian."},
+        {"text": "Teruskan melabur jumlah kecil", "correct": false, "feedback": "Salah. Walaupun jumlah kecil, ia masih berisiko."},
+        {"text": "Hubungi penipu untuk pengesahan", "correct": false, "feedback": "Salah. Jangan hubungi nombor tidak rasmi."}
+      ]
+    },
+    {
+      "id": "ms_q13",
+      "text": "Mengapa testimoni dalam talian tidak boleh dipercayai sepenuhnya?",
+      "options": [
+        {"text": "Kerana ia boleh dipalsukan", "correct": true, "feedback": "Betul. Testimoni boleh direka untuk menipu."},
+        {"text": "Kerana ia selalu benar", "correct": false, "feedback": "Salah. Tidak semua testimoni benar."},
+        {"text": "Kerana ia terlalu panjang", "correct": false, "feedback": "Salah. Panjang testimoni tidak relevan."}
+      ]
+    },
+    {
+      "id": "ms_q14",
+      "text": "Apa yang patut dilakukan jika menerima panggilan ancaman berkaitan jenayah?",
+      "options": [
+        {"text": "Tamatkan panggilan dan sahkan dengan pihak berkuasa", "correct": true, "feedback": "Betul. Sahkan hanya melalui nombor rasmi."},
+        {"text": "Berikan semua maklumat untuk mengelakkan masalah", "correct": false, "feedback": "Salah. Jangan kongsi maklumat sensitif."},
+        {"text": "Ikut arahan tanpa berfikir", "correct": false, "feedback": "Salah. Itu yang penipu mahukan."}
+      ]
+    },
+    {
+      "id": "ms_q15",
+      "text": "Apakah hotline untuk melaporkan penipuan kepada CyberSecurity Malaysia?",
+      "options": [
+        {"text": "+603-8800 7999", "correct": true, "feedback": "Betul. Ini adalah talian bantuan rasmi."},
+        {"text": "999", "correct": false, "feedback": "Salah. 999 adalah nombor kecemasan umum."},
+        {"text": "112", "correct": false, "feedback": "Salah. 112 adalah nombor kecemasan antarabangsa."}
+      ]
+    }
+  ]
+}

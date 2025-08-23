@@ -1,0 +1,139 @@
+{
+  "questions": [
+    {
+      "id": "en_q1",
+      "text": "What is the definition of online fraud?",
+      "options": [
+        {"text": "Using the internet or phone to deceive people to obtain personal information or money", "correct": true, "feedback": "✅ Correct. Online fraud is the act of using the internet or phone to trick others into giving personal information or money."},
+        {"text": "Shopping online", "correct": false, "feedback": "❌ Incorrect. Online shopping itself is not fraud."},
+        {"text": "Using social media to communicate with friends", "correct": false, "feedback": "❌ Incorrect. Regular social activities are not fraud."}
+      ]
+    },
+    {
+      "id": "en_q2",
+      "text": "Which of the following is a common online fraud method?",
+      "options": [
+        {"text": "Impersonating government officials", "correct": true, "feedback": "✅ Correct. Scammers often pretend to be government officials to intimidate victims."},
+        {"text": "Providing free customer service", "correct": false, "feedback": "❌ Incorrect. Free services are not necessarily fraud."},
+        {"text": "Sending holiday greetings via email", "correct": false, "feedback": "❌ Incorrect. Normal greetings are usually unrelated to scams."}
+      ]
+    },
+    {
+      "id": "en_q3",
+      "text": "Which type of information should never be shared over the phone or social media?",
+      "options": [
+        {"text": "ID card number", "correct": true, "feedback": "✅ Correct. ID numbers are sensitive information."},
+        {"text": "Personal hobbies", "correct": false, "feedback": "❌ Incorrect. Hobbies are not sensitive information."},
+        {"text": "Favorite color", "correct": false, "feedback": "❌ Incorrect. Your favorite color cannot be used to steal your identity."}
+      ]
+    },
+    {
+      "id": "en_q4",
+      "text": "What is the first thing to do when receiving a suspicious call?",
+      "options": [
+        {"text": "Stay calm and hang up", "correct": true, "feedback": "✅ Correct. Staying calm and hanging up helps avoid being scammed."},
+        {"text": "Immediately provide bank details", "correct": false, "feedback": "❌ Incorrect. You should never give out bank details."},
+        {"text": "Click the link provided by the caller", "correct": false, "feedback": "❌ Incorrect. The link might lead to a scam site."}
+      ]
+    },
+    {
+      "id": "en_q5",
+      "text": "Which is an example of caller ID spoofing?",
+      "options": [
+        {"text": "A number very similar to the official bank number", "correct": true, "feedback": "✅ Correct. Scammers use similar numbers to confuse victims."},
+        {"text": "A saved contact from your phone book", "correct": false, "feedback": "❌ Incorrect. Known contacts are generally safe."},
+        {"text": "A family member’s number", "correct": false, "feedback": "❌ Incorrect. Family numbers are rarely spoofed for scams."}
+      ]
+    },
+    {
+      "id": "en_q6",
+      "text": "What is the purpose of using urgent language in scam calls?",
+      "options": [
+        {"text": "To panic the victim and make them act immediately", "correct": true, "feedback": "✅ Correct. Scammers want you to act without thinking."},
+        {"text": "To tell you good news", "correct": false, "feedback": "❌ Incorrect. Urgent tone is rarely for good news."},
+        {"text": "To offer discounts", "correct": false, "feedback": "❌ Incorrect. Discounts don’t require creating panic."}
+      ]
+    },
+    {
+      "id": "en_q7",
+      "text": "What is the best thing to do when receiving a suspicious SMS with a link?",
+      "options": [
+        {"text": "Ignore it and don’t click", "correct": true, "feedback": "✅ Correct. Avoid clicking suspicious links as they may be scam sites."},
+        {"text": "Click immediately to check", "correct": false, "feedback": "❌ Incorrect. Clicking could put you at risk."},
+        {"text": "Forward the link to friends", "correct": false, "feedback": "❌ Incorrect. Don’t spread suspicious links."}
+      ]
+    },
+    {
+      "id": "en_q8",
+      "text": "How can you verify if an investment website is real?",
+      "options": [
+        {"text": "Check the domain and official registration info", "correct": true, "feedback": "✅ Correct. Check the domain and confirm it’s registered with the Securities Commission or Central Bank."},
+        {"text": "Look at the website design", "correct": false, "feedback": "❌ Incorrect. Website design can be faked easily."},
+        {"text": "Trust positive user reviews", "correct": false, "feedback": "❌ Incorrect. Reviews may be fake."}
+      ]
+    },
+    {
+      "id": "en_q9",
+      "text": "Which of the following is an example of a fake website domain?",
+      "options": [
+        {"text": "maybank2u-login-secure.net", "correct": true, "feedback": "✅ Correct. This suspicious domain is not Maybank’s official site."},
+        {"text": "www.maybank2u.com.my", "correct": false, "feedback": "❌ Incorrect. This is Maybank’s official website."},
+        {"text": "www.google.com", "correct": false, "feedback": "❌ Incorrect. Google is not an investment site."}
+      ]
+    },
+    {
+      "id": "en_q10",
+      "text": "Why is a website without HTTPS unsafe?",
+      "options": [
+        {"text": "Information may be intercepted by third parties", "correct": true, "feedback": "✅ Correct. HTTPS encrypts data transmission to protect security."},
+        {"text": "The webpage will load slower", "correct": false, "feedback": "❌ Incorrect. Speed is not the main issue."},
+        {"text": "The background color will change", "correct": false, "feedback": "❌ Incorrect. HTTPS has nothing to do with color."}
+      ]
+    },
+    {
+      "id": "en_q11",
+      "text": "In Malaysia, which body regulates the registration of investment companies?",
+      "options": [
+        {"text": "Securities Commission Malaysia (SC)", "correct": true, "feedback": "✅ Correct. The Securities Commission regulates investment companies."},
+        {"text": "Tourism Ministry", "correct": false, "feedback": "❌ Incorrect. The Tourism Ministry is not related to investment regulation."},
+        {"text": "Football Association of Malaysia", "correct": false, "feedback": "❌ Incorrect. The football association doesn’t handle investments."}
+      ]
+    },
+    {
+      "id": "en_q12",
+      "text": "What should you do if you suspect an investment website is suspicious?",
+      "options": [
+        {"text": "Stop all transactions immediately", "correct": true, "feedback": "✅ Correct. Stop all actions to avoid losses."},
+        {"text": "Continue investing small amounts", "correct": false, "feedback": "❌ Incorrect. Even small amounts are risky."},
+        {"text": "Contact the other party for confirmation", "correct": false, "feedback": "❌ Incorrect. Don’t contact non-official numbers."}
+      ]
+    },
+    {
+      "id": "en_q13",
+      "text": "Why can’t online positive reviews be fully trusted?",
+      "options": [
+        {"text": "Because they may be fake", "correct": true, "feedback": "✅ Correct. Reviews may be fabricated."},
+        {"text": "Because they are always true", "correct": false, "feedback": "❌ Incorrect. Not all reviews are true."},
+        {"text": "Because the reviews are too long", "correct": false, "feedback": "❌ Incorrect. Length has nothing to do with authenticity."}
+      ]
+    },
+    {
+      "id": "en_q14",
+      "text": "What should you do if you receive a call threatening you with a crime?",
+      "options": [
+        {"text": "Hang up and verify through official channels", "correct": true, "feedback": "✅ Correct. Only verify through official numbers."},
+        {"text": "Provide all information to avoid trouble", "correct": false, "feedback": "❌ Incorrect. Never disclose sensitive information."},
+        {"text": "Follow instructions without thinking", "correct": false, "feedback": "❌ Incorrect. That’s exactly what scammers want."}
+      ]
+    },
+    {
+      "id": "en_q15",
+      "text": "What is the hotline number for reporting scams to CyberSecurity Malaysia?",
+      "options": [
+        {"text": "+603-8800 7999", "correct": true, "feedback": "✅ Correct. This is the official hotline number."},
+        {"text": "999", "correct": false, "feedback": "❌ Incorrect. 999 is the general emergency number."},
+        {"text": "112", "correct": false, "feedback": "❌ Incorrect. 112 is the international emergency number."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "ms_q1",
+      "text": "Yang manakah berikut dianggap sebagai maklumat peribadi?",
+      "options": [
+        {"text": "Nombor kad pengenalan atau pasport", "correct": true, "feedback": "✅ Betul! Nombor kad pengenalan adalah maklumat peribadi yang sangat sensitif."},
+        {"text": "Warna kegemaran", "correct": false, "feedback": "❌ Warna kegemaran bukan maklumat sensitif."},
+        {"text": "Nama panggilan permainan", "correct": false, "feedback": "❌ Nama panggilan permainan biasanya bukan maklumat peribadi."}
+      ]
+    },
+    {
+      "id": "ms_q2",
+      "text": "Jika anda menerima e-mel yang meminta anda klik pautan untuk log masuk akaun bank, apa yang patut anda lakukan?",
+      "options": [
+        {"text": "Klik pautan tersebut segera", "correct": false, "feedback": "❌ Ini mungkin e-mel phishing."},
+        {"text": "Abaikan e-mel sepenuhnya", "correct": false, "feedback": "⚠️ Lebih selamat daripada mengklik, tetapi sebaiknya sahkan melalui saluran rasmi."},
+        {"text": "Lawati laman web rasmi bank atau hubungi khidmat pelanggan", "correct": true, "feedback": "✅ Betul! Sentiasa sahkan melalui sumber rasmi."}
+      ]
+    },
+    {
+      "id": "ms_q3",
+      "text": "Apakah cara yang betul untuk mencipta kata laluan yang kukuh?",
+      "options": [
+        {"text": "Guna tarikh lahir atau nombor telefon", "correct": false, "feedback": "❌ Maklumat ini mudah diteka oleh penggodam."},
+        {"text": "Gunakan sekurang-kurangnya 12 aksara termasuk huruf besar, kecil, nombor dan simbol", "correct": true, "feedback": "✅ Betul! Ini memenuhi piawaian kata laluan kukuh."},
+        {"text": "Gunakan kata laluan yang sama untuk semua akaun", "correct": false, "feedback": "❌ Jika satu digodam, semua akaun akan terjejas."}
+      ]
+    },
+    {
+      "id": "ms_q4",
+      "text": "Tujuan utama Pengesahan Berbilang Faktor (MFA) adalah untuk:",
+      "options": [
+        {"text": "Mengelakkan daripada mengingati kata laluan", "correct": false, "feedback": "❌ MFA bukan pengganti kata laluan."},
+        {"text": "Menambah langkah pengesahan identiti tambahan untuk keselamatan", "correct": true, "feedback": "✅ Betul! MFA ialah lapisan pertahanan kedua."},
+        {"text": "Membolehkan log masuk automatik", "correct": false, "feedback": "❌ MFA tidak membuat log masuk automatik."}
+      ]
+    },
+    {
+      "id": "ms_q5",
+      "text": "Tindakan mana yang boleh mengurangkan risiko serangan phishing?",
+      "options": [
+        {"text": "Klik pautan ringkas yang tidak dikenali", "correct": false, "feedback": "❌ Pautan ringkas boleh menyembunyikan URL berbahaya."},
+        {"text": "Arahkan tetikus ke pautan untuk melihat URL sebenar", "correct": true, "feedback": "✅ Betul! Ini membantu mengesan laman web palsu."},
+        {"text": "Masukkan kata laluan dalam pautan e-mel", "correct": false, "feedback": "❌ Ini berisiko tinggi dan boleh menyebabkan akaun digodam."}
+      ]
+    },
+    {
+      "id": "ms_q6",
+      "text": "Untuk melindungi privasi di media sosial, anda perlu:",
+      "options": [
+        {"text": "Hadkan tetapan privasi supaya orang asing tidak dapat melihat maklumat anda", "correct": true, "feedback": "✅ Betul! Ini mengurangkan pendedahan kepada ancaman."},
+        {"text": "Kongsi sebanyak mungkin butiran kehidupan untuk populariti", "correct": false, "feedback": "❌ Perkongsian berlebihan meningkatkan risiko privasi."},
+        {"text": "Kongsi nama haiwan peliharaan, tarikh lahir, atau nama keluarga", "correct": false, "feedback": "❌ Maklumat ini boleh digunakan sebagai petunjuk kata laluan."}
+      ]
+    },
+    {
+      "id": "ms_q7",
+      "text": "Jika anda menerima SMS mengatakan penghantaran bungkusan gagal dan mengandungi pautan, anda patut:",
+      "options": [
+        {"text": "Klik pautan untuk mengemas kini maklumat", "correct": false, "feedback": "❌ Ini mungkin phishing melalui SMS."},
+        {"text": "Hubungi khidmat pelanggan rasmi syarikat penghantaran", "correct": true, "feedback": "✅ Betul! Sahkan melalui nombor rasmi syarikat."},
+        {"text": "Balas SMS dengan kod pengesahan anda", "correct": false, "feedback": "❌ Jangan sekali-kali berkongsi kod pengesahan."}
+      ]
+    },
+    {
+      "id": "ms_q8",
+      "text": "Apakah tujuan utama pengurus kata laluan?",
+      "options": [
+        {"text": "Membantu menyimpan dan menjana kata laluan selamat", "correct": true, "feedback": "✅ Betul! Pengurus kata laluan menyimpan kata laluan dengan selamat."},
+        {"text": "Secara automatik mengisi semua kod pengesahan", "correct": false, "feedback": "❌ Kod pengesahan biasanya memerlukan input manual atau MFA."},
+        {"text": "Membolehkan anda guna satu kata laluan untuk semua akaun", "correct": false, "feedback": "❌ Ini meningkatkan risiko kebocoran akaun."}
+      ]
+    },
+    {
+      "id": "ms_q9",
+      "text": "Yang manakah contoh peranti MFA berbentuk perkakasan?",
+      "options": [
+        {"text": "YubiKey", "correct": true, "feedback": "✅ Betul! YubiKey ialah kunci keselamatan fizikal."},
+        {"text": "Kod pengesahan SMS", "correct": false, "feedback": "❌ Ini kaedah berasaskan perisian."},
+        {"text": "Pengurus kata laluan", "correct": false, "feedback": "❌ Pengurus kata laluan bukan MFA."}
+      ]
+    },
+    {
+      "id": "ms_q10",
+      "text": "Tindakan mana boleh membantu mencegah serangan penukaran kad SIM?",
+      "options": [
+        {"text": "Gunakan aplikasi pengesah berbanding kod SMS", "correct": true, "feedback": "✅ Betul! Aplikasi pengesah lebih selamat."},
+        {"text": "Kerap tukar nombor telefon", "correct": false, "feedback": "❌ Ini tidak semestinya menghalang serangan penukaran kad SIM."},
+        {"text": "Hantar kod pengesahan kepada rakan", "correct": false, "feedback": "❌ Ini mendedahkan kod keselamatan anda."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "zh_q1",
+      "text": "电子邮件欺诈的常见特征是什么？",
+      "options": [
+        {"text": "伪造的域名，例如 '@micr0soft.com'", "correct": true, "feedback": "✅ 正确！攻击者常用相似域名进行欺骗。"},
+        {"text": "来自熟悉联系人的普通语气邮件", "correct": false, "feedback": "❌ 普通语气不一定是欺诈信号。"},
+        {"text": "没有任何链接或附件的邮件", "correct": false, "feedback": "❌ 欺诈邮件通常包含可疑的链接或附件。"}
+      ]
+    },
+    {
+      "id": "zh_q2",
+      "text": "BEC（商业邮件欺骗）通常会针对哪个部门？",
+      "options": [
+        {"text": "财务和采购部门", "correct": true, "feedback": "✅ 正确！他们有资金审批权。"},
+        {"text": "餐饮部门", "correct": false, "feedback": "❌ 攻击者不会优先针对餐饮部门。"},
+        {"text": "设备维护部门", "correct": false, "feedback": "❌ 不是主要目标。"}
+      ]
+    },
+    {
+      "id": "zh_q3",
+      "text": "勒索软件攻击可能带来的后果是？",
+      "options": [
+        {"text": "业务中断", "correct": true, "feedback": "✅ 正确！勒索软件会导致系统无法运行。"},
+        {"text": "免费获得软件升级", "correct": false, "feedback": "❌ 勒索软件不会带来好处。"},
+        {"text": "提升系统性能", "correct": false, "feedback": "❌ 它会破坏性能而不是提升。"}
+      ]
+    },
+    {
+      "id": "zh_q4",
+      "text": "如何防范假发票诈骗？",
+      "options": [
+        {"text": "核实发票来源", "correct": true, "feedback": "✅ 正确！要确认发票的真实性。"},
+        {"text": "立即批准所有发票", "correct": false, "feedback": "❌ 匆忙批准会增加风险。"},
+        {"text": "忽略供应商账户变更", "correct": false, "feedback": "❌ 账户变更必须确认。"}
+      ]
+    },
+    {
+      "id": "zh_q5",
+      "text": "马来西亚保护个人数据的法律是？",
+      "options": [
+        {"text": "PDPA（个人数据保护法）", "correct": true, "feedback": "✅ 正确！PDPA是马来西亚的主要法规。"},
+        {"text": "GDPR", "correct": false, "feedback": "❌ GDPR是欧盟法律。"},
+        {"text": "HIPAA", "correct": false, "feedback": "❌ HIPAA是美国医疗数据法规。"}
+      ]
+    },
+    {
+      "id": "zh_q6",
+      "text": "PDPA的一般原则要求什么？",
+      "options": [
+        {"text": "收集个人数据必须得到同意", "correct": true, "feedback": "✅ 正确！同意是法律要求。"},
+        {"text": "可以秘密收集数据", "correct": false, "feedback": "❌ 这违反了PDPA。"},
+        {"text": "必须公开所有数据", "correct": false, "feedback": "❌ 个人隐私应受保护。"}
+      ]
+    },
+    {
+      "id": "zh_q7",
+      "text": "哪项PDPA原则确保个人可以查看并修改自己的数据？",
+      "options": [
+        {"text": "访问原则", "correct": true, "feedback": "✅ 正确！访问原则赋予个人此权利。"},
+        {"text": "披露原则", "correct": false, "feedback": "❌ 披露原则是关于数据共享的。"},
+        {"text": "保留原则", "correct": false, "feedback": "❌ 保留原则是关于保存期限的。"}
+      ]
+    },
+    {
+      "id": "zh_q8",
+      "text": "不遵守PDPA可能的处罚是？",
+      "options": [
+        {"text": "最高罚款 RM 500,000", "correct": true, "feedback": "✅ 正确！违反法规会导致高额罚款。"},
+        {"text": "获得免费广告机会", "correct": false, "feedback": "❌ 违规不会得到奖励。"},
+        {"text": "获得政府额外资金", "correct": false, "feedback": "❌ 违规只会受到处罚。"}
+      ]
+    },
+    {
+      "id": "zh_q9",
+      "text": "哪项PDPA原则限制了个人数据的保存期限？",
+      "options": [
+        {"text": "保留原则", "correct": true, "feedback": "✅ 正确！数据不能无限期保存。"},
+        {"text": "安全原则", "correct": false, "feedback": "❌ 安全原则是关于数据保护的。"},
+        {"text": "数据完整性原则", "correct": false, "feedback": "❌ 数据完整性是关于准确性的。"}
+      ]
+    },
+    {
+      "id": "zh_q10",
+      "text": "电子邮件欺诈常用的策略是？",
+      "options": [
+        {"text": "使用紧迫语气催促立即行动", "correct": true, "feedback": "✅ 正确！紧迫感会让人放松警惕。"},
+        {"text": "礼貌且不急迫的邮件", "correct": false, "feedback": "❌ 这种邮件通常不具威胁性。"},
+        {"text": "带有有效数字签名的邮件", "correct": false, "feedback": "❌ 数字签名通常代表真实可信。"}
+      ]
+    }
+  ]
+}

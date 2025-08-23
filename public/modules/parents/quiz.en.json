@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "en_q1",
+      "text": "To protect a child’s privacy on social media, what should parents do?",
+      "options": [
+        {"text": "Set the child’s account to private", "correct": true, "feedback": "✅ Correct! Private accounts reduce exposure to strangers."},
+        {"text": "Allow anyone to view and comment", "correct": false, "feedback": "❌ This increases risks."},
+        {"text": "Share the child’s location publicly", "correct": false, "feedback": "❌ Location sharing can expose safety risks."}
+      ]
+    },
+    {
+      "id": "en_q2",
+      "text": "Which of the following is a risk of account sharing?",
+      "options": [
+        {"text": "Friends might misuse the account", "correct": true, "feedback": "✅ Correct! Others may post harmful content using the account."},
+        {"text": "The account becomes more secure", "correct": false, "feedback": "❌ Sharing always reduces security."},
+        {"text": "It can increase followers", "correct": false, "feedback": "❌ More followers don’t reduce risks."}
+      ]
+    },
+    {
+      "id": "en_q3",
+      "text": "The best way to prevent children from being scammed in online games is:",
+      "options": [
+        {"text": "Tell them not to trust 'free skins' offers", "correct": true, "feedback": "✅ Correct! This is a common scam tactic."},
+        {"text": "Let them trade freely with strangers", "correct": false, "feedback": "❌ This can risk accounts and money."},
+        {"text": "Make payment info public", "correct": false, "feedback": "❌ This is extremely dangerous."}
+      ]
+    },
+    {
+      "id": "en_q4",
+      "text": "Which is a security measure parents should take?",
+      "options": [
+        {"text": "Enable payment verification", "correct": true, "feedback": "✅ Correct! It prevents unauthorized purchases."},
+        {"text": "Turn off all safety settings", "correct": false, "feedback": "❌ This increases risk."},
+        {"text": "Allow unlimited internet access", "correct": false, "feedback": "❌ Unrestricted access poses dangers."}
+      ]
+    },
+    {
+      "id": "en_q5",
+      "text": "When a child receives a friend request from a stranger, they should:",
+      "options": [
+        {"text": "Accept immediately", "correct": false, "feedback": "❌ This can lead to scams or harassment."},
+        {"text": "Decline and tell a parent", "correct": true, "feedback": "✅ Correct! This is the safest choice."},
+        {"text": "Share family info first", "correct": false, "feedback": "❌ Revealing personal info is dangerous."}
+      ]
+    },
+    {
+      "id": "en_q6",
+      "text": "Why should you avoid posting photos of a child in school uniform?",
+      "options": [
+        {"text": "It may reveal the school location", "correct": true, "feedback": "✅ Correct! Background details may expose location."},
+        {"text": "The photo will be blurry", "correct": false, "feedback": "❌ Blurriness has nothing to do with safety."},
+        {"text": "It doesn’t look nice", "correct": false, "feedback": "❌ Appearance is not a safety concern."}
+      ]
+    },
+    {
+      "id": "en_q7",
+      "text": "The benefit of having parents review posts before publishing is:",
+      "options": [
+        {"text": "Reduce risk of sharing sensitive info", "correct": true, "feedback": "✅ Correct! This prevents privacy leaks."},
+        {"text": "Delete all content", "correct": false, "feedback": "❌ The goal is to screen for risks, not delete everything."},
+        {"text": "Get more likes", "correct": false, "feedback": "❌ Review has nothing to do with likes."}
+      ]
+    },
+    {
+      "id": "en_q8",
+      "text": "One important way to prevent online shopping scams is:",
+      "options": [
+        {"text": "Avoid clicking unfamiliar links", "correct": true, "feedback": "✅ Correct! This helps prevent phishing."},
+        {"text": "Buy extremely cheap products", "correct": false, "feedback": "❌ Super low prices are often traps."},
+        {"text": "Directly enter bank details", "correct": false, "feedback": "❌ Never share payment info casually."}
+      ]
+    },
+    {
+      "id": "en_q9",
+      "text": "If a child receives a text saying 'package undelivered' with a link, they should:",
+      "options": [
+        {"text": "Click the link and fill out info", "correct": false, "feedback": "❌ This is likely a phishing text."},
+        {"text": "Call the courier company’s official number", "correct": true, "feedback": "✅ Correct! Always verify through official channels."},
+        {"text": "Forward it to friends to click", "correct": false, "feedback": "❌ This spreads the risk."}
+      ]
+    },
+    {
+      "id": "en_q10",
+      "text": "Why should children’s location services be turned off in social apps?",
+      "options": [
+        {"text": "To prevent strangers from knowing their location", "correct": true, "feedback": "✅ Correct! This protects privacy."},
+        {"text": "To save mobile data", "correct": false, "feedback": "❌ While it might save data, the main reason is safety."},
+        {"text": "So they can’t find friends", "correct": false, "feedback": "❌ This is unrelated to safety concerns."}
+      ]
+    }
+  ]
+}

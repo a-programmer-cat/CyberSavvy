@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "zh_q1",
+      "text": "以下哪一项属于个人信息？",
+      "options": [
+        {"text": "身份证号码", "correct": true, "feedback": "✅ 正确！身份证号码是高度敏感的个人信息"},
+        {"text": "喜欢的颜色", "correct": false, "feedback": "❌ 喜欢的颜色通常不是敏感信息"},
+        {"text": "游戏昵称", "correct": false, "feedback": "❌ 游戏昵称通常不是个人身份信息"}
+      ]
+    },
+    {
+      "id": "zh_q2",
+      "text": "如果你收到一封邮件，要求点击链接登录银行账号，你应该：",
+      "options": [
+        {"text": "立即点击链接", "correct": false, "feedback": "❌ 可能是钓鱼邮件"},
+        {"text": "忽略邮件", "correct": false, "feedback": "⚠️ 虽然比点击安全，但最好通过官方渠道确认"},
+        {"text": "直接访问银行官网或拨打客服电话", "correct": true, "feedback": "✅ 正确！应通过官方渠道验证"}
+      ]
+    },
+    {
+      "id": "zh_q3",
+      "text": "创建强密码的正确做法是：",
+      "options": [
+        {"text": "使用生日或电话号码", "correct": false, "feedback": "❌ 这些信息容易被猜到"},
+        {"text": "使用至少12位、包含大小写字母、数字和符号", "correct": true, "feedback": "✅ 正确！这是安全密码的标准做法"},
+        {"text": "在所有网站使用同一个密码", "correct": false, "feedback": "❌ 同一个密码被盗会导致全部账户沦陷"}
+      ]
+    },
+    {
+      "id": "zh_q4",
+      "text": "多因素认证 (MFA) 的作用是：",
+      "options": [
+        {"text": "让你不需要记密码", "correct": false, "feedback": "❌ MFA 不是用来代替密码的"},
+        {"text": "增加额外的身份验证步骤，提高安全性", "correct": true, "feedback": "✅ 正确！MFA 是密码之外的第二道防线"},
+        {"text": "让账户自动登录", "correct": false, "feedback": "❌ MFA 不会让账户自动登录"}
+      ]
+    },
+    {
+      "id": "zh_q5",
+      "text": "以下哪种做法可以减少钓鱼攻击风险？",
+      "options": [
+        {"text": "点击来源不明的短链接", "correct": false, "feedback": "❌ 短链接可能是钓鱼陷阱"},
+        {"text": "用鼠标悬停查看真实网址", "correct": true, "feedback": "✅ 正确！可以提前发现假网址"},
+        {"text": "在邮件中直接输入账号密码", "correct": false, "feedback": "❌ 这是非常危险的做法"}
+      ]
+    },
+    {
+      "id": "zh_q6",
+      "text": "为了保护社交媒体隐私，你应该：",
+      "options": [
+        {"text": "限制隐私设置，不让陌生人查看信息", "correct": true, "feedback": "✅ 正确！这样能减少被攻击的风险"},
+        {"text": "尽可能公开生活细节以增加人气", "correct": false, "feedback": "❌ 过度分享会暴露隐私"},
+        {"text": "发布宠物名字、生日等信息", "correct": false, "feedback": "❌ 这些信息可能成为密码线索"}
+      ]
+    },
+    {
+      "id": "zh_q7",
+      "text": "收到短信通知快递失败并附有链接，你应该：",
+      "options": [
+        {"text": "点击链接填写信息", "correct": false, "feedback": "❌ 可能是短信钓鱼"},
+        {"text": "拨打快递公司官方客服电话确认", "correct": true, "feedback": "✅ 正确！通过官方渠道验证最安全"},
+        {"text": "回复短信提供验证码", "correct": false, "feedback": "❌ 切勿提供验证码"}
+      ]
+    },
+    {
+      "id": "zh_q8",
+      "text": "密码管理器的主要作用是：",
+      "options": [
+        {"text": "帮你记住和生成安全密码", "correct": true, "feedback": "✅ 正确！密码管理器可以安全管理多个账户密码"},
+        {"text": "自动填写所有网站验证码", "correct": false, "feedback": "❌ 验证码一般需要人工输入或 MFA"},
+        {"text": "让你只用一个密码登录所有账户", "correct": false, "feedback": "❌ 这样会增加风险"}
+      ]
+    },
+    {
+      "id": "zh_q9",
+      "text": "以下哪一个是硬件 MFA 设备？",
+      "options": [
+        {"text": "YubiKey", "correct": true, "feedback": "✅ 正确！YubiKey 是一种硬件安全密钥"},
+        {"text": "短信验证码", "correct": false, "feedback": "❌ 短信验证码属于软件方式"},
+        {"text": "密码管理器", "correct": false, "feedback": "❌ 密码管理器不是 MFA 设备"}
+      ]
+    },
+    {
+      "id": "zh_q10",
+      "text": "以下哪项是防范 SIM 卡劫持的做法？",
+      "options": [
+        {"text": "尽量使用 App 认证器而非短信验证码", "correct": true, "feedback": "✅ 正确！App 认证器更安全"},
+        {"text": "经常更换电话号码", "correct": false, "feedback": "❌ 更换号码不一定能防止劫持"},
+        {"text": "把验证码截图发给朋友", "correct": false, "feedback": "❌ 这样会直接泄露验证码"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "questions": [
+    {
+      "id": "zh_q1",
+      "text": "什么是网络诈骗的定义？",
+      "options": [
+        {"text": "通过互联网或电话骗取个人信息或钱财的行为", "correct": true, "feedback": "✅ 正确。网络诈骗是利用互联网或电话进行欺骗以获取个人信息或钱财的行为。"},
+        {"text": "在网上购买商品", "correct": false, "feedback": "❌ 错误。网购本身不是诈骗。"},
+        {"text": "使用社交媒体与朋友交流", "correct": false, "feedback": "❌ 错误。普通的社交活动不是诈骗。"}
+      ]
+    },
+    {
+      "id": "zh_q2",
+      "text": "以下哪一项是网络诈骗常用手法？",
+      "options": [
+        {"text": "冒充政府官员", "correct": true, "feedback": "✅ 正确。诈骗分子常冒充政府人员恐吓受害者。"},
+        {"text": "提供免费的客户服务", "correct": false, "feedback": "❌ 错误。免费服务不一定是诈骗。"},
+        {"text": "通过电子邮件发送节日问候", "correct": false, "feedback": "❌ 错误。普通问候通常与诈骗无关。"}
+      ]
+    },
+    {
+      "id": "zh_q3",
+      "text": "哪类信息不能通过电话或社交媒体分享？",
+      "options": [
+        {"text": "身份证号码", "correct": true, "feedback": "✅ 正确。身份证号码属于敏感信息。"},
+        {"text": "个人爱好", "correct": false, "feedback": "❌ 错误。爱好不是敏感信息。"},
+        {"text": "喜欢的颜色", "correct": false, "feedback": "❌ 错误。喜欢的颜色不会导致身份被盗用。"}
+      ]
+    },
+    {
+      "id": "zh_q4",
+      "text": "接到可疑电话时，第一步应该做什么？",
+      "options": [
+        {"text": "保持冷静并挂断电话", "correct": true, "feedback": "✅ 正确。冷静应对并挂断电话可以避免被骗。"},
+        {"text": "立即提供银行信息", "correct": false, "feedback": "❌ 错误。绝不能随便提供银行信息。"},
+        {"text": "点击对方提供的链接", "correct": false, "feedback": "❌ 错误。链接可能通向诈骗网站。"}
+      ]
+    },
+    {
+      "id": "zh_q5",
+      "text": "什么是伪造来电号码（号码欺骗）的例子？",
+      "options": [
+        {"text": "与银行官方号码非常相似的号码", "correct": true, "feedback": "✅ 正确。诈骗分子会使用相似号码混淆受害者。"},
+        {"text": "你通讯录中存储的号码", "correct": false, "feedback": "❌ 错误。已知号码通常安全。"},
+        {"text": "来自家人的号码", "correct": false, "feedback": "❌ 错误。家人号码很少被用于号码欺骗。"}
+      ]
+    },
+    {
+      "id": "zh_q6",
+      "text": "诈骗电话中使用紧迫语气的目的是什么？",
+      "options": [
+        {"text": "让受害者慌乱并立刻行动", "correct": true, "feedback": "✅ 正确。诈骗分子希望你不经思考就行动。"},
+        {"text": "告诉你一个好消息", "correct": false, "feedback": "❌ 错误。紧迫语气通常不是为了好消息。"},
+        {"text": "提供折扣", "correct": false, "feedback": "❌ 错误。折扣不需要制造恐慌。"}
+      ]
+    },
+    {
+      "id": "zh_q7",
+      "text": "收到带有可疑链接的短信时，最佳做法是什么？",
+      "options": [
+        {"text": "忽略并不要点击", "correct": true, "feedback": "✅ 正确。不要点击可疑链接，它可能是诈骗网站。"},
+        {"text": "立即点击查看", "correct": false, "feedback": "❌ 错误。点击可能会让你陷入危险。"},
+        {"text": "将链接转发给朋友", "correct": false, "feedback": "❌ 错误。不要传播可疑链接。"}
+      ]
+    },
+    {
+      "id": "zh_q8",
+      "text": "如何验证一个投资网站是否真实？",
+      "options": [
+        {"text": "检查域名及官方注册信息", "correct": true, "feedback": "✅ 正确。应检查域名并确认是否在证监会或央行注册。"},
+        {"text": "查看网站的设计", "correct": false, "feedback": "❌ 错误。网站设计容易伪造。"},
+        {"text": "相信正面的用户评价", "correct": false, "feedback": "❌ 错误。评价可能是假的。"}
+      ]
+    },
+    {
+      "id": "zh_q9",
+      "text": "以下哪个是虚假网站域名的例子？",
+      "options": [
+        {"text": "maybank2u-login-secure.net", "correct": true, "feedback": "✅ 正确。这个域名可疑，不是Maybank官方域名。"},
+        {"text": "www.maybank2u.com.my", "correct": false, "feedback": "❌ 错误。这是Maybank的官方网站。"},
+        {"text": "www.google.com", "correct": false, "feedback": "❌ 错误。Google不是投资网站。"}
+      ]
+    },
+    {
+      "id": "zh_q10",
+      "text": "为什么没有HTTPS的网站不安全？",
+      "options": [
+        {"text": "信息可能被第三方截取", "correct": true, "feedback": "✅ 正确。HTTPS可以加密传输数据，保护安全。"},
+        {"text": "网页加载会更慢", "correct": false, "feedback": "❌ 错误。速度不是主要问题。"},
+        {"text": "背景颜色会改变", "correct": false, "feedback": "❌ 错误。HTTPS与颜色无关。"}
+      ]
+    },
+    {
+      "id": "zh_q11",
+      "text": "在马来西亚，哪个机构负责监管投资公司注册？",
+      "options": [
+        {"text": "马来西亚证券委员会（SC）", "correct": true, "feedback": "✅ 正确。证券委员会负责监管投资公司。"},
+        {"text": "旅游部", "correct": false, "feedback": "❌ 错误。旅游部与投资监管无关。"},
+        {"text": "马来西亚足球协会", "correct": false, "feedback": "❌ 错误。足球协会不负责投资事务。"}
+      ]
+    },
+    {
+      "id": "zh_q12",
+      "text": "如果怀疑某投资网站有问题，应该怎么办？",
+      "options": [
+        {"text": "立即停止所有交易", "correct": true, "feedback": "✅ 正确。应马上停止操作以防损失。"},
+        {"text": "继续小额投资", "correct": false, "feedback": "❌ 错误。即使是小额也有风险。"},
+        {"text": "联系对方确认", "correct": false, "feedback": "❌ 错误。不要联系非官方号码。"}
+      ]
+    },
+    {
+      "id": "zh_q13",
+      "text": "为什么网络上的好评不能完全相信？",
+      "options": [
+        {"text": "因为它们可能是假的", "correct": true, "feedback": "✅ 正确。评论可能被虚构出来。"},
+        {"text": "因为它们总是真的", "correct": false, "feedback": "❌ 错误。并非所有评论都是真的。"},
+        {"text": "因为评论太长", "correct": false, "feedback": "❌ 错误。评论长短与真实性无关。"}
+      ]
+    },
+    {
+      "id": "zh_q14",
+      "text": "如果接到涉及犯罪威胁的电话，应该怎么做？",
+      "options": [
+        {"text": "挂断并通过官方渠道核实", "correct": true, "feedback": "✅ 正确。只通过官方号码进行确认。"},
+        {"text": "提供所有信息以避免麻烦", "correct": false, "feedback": "❌ 错误。不要透露敏感信息。"},
+        {"text": "不加思考地照做", "correct": false, "feedback": "❌ 错误。这正是诈骗分子想要的。"}
+      ]
+    },
+    {
+      "id": "zh_q15",
+      "text": "向马来西亚网络安全机构报告诈骗的热线是多少？",
+      "options": [
+        {"text": "+603-8800 7999", "correct": true, "feedback": "✅ 正确。这是官方服务热线。"},
+        {"text": "999", "correct": false, "feedback": "❌ 错误。999 是通用紧急号码。"},
+        {"text": "112", "correct": false, "feedback": "❌ 错误。112 是国际紧急号码。"}
+      ]
+    }
+  ]
+}

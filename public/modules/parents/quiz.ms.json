@@ -1,0 +1,94 @@
+{
+  "questions": [
+    {
+      "id": "ms_q1",
+      "text": "Untuk melindungi privasi anak di media sosial, ibu bapa patut:",
+      "options": [
+        {"text": "Tetapkan akaun anak kepada 'peribadi'", "correct": true, "feedback": "✅ Betul! Akaun peribadi mengurangkan pendedahan kepada orang asing."},
+        {"text": "Benarkan semua orang melihat dan komen", "correct": false, "feedback": "❌ Ini meningkatkan risiko keselamatan."},
+        {"text": "Kongsi lokasi anak secara umum", "correct": false, "feedback": "❌ Perkongsian lokasi boleh membahayakan keselamatan."}
+      ]
+    },
+    {
+      "id": "ms_q2",
+      "text": "Antara berikut, yang manakah risiko perkongsian akaun?",
+      "options": [
+        {"text": "Rakan mungkin menyalahgunakan akaun", "correct": true, "feedback": "✅ Betul! Orang lain boleh memuat naik kandungan berbahaya."},
+        {"text": "Akaun menjadi lebih selamat", "correct": false, "feedback": "❌ Perkongsian sentiasa mengurangkan keselamatan."},
+        {"text": "Boleh menambah pengikut", "correct": false, "feedback": "❌ Lebih ramai pengikut tidak mengurangkan risiko."}
+      ]
+    },
+    {
+      "id": "ms_q3",
+      "text": "Cara terbaik untuk mengelakkan anak daripada ditipu dalam permainan atas talian ialah:",
+      "options": [
+        {"text": "Beritahu mereka supaya tidak percaya tawaran 'skin percuma'", "correct": true, "feedback": "✅ Betul! Ini adalah taktik penipuan biasa."},
+        {"text": "Benarkan mereka berdagang dengan orang asing", "correct": false, "feedback": "❌ Ini boleh mendedahkan akaun dan wang."},
+        {"text": "Kongsi maklumat pembayaran secara terbuka", "correct": false, "feedback": "❌ Ini sangat berbahaya."}
+      ]
+    },
+    {
+      "id": "ms_q4",
+      "text": "Antara berikut, yang manakah langkah keselamatan yang patut diambil oleh ibu bapa?",
+      "options": [
+        {"text": "Aktifkan pengesahan pembayaran", "correct": true, "feedback": "✅ Betul! Ia mencegah pembelian tanpa kebenaran."},
+        {"text": "Matikan semua tetapan keselamatan", "correct": false, "feedback": "❌ Ini meningkatkan risiko."},
+        {"text": "Benarkan akses internet tanpa had", "correct": false, "feedback": "❌ Akses tanpa kawalan adalah berbahaya."}
+      ]
+    },
+    {
+      "id": "ms_q5",
+      "text": "Apabila anak menerima permintaan rakan daripada orang asing, mereka patut:",
+      "options": [
+        {"text": "Terima segera", "correct": false, "feedback": "❌ Ini boleh membawa kepada penipuan atau gangguan."},
+        {"text": "Tolak dan beritahu ibu bapa", "correct": true, "feedback": "✅ Betul! Ini adalah pilihan paling selamat."},
+        {"text": "Kongsi maklumat keluarga dahulu", "correct": false, "feedback": "❌ Mendedahkan maklumat peribadi adalah berbahaya."}
+      ]
+    },
+    {
+      "id": "ms_q6",
+      "text": "Kenapa kita patut elakkan memuat naik gambar anak dengan pakaian sekolah?",
+      "options": [
+        {"text": "Ia mungkin mendedahkan lokasi sekolah", "correct": true, "feedback": "✅ Betul! Latar belakang boleh mendedahkan lokasi."},
+        {"text": "Gambar akan kabur", "correct": false, "feedback": "❌ Kekaburan tiada kaitan dengan keselamatan."},
+        {"text": "Ia tidak cantik", "correct": false, "feedback": "❌ Isu rupa tidak berkaitan dengan keselamatan."}
+      ]
+    },
+    {
+      "id": "ms_q7",
+      "text": "Kelebihan ibu bapa menyemak siaran sebelum dimuat naik ialah:",
+      "options": [
+        {"text": "Mengurangkan risiko perkongsian maklumat sensitif", "correct": true, "feedback": "✅ Betul! Ia mencegah kebocoran privasi."},
+        {"text": "Padam semua kandungan", "correct": false, "feedback": "❌ Tujuannya ialah menyaring risiko, bukan memadam semuanya."},
+        {"text": "Mendapat lebih banyak 'likes'", "correct": false, "feedback": "❌ Semakan tiada kaitan dengan bilangan 'likes'."}
+      ]
+    },
+    {
+      "id": "ms_q8",
+      "text": "Satu cara penting untuk mengelakkan penipuan membeli-belah atas talian ialah:",
+      "options": [
+        {"text": "Elakkan klik pautan yang tidak dikenali", "correct": true, "feedback": "✅ Betul! Ini membantu mengelakkan 'phishing'."},
+        {"text": "Beli produk yang sangat murah", "correct": false, "feedback": "❌ Harga terlalu murah sering kali perangkap."},
+        {"text": "Masukkan maklumat bank secara langsung", "correct": false, "feedback": "❌ Jangan sesekali berkongsi maklumat pembayaran secara rawak."}
+      ]
+    },
+    {
+      "id": "ms_q9",
+      "text": "Jika anak menerima mesej 'bungkusan tidak dihantar' bersama pautan, mereka patut:",
+      "options": [
+        {"text": "Klik pautan dan isi maklumat", "correct": false, "feedback": "❌ Ini mungkin mesej 'phishing'."},
+        {"text": "Hubungi nombor rasmi syarikat kurier", "correct": true, "feedback": "✅ Betul! Sentiasa sahkan melalui saluran rasmi."},
+        {"text": "Hantar kepada rakan untuk mereka klik", "correct": false, "feedback": "❌ Ini menyebarkan risiko."}
+      ]
+    },
+    {
+      "id": "ms_q10",
+      "text": "Kenapa perkhidmatan lokasi anak patut dimatikan dalam aplikasi sosial?",
+      "options": [
+        {"text": "Untuk mengelakkan orang asing mengetahui lokasi mereka", "correct": true, "feedback": "✅ Betul! Ini melindungi privasi."},
+        {"text": "Untuk menjimatkan data mudah alih", "correct": false, "feedback": "❌ Walaupun boleh jimatkan data, sebab utama ialah keselamatan."},
+        {"text": "Supaya mereka tidak dapat mencari rakan", "correct": false, "feedback": "❌ Ini tiada kaitan dengan keselamatan."}
+      ]
+    }
+  ]
+}
