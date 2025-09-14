@@ -38,5 +38,3 @@ The platform uses gamified learning, quizzes, and real community stories to make
 - **Internationalization:** React-i18next (English, Malay, Chinese in the future)  
 - **Auth & Database:** Firebase / Supabase (optional)  
 - **Deployment:** Vercel or Netlify  
-
----
