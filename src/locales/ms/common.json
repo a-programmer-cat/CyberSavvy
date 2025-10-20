@@ -187,5 +187,22 @@
     "dismiss": "Tutup"
   },
   "readMore": "Ketahui Lebih Lanjut",
-  "tags": "Tag"
+  "tags": "Tag",
+  "login-page": {
+    "login-title": "Log Masuk",
+    "email": "E-mel",
+    "password": "Kata Laluan",
+    "loggingIn": "Sedang log masuk...",
+    "loginError": "E-mel atau kata laluan tidak sah.",
+    "logout": "Log Keluar"
+  },
+  "register-page": {
+    "register": "Daftar Akaun",
+    "email": "E-mel",
+    "password": "Kata Laluan",
+    "creatingAccount": "Sedang mencipta akaun...",
+    "registerError": "Pendaftaran gagal. Sila cuba lagi.",
+    "registerSuccess": "Akaun berjaya dicipta!",
+    "welcomeBack": "Selamat kembali"
+  }
 }

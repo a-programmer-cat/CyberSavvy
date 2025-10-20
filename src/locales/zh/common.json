@@ -187,5 +187,22 @@
     "dismiss": "关闭"
   },
   "readMore": "了解更多",
-  "tags": "标签"
+  "tags": "标签",
+  "login-page": {
+    "login-title": "登录",
+    "email": "电子邮箱",
+    "password": "密码",
+    "loggingIn": "正在登录...",
+    "loginError": "邮箱或密码错误。",
+    "logout": "退出登录"
+  },
+  "register-page": {
+    "register": "注册账号",
+    "email": "电子邮箱",
+    "password": "密码",
+    "creatingAccount": "正在创建账号...",
+    "registerError": "注册失败，请重试。",
+    "registerSuccess": "账号创建成功！",
+    "welcomeBack": "欢迎回来"
+  }
 }

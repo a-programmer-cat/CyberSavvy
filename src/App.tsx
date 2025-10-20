@@ -8,6 +8,7 @@ import { CategoryOverview } from './pages/CategoryOverview'
 import { LessonPage } from './pages/LessonPage'
 import { QuizPage } from './pages/QuizPage'
 import { Login } from './pages/Login'
+import { Register } from './pages/Register'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path="/learning/:category/:lessonId" element={<LessonPage />} />
             <Route path="/test/:category" element={<QuizPage />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </main>
         <footer className="bg-gray-800 text-white p-4">

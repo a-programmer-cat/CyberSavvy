@@ -187,5 +187,22 @@
     "dismiss": "Dismiss"
   },
   "readMore": "Read More",
-  "tags": "Tag"
+  "tags": "Tag",
+  "login-page": {
+    "login-title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "loggingIn": "Logging in...",
+    "loginError": "Invalid email or password.",
+    "logout": "Logout"
+  },
+  "register-page": {
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "creatingAccount": "Creating account...",
+    "registerError": "Registration failed. Please try again.",
+    "registerSuccess": "Account created successfully!",
+    "welcomeBack": "Welcome back"
+  }
 }
