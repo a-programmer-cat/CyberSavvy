@@ -194,7 +194,10 @@
     "password": "Kata Laluan",
     "loggingIn": "Sedang log masuk...",
     "loginError": "E-mel atau kata laluan tidak sah.",
-    "logout": "Log Keluar"
+    "logout": "Log Keluar",
+    "google": "Teruskan dengan Google",
+    "hint": "Belum mendaftar?",
+    "create_account": "Cipta akaun"
   },
   "register-page": {
     "register": "Daftar Akaun",

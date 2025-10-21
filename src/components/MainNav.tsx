@@ -1,17 +1,17 @@
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { motion } from 'framer-motion';
-import { 
-  FaHome, 
-  FaGraduationCap, 
-  FaClipboardCheck, 
-  FaBookOpen, 
-  FaQuestionCircle 
+import {
+  FaHome,
+  FaGraduationCap,
+  FaClipboardCheck,
+  FaBookOpen,
+  FaQuestionCircle
 } from 'react-icons/fa';
 
 export const MainNav = () => {
   const { t } = useTranslation();
-  
+
   const navItems = [
     {
       path: "/",
@@ -46,7 +46,7 @@ export const MainNav = () => {
   ];
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

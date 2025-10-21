@@ -1,88 +1,88 @@
 // src/pages/Login.tsx
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../components/FireBase";
 import { useAuth } from "../components/AuthContext";
 
 export const Login = () => {
   const { t } = useTranslation();
   const { user } = useAuth();
-
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
     setLoading(true);
+    setError("");
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      navigate("/dashboard");
     } catch (err: any) {
-      setError(t("login-page.loginError"));
+      setError(err.message);
     } finally {
       setLoading(false);
     }
   };
-
-  const handleLogout = async () => {
-    await signOut(auth);
+  
+  const handleGoogleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      navigate("/dashboard");
+    } catch (err: any) {
+      setError(err.message);
+    }
   };
 
   return (
     <div className="container mx-auto px-4 py-8 bg-bg-dark text-text-main min-h-screen flex flex-col items-center justify-center">
       <div className="bg-bg-card border border-bg-border rounded-lg shadow-lg p-8 max-w-md w-full">
-        {!user ? (
-          <>
-            <h1 className="text-3xl font-bold mb-6 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-gradient-start to-gradient-end">
-              {t("login-page.login-title")}
-            </h1>
+        <h1 className="text-3xl font-bold mb-6 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-gradient-start to-gradient-end">
+          {t('login-page.login-title')}
+        </h1>
+        {error && <p className="text-error mb-3">{error}</p>}
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder={t('login-page.email')}
+            className="w-full mb-4 p-2 border rounded-md text-black"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder={t('login-page.password')}
+            className="w-full mb-4 p-2 border rounded-md text-black"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button
+            type="submit"
+            className="w-full py-2 px-4 mt-4 rounded-md bg-primary hover:bg-primary-hover text-white font-medium transition-colors"
+            disabled={loading}
+          >
+            {loading ? t('login-page.loggingIn') : t('login-page.login-title')}
+          </button>
+        </form>
 
-            <form onSubmit={handleLogin} className="flex flex-col gap-4">
-              <input
-                type="email"
-                placeholder={t("login-page.email") || "Email"}
-                className="w-full p-2 rounded-md border border-bg-border bg-bg-dark text-text-main focus:outline-none focus:ring-2 focus:ring-primary"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+        <button
+          onClick={handleGoogleLogin}
+          className="w-full py-2 px-4 mt-4 rounded-md bg-red-500 hover:bg-red-600 text-white font-medium transition-colors"
+        >
+          {t('login-page.google')}
+        </button>
 
-              <input
-                type="password"
-                placeholder={t("login-page.password") || "Password"}
-                className="w-full p-2 rounded-md border border-bg-border bg-bg-dark text-text-main focus:outline-none focus:ring-2 focus:ring-primary"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full py-2 px-4 mt-2 rounded-md bg-primary hover:bg-primary-hover text-white font-medium transition-colors"
-              >
-                {loading ? t("login-page.loggingIn") || "Logging in..." : t("login-page.login-title")}
-              </button>
-            </form>
-
-            {error && <p className="text-red-400 mt-4">{error}</p>}
-          </>
-        ) : (
-          <div className="text-center">
-            <h1 className="text-2xl font-semibold mb-4">
-              {t("login-page.welcomeBack")}, {user.email}
-            </h1>
-            <button
-              onClick={handleLogout}
-              className="w-full py-2 px-4 rounded-md bg-red-500 hover:bg-red-600 text-white font-medium transition-colors"
-            >
-              {t("login-page.logout")}
-            </button>
-          </div>
-        )}
+        <p className="text-text-secondary mt-4 text-center">
+          {t('login-page.hint')}{" "}
+          <Link to="/register" className="text-primary hover:underline">
+            {t('login-page.create_account')}
+          </Link>
+        </p>
       </div>
     </div>
   );

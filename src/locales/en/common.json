@@ -194,7 +194,10 @@
     "password": "Password",
     "loggingIn": "Logging in...",
     "loginError": "Invalid email or password.",
-    "logout": "Logout"
+    "logout": "Logout",
+    "google": "Continue with Google",
+    "hint": "Haven't registered?",
+    "create_account": "Create an account"
   },
   "register-page": {
     "register": "Register",
