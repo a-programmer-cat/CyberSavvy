@@ -1,43 +1,40 @@
-// src/pages/Register.tsx
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { createUserWithEmailAndPassword, updateProfile, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../components/FireBase";
 import { useTranslation } from "react-i18next";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../components/FireBase";
-import { doc, setDoc } from "firebase/firestore";
 
 export const Register = () => {
   const { t } = useTranslation();
-
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
+  const [name, setName] = useState("");
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
-    setSuccess(false);
     setLoading(true);
-
+    setError("");
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-
-      await setDoc(doc(db, "users", user.uid), {
-        email: user.email,
-        badges: [],
-        progress: {},
-        createdAt: new Date(),
-      });
-
-      setSuccess(true);
-      setEmail("");
-      setPassword("");
+      await updateProfile(userCredential.user, { displayName: name });
+      navigate("/dashboard");
     } catch (err: any) {
-      setError(t("register-page.registerError") || err.message);
+      setError(err.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleGoogleRegister = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      navigate("/dashboard");
+    } catch (err: any) {
+      setError(err.message);
     }
   };
 
@@ -45,39 +42,53 @@ export const Register = () => {
     <div className="container mx-auto px-4 py-8 bg-bg-dark text-text-main min-h-screen flex flex-col items-center justify-center">
       <div className="bg-bg-card border border-bg-border rounded-lg shadow-lg p-8 max-w-md w-full">
         <h1 className="text-3xl font-bold mb-6 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-gradient-start to-gradient-end">
-          {t("register-page.register")}
+          {t('register-page.register')}
         </h1>
-
-        <form onSubmit={handleRegister} className="flex flex-col gap-4">
+        {error && <p className="text-error mb-3">{error}</p>}
+        <form onSubmit={handleRegister}>
+          <input
+            type="text"
+            placeholder={t('register-page.name')}
+            className="w-full mb-4 p-2 border rounded-md text-black"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <input
             type="email"
-            placeholder={t("register-page.email") || "Email"}
-            className="w-full p-2 rounded-md border border-bg-border bg-bg-dark text-text-main focus:outline-none focus:ring-2 focus:ring-primary"
+            placeholder={t('register-page.email')}
+            className="w-full mb-4 p-2 border rounded-md text-black"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
-
           <input
             type="password"
-            placeholder={t("register-page.password") || "Password"}
-            className="w-full p-2 rounded-md border border-bg-border bg-bg-dark text-text-main focus:outline-none focus:ring-2 focus:ring-primary"
+            placeholder={t('register-page.password')}
+            className="w-full mb-4 p-2 border rounded-md text-black"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
-
           <button
             type="submit"
+            className="w-full py-2 px-4 mt-4 rounded-md bg-primary hover:bg-primary-hover text-white font-medium transition-colors"
             disabled={loading}
-            className="w-full py-2 px-4 mt-2 rounded-md bg-primary hover:bg-primary-hover text-white font-medium transition-colors"
           >
-            {loading ? t("register-page.creatingAccount") || "Creating..." : t("register-page.register")}
+            {loading ? t('register-page.creatingAccount') : t('register-page.register')}
           </button>
         </form>
 
-        {error && <p className="text-red-400 mt-4">{error}</p>}
-        {success && <p className="text-green-400 mt-4">{t("register-page.registerSuccess") || "✅ Account created!"}</p>}
+        <button
+          onClick={handleGoogleRegister}
+          className="w-full py-2 px-4 mt-4 rounded-md bg-red-500 hover:bg-red-600 text-white font-medium transition-colors"
+        >
+          {t('register-page.google')}
+        </button>
+
+        <p className="text-text-secondary mt-4 text-center">
+          {t('register-page.hint')}{" "}
+          <Link to="/login" className="text-primary hover:underline">
+            {t('register-page.login')}
+          </Link>
+        </p>
       </div>
     </div>
   );

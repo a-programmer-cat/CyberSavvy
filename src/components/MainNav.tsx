@@ -1,6 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { auth } from "../components/FireBase";
+import { useAuth } from "../components/AuthContext";
+import { useState, useEffect } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 import { motion } from 'framer-motion';
+import { Link, useNavigate } from "react-router-dom";
 import {
   FaHome,
   FaGraduationCap,
@@ -11,6 +16,15 @@ import {
 
 export const MainNav = () => {
   const { t } = useTranslation();
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleLogout = async () => {
+    await signOut(auth);
+    setMenuOpen(false);
+    navigate("/");
+  };
 
   const navItems = [
     {
@@ -90,14 +104,42 @@ export const MainNav = () => {
 
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
-            <motion.a
-              href="/login"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="hidden md:flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors duration-300"
-            >
-              <span>{t('login')}</span>
-            </motion.a>
+          </div>
+
+          <div className="relative">
+            {!user ? (
+              <div className="flex items-center space-x-4">
+                <LanguageSwitcher />
+                <motion.a
+                  href="/login"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="hidden md:flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors duration-300"
+                >
+                  <span>{t('login')}</span>
+                </motion.a>
+              </div>
+            ) : (
+              <div className="relative">
+                <button
+                  onClick={() => setMenuOpen(!menuOpen)}
+                  className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-hover transition"
+                >
+                  {user.displayName || user.email?.split("@")[0] || "User"}
+                </button>
+
+                {menuOpen && (
+                  <div className="absolute right-0 mt-2 w-40 bg-bg-card border border-bg-border rounded-lg shadow-lg">
+                    <button
+                      onClick={handleLogout}
+                      className="w-full text-left px-4 py-2 hover:bg-bg-border rounded-md"
+                    >
+                      {t('nav.logout')}
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
 

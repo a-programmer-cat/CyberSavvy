@@ -180,7 +180,8 @@
     "test": "Cyber Test",
     "stories": "Real Stories",
     "help": "Help & Report",
-    "login": "Login"
+    "login": "Login",
+    "logout": "Logout"
   },
   "alert": {
     "message": "Warning: New phishing scam targeting Malaysian bank users!",
@@ -201,11 +202,20 @@
   },
   "register-page": {
     "register": "Register",
+    "name": "Full Name",
     "email": "Email",
     "password": "Password",
     "creatingAccount": "Creating account...",
     "registerError": "Registration failed. Please try again.",
     "registerSuccess": "Account created successfully!",
-    "welcomeBack": "Welcome back"
+    "google": "Sign up with Google",
+    "welcomeBack": "Welcome back",
+    "hint": "Already have an account?",
+    "login": "Login here"
+  },
+  "dashboard-page": {
+    "welcome": "Welcome,",
+    "message": "You are successfully logged in 🎉",
+    "logout": "Logout"
   }
 }

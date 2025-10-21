@@ -3,12 +3,14 @@ import { Home } from './pages/Home'
 import { LearningHub } from './pages/LearningHub'
 import { CyberTest } from './pages/CyberTest'
 import { RealStories } from './pages/RealStories'
-import  HelpPage  from './pages/HelpPage'
+import HelpPage from './pages/HelpPage'
 import { CategoryOverview } from './pages/CategoryOverview'
 import { LessonPage } from './pages/LessonPage'
 import { QuizPage } from './pages/QuizPage'
 import { Login } from './pages/Login'
 import { Register } from './pages/Register'
+import { Dashboard } from './pages/Dashboard'
+import { PrivateRoute } from "./components/PrivateRoute";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -28,6 +30,11 @@ function App() {
             <Route path="/test/:category" element={<QuizPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/dashboard" element={
+              <PrivateRoute>
+                <Dashboard />
+              </PrivateRoute>}
+            />
           </Routes>
         </main>
         <footer className="bg-gray-800 text-white p-4">

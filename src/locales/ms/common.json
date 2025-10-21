@@ -180,7 +180,8 @@
     "test": "Ujian Cyber",
     "stories": "Kisah Benar",
     "help": "Bantuan & Laporan",
-    "login": "Log Masuk"
+    "login": "Log Masuk",
+    "logout": "Log keluar"
   },
   "alert": {
     "message": "Amaran: Penipuan phishing baru menargetkan pengguna bank Malaysia!",
@@ -200,12 +201,21 @@
     "create_account": "Cipta akaun"
   },
   "register-page": {
-    "register": "Daftar Akaun",
+    "register": "Daftar",
+    "name": "Nama Penuh",
     "email": "E-mel",
     "password": "Kata Laluan",
     "creatingAccount": "Sedang mencipta akaun...",
     "registerError": "Pendaftaran gagal. Sila cuba lagi.",
     "registerSuccess": "Akaun berjaya dicipta!",
-    "welcomeBack": "Selamat kembali"
+    "google": "Daftar dengan Google",
+    "welcomeBack": "Selamat kembali",
+    "hint": "Sudah mempunyai akaun?",
+    "login": "Log masuk di sini"
+  },
+  "dashboard-page": {
+    "welcome": "Selamat datang,",
+    "message": "Anda telah berjaya log masuk 🎉",
+    "logout": "Log keluar"
   }
 }
