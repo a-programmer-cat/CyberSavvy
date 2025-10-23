@@ -217,5 +217,9 @@
     "welcome": "Selamat datang,",
     "message": "Anda telah berjaya log masuk 🎉",
     "logout": "Log keluar"
+  },
+  "chatbot": {
+    "title": "Pembantu AI Celik Siber CyberSavvy 🤖",
+    "hint": "Tanya tentang keselamatan dalam talian..."
   }
 }

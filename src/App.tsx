@@ -12,6 +12,7 @@ import { Register } from './pages/Register'
 import { Dashboard } from './pages/Dashboard'
 import { PrivateRoute } from "./components/PrivateRoute";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ChatBot from "./components/ChatBot";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <p>© 2025 CyberSavvy - All rights reserved</p>
           </div>
         </footer>
+        <ChatBot />
       </div>
     </Router>
   )

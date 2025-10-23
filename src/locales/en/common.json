@@ -217,5 +217,9 @@
     "welcome": "Welcome,",
     "message": "You are successfully logged in 🎉",
     "logout": "Logout"
+  },
+  "chatbot": {
+    "title": "CyberSavvy AI Assistant 🤖",
+    "hint": "Ask about online safety..."
   }
 }
