@@ -26,6 +26,7 @@
     "gsap": "^3.13.0",
     "i18next": "21.10.0",
     "lucide-react": "^0.539.0",
+    "openai": "^6.6.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-i18next": "11.18.6",
