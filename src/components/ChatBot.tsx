@@ -82,7 +82,7 @@ export default function ChatBot() {
       {/* 右下角悬浮按钮 */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed z-[9999] bottom-6 right-6 bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center text-2xl"
+        className="fixed z-[100] bottom-6 right-6 bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center text-2xl"
       >
         💬
       </button>
