@@ -3,7 +3,7 @@ import { AlertBanner } from '../components/AlertBanner';
 import { FaGraduationCap, FaClipboardCheck, FaUserFriends } from 'react-icons/fa';
 import { SplashScreen } from "../components/SplashScreen";
 import { CodeRainBackground } from "../components/CodeRainBackground";
-import { HackerCharacter } from "../components/HackerCharacter";
+//import { HackerCharacter } from "../components/HackerCharacter";
 import { motion } from 'framer-motion';
 import { useState } from "react";
 
@@ -162,7 +162,8 @@ export const Home = () => {
       
       </div>
 
-      {showHacker && <HackerCharacter />}
+      {// showHacker && <HackerCharacter />
+      }
     </div>
   );
 };

@@ -1,28 +1,33 @@
-import { useState, useEffect , useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
 
 export default function ChatBot() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [messages, setMessages] = useState<{ from: string; text: string }[]>([]);
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState<{ role: string; content: string }[]>(
-    () => JSON.parse(localStorage.getItem("chatMessages") || "[]")
-  );
   const [loading, setLoading] = useState(false);
-  const chatEndRef = useRef<HTMLDivElement | null>(null);
+  const [typingText, setTypingText] = useState(""); // AI打字中的文字
 
+  // 从localStorage恢复聊天记录
   useEffect(() => {
-    localStorage.setItem("chatMessages", JSON.stringify(messages));
-    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    const saved = localStorage.getItem("cybersavvy_chat");
+    if (saved) setMessages(JSON.parse(saved));
+  }, []);
+
+  // 保存聊天记录
+  useEffect(() => {
+    localStorage.setItem("cybersavvy_chat", JSON.stringify(messages));
   }, [messages]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
-    const userMessage = { role: "user", content: input };
-    setMessages((prev) => [...prev, userMessage]);
+
+    const userMsg = { from: "user", text: input };
+    setMessages((prev) => [...prev, userMsg]);
     setInput("");
     setLoading(true);
+    setTypingText("");
 
     try {
       const res = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -32,98 +37,126 @@ export default function ChatBot() {
           Authorization: `Bearer ${process.env.REACT_APP_OPENAI_API_KEY}`,
         },
         body: JSON.stringify({
-          model: "gpt-4o-mini",
+          model: "gpt-3.5-turbo",
           messages: [
-            { role: "system", content: "You are a helpful cybersecurity assistant for Malaysians. Give clear, simple, accurate advice on online safety, scams, and privacy." },
-            ...messages,
-            userMessage,
+            {
+              role: "system",
+              content:
+                "You are CyberSavvy AI, a friendly and helpful cybersecurity assistant for Malaysians. Provide clear, practical advice and examples.",
+            },
+            { role: "user", content: input },
           ],
         }),
       });
 
       const data = await res.json();
-      const aiMessage = {
-        role: "assistant",
-        content: data.choices?.[0]?.message?.content || "Sorry, I couldn’t get a response.",
-      };
-      setMessages((prev) => [...prev, aiMessage]);
+      const aiText =
+        data.choices?.[0]?.message?.content ||
+        "⚠️ Sorry, I couldn’t generate a reply.";
+
+      // 打字机效果
+      let i = 0;
+      const interval = setInterval(() => {
+        if (i < aiText.length) {
+          setTypingText((prev) => prev + aiText[i]);
+          i++;
+        } else {
+          clearInterval(interval);
+          setMessages((prev) => [...prev, { from: "ai", text: aiText }]);
+          setTypingText("");
+          setLoading(false);
+        }
+      }, 10);
     } catch (err) {
       console.error(err);
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "⚠️ Connection error. Please try again." },
+        { from: "ai", text: "⚠️ Something went wrong." },
       ]);
-    } finally {
       setLoading(false);
     }
   };
 
   return (
-    <>
-      {/* Floating Button */}
-      <motion.button
+    <div>
+      {/* 右下角悬浮按钮 */}
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg z-50"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        className="fixed z-[9999] bottom-6 right-6 bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center text-2xl"
       >
         💬
-      </motion.button>
+      </button>
 
-      {/* Chat Window */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed bottom-20 right-6 w-80 md:w-96 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl shadow-2xl flex flex-col z-50"
-          >
-            {/* Header */}
-            <div className="flex justify-between items-center px-4 py-2 bg-blue-600 text-white rounded-t-xl">
-              <span className="font-semibold">{t("chatbot.title")}</span>
-              <button onClick={() => setIsOpen(false)}>❌</button>
-            </div>
+      {/* 聊天窗口 */}
+      {isOpen && (
+        <div className="fixed z-[9999] bottom-24 right-6 w-96 bg-white border border-gray-300 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+          {/* Header */}
+          <div className="bg-blue-600 text-white text-lg font-semibold px-4 py-3 flex justify-between items-center">
+            {t("chatbot.title")}
+            <button onClick={() => setIsOpen(false)} className="text-sm">
+              ✖
+            </button>
+          </div>
 
-            {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-96">
-              {messages.map((msg, i) => (
+          {/* Chat area */}
+          <div className="flex-1 p-4 overflow-y-auto space-y-3 max-h-[60vh]">
+            {messages.map((msg, idx) => (
+              <div
+                key={idx}
+                className={`flex items-end ${
+                  msg.from === "user" ? "justify-end" : "justify-start"
+                }`}
+              >
+                {msg.from === "ai" && (
+                  <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold mr-2">
+                    🤖
+                  </div>
+                )}
                 <div
-                  key={i}
-                  className={`p-2 rounded-lg text-sm ${
-                    msg.role === "user"
-                      ? "bg-blue-500 dark:bg-blue-900 self-end text-right"
-                      : "bg-gray-500 dark:bg-gray-700"
+                  className={`p-3 rounded-2xl max-w-[66%] ${
+                    msg.from === "user"
+                      ? "bg-blue-600 text-white rounded-br-none"
+                      : "bg-gray-200 text-gray-800 rounded-bl-none"
                   }`}
                 >
-                  {msg.content}
+                  {msg.text}
                 </div>
-              ))}
-              {loading && <div className="text-gray-400 text-sm">Thinking...</div>}
-            </div>
+              </div>
+            ))}
 
-            {/* Input */}
-            <div className="flex items-center border-t border-gray-300 dark:border-gray-700 p-2">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleSend()}
-                className="flex-1 px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none"
-                placeholder={t("chatbot.hint")}
-              />
-              <button
-                onClick={handleSend}
-                disabled={loading}
-                className="ml-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md"
-              >
+            {/* AI 打字中 */}
+            {typingText && (
+              <div className="flex justify-start items-end space-x-2">
+                <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
+                  🤖
+                </div>
+                <div className="p-2 rounded-2xl max-w-[66%] text-gray-800 bg-gray-200 text-left">
+                  {typingText}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Input area */}
+          <div className="p-3 border-t border-gray-200 flex items-center space-x-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
+              placeholder={t("chatbot.hint")}
+              className="flex-1 border border-gray-300 text-black rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              onClick={handleSend}
+              disabled={loading}
+              className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-4 py-2 text-sm transition"
+            >
                 ➤
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
