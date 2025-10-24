@@ -3,6 +3,7 @@ import { AlertBanner } from '../components/AlertBanner';
 import { FaGraduationCap, FaClipboardCheck, FaUserFriends } from 'react-icons/fa';
 import { SplashScreen } from "../components/SplashScreen";
 import IntroScreen from "../components/IntroScreen";
+import TargetCursor from '../components/TargetCursor';
 import { CodeRainBackground } from "../components/CodeRainBackground";
 //import { HackerCharacter } from "../components/HackerCharacter";
 import { motion } from 'framer-motion';
@@ -64,6 +65,11 @@ export const Home = () => {
         <IntroScreen onFinish={() => setIntroDone(true)} />
       ) : (
         <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
+          <TargetCursor
+            spinDuration={2}
+            hideDefaultCursor={true}
+          />
+
           <div className="absolute inset-0 z-0">
             <CodeRainBackground />
             <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/70 to-gray-900/90"></div>
@@ -116,7 +122,7 @@ export const Home = () => {
                     <p className="text-gray-300 mb-6">{card.description}</p>
                     <a
                       href={card.link}
-                      className={`inline-block ${card.color} text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-md`}
+                      className={`inline-block  cursor-target ${card.color} text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-md`}
                     >
                       {card.buttonText}
                     </a>
@@ -139,7 +145,7 @@ export const Home = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <motion.div
                   whileHover={{ y: -5 }}
-                  className="bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl shadow-sm border border-gray-700"
+                  className="bg-gray-800/80 cursor-target backdrop-blur-sm p-8 rounded-xl shadow-sm border border-gray-700"
                 >
                   <div className="text-blue-400 text-3xl mb-4">📊</div>
                   <h4 className="font-medium text-white mb-3">{t('feature1')}</h4>
@@ -147,7 +153,7 @@ export const Home = () => {
                 </motion.div>
                 <motion.div
                   whileHover={{ y: -5 }}
-                  className="bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl shadow-sm border border-gray-700"
+                  className="bg-gray-800/80 cursor-target backdrop-blur-sm p-8 rounded-xl shadow-sm border border-gray-700"
                 >
                   <div className="text-green-400 text-3xl mb-4">🛡️</div>
                   <h4 className="font-medium text-white mb-3">{t('feature2')}</h4>
@@ -155,7 +161,7 @@ export const Home = () => {
                 </motion.div>
                 <motion.div
                   whileHover={{ y: -5 }}
-                  className="bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl shadow-sm border border-gray-700"
+                  className="bg-gray-800/80 cursor-target backdrop-blur-sm p-8 rounded-xl shadow-sm border border-gray-700"
                 >
                   <div className="text-purple-400 text-3xl mb-4">🌐</div>
                   <h4 className="font-medium text-white mb-3">{t('feature3')}</h4>

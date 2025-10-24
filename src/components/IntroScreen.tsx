@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import TextType from './TextType';
-import DecryptedText from './DecryptedText';
-import TrueFocus from './TrueFocus';
+import TextType from "./TextType";
+import DecryptedText from "./DecryptedText";
+import TrueFocus from "./TrueFocus";
+import ParticleBackground from "./ParticleBackground";
+import ScanLight from "./ScanLight";
 
 interface IPData {
   ip?: string;
@@ -16,42 +18,36 @@ export default function IntroScreen({ onFinish }: { onFinish: () => void }) {
   const [ipData, setIpData] = useState<IPData>({});
   const [deviceInfo, setDeviceInfo] = useState("");
 
-  // 获取 IP 信息
+  // 获取 IP 与设备信息
   useEffect(() => {
     fetch("https://ipapi.co/json/")
       .then((res) => res.json())
       .then((data) => setIpData(data))
       .catch(() => setIpData({ ip: "Unavailable" }));
 
-    // 获取设备信息
     const ua = navigator.userAgent;
     if (/mobile/i.test(ua)) setDeviceInfo("Mobile Device");
     else if (/Mac|Windows|Linux/i.test(ua)) setDeviceInfo("Desktop / Laptop");
     else setDeviceInfo("Unknown Device");
 
-    // 控制步骤时间
+    // 定时切换阶段
     const timers = [
       setTimeout(() => setStep(1), 5000),
-      setTimeout(() => setStep(2), 15000),
+      setTimeout(() => setStep(2), 13000),
       setTimeout(() => setStep(3), 20000),
     ];
     return () => timers.forEach(clearTimeout);
   }, []);
 
-  const infoTexts = 
-    `IP Address: ${ipData?.ip ?? "Loading..."}\n` +
-    `Location: ${ipData?.city
-      ? `${ipData.city}, ${ipData.region}, ${ipData.country_name}`
-      : "Detecting..."}\n` +
-    `ISP: ${ipData?.org ?? "Detecting..."}\n` +
-    `Device: ${deviceInfo ?? "Unknown"}` ;
-
-
   return (
-    <div className="fixed inset-0 z-[200] h-screen w-full flex flex-col items-center justify-center bg-black text-white font-mono overflow-hidden">
+    <div className="fixed inset-0 z-[200] h-screen w-full flex flex-col items-center bg-black justify-center text-white font-mono overflow-hidden">
+      <ParticleBackground />
+      <ScanLight />
+
+    <div className="z-[220] ">
       {/* Step 0: 数据分析提示 */}
       {step === 0 && (
-        <div className="text-3xl font-bold text-left space-y-2">
+        <div className="text-3xl font-bold text-start space-y-2">
           <DecryptedText
             text="Analyzing your data..."
             speed={100}
@@ -62,16 +58,57 @@ export default function IntroScreen({ onFinish }: { onFinish: () => void }) {
         </div>
       )}
 
-      {/* Step 1: 显示真实 IP 信息 */}
+      {/* Step 1: 显示真实 IP 信息（标签固定 + 数据解密） */}
       {step === 1 && (
-        <div className="text-3xl font-bold text-green-400 text-left space-y-2">
-          <TextType
-            text={infoTexts}
-            typingSpeed={50}
-            pauseDuration={1500}
-            showCursor={true}
-            cursorCharacter="|"
-          />
+        <div className="text-2xl font-bold text-green-400 text-left space-y-3">
+          <p>
+            IP Address:{" "}
+            <DecryptedText
+              key={ipData.ip}
+              text={ipData.ip ?? "Loading..."}
+              speed={60}
+              maxIterations={15}
+              revealDirection="start"
+              animateOn="view"
+            />
+          </p>
+          <p>
+            Location:{" "}
+            <DecryptedText
+              key={ipData.city}
+              text={
+                ipData.city
+                  ? `${ipData.city}, ${ipData.region}, ${ipData.country_name}`
+                  : "Detecting..."
+              }
+              speed={60}
+              maxIterations={15}
+              revealDirection="start"
+              animateOn="view"
+            />
+          </p>
+          <p>
+            ISP:{" "}
+            <DecryptedText
+              key={ipData.org}
+              text={ipData.org ?? "Detecting..."}
+              speed={60}
+              maxIterations={15}
+              revealDirection="start"
+              animateOn="view"
+            />
+          </p>
+          <p>
+            Device:{" "}
+            <DecryptedText
+              key={deviceInfo}
+              text={deviceInfo ?? "Unknown"}
+              speed={60}
+              maxIterations={15}
+              revealDirection="start"
+              animateOn="view"
+            />
+          </p>
         </div>
       )}
 
@@ -79,9 +116,12 @@ export default function IntroScreen({ onFinish }: { onFinish: () => void }) {
       {step === 2 && (
         <div className="text-3xl text-red-500 font-bold text-center">
           <TextType
-            text={["You just shared this with a website."]}
-            typingSpeed={50}
-            pauseDuration={1500}
+            text={[
+              "[!] ALERT: Your information is now visible to this site.\n" +
+              "...and yet, you didn’t even click anything."
+            ]}
+            typingSpeed={45}
+            pauseDuration={1200}
             showCursor={true}
             cursorCharacter="|"
           />
@@ -105,6 +145,7 @@ export default function IntroScreen({ onFinish }: { onFinish: () => void }) {
           </button>
         </div>
       )}
+      </div>
     </div>
   );
 }
