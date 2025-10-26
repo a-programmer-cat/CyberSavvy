@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 
 export default function ChatBot() {
@@ -8,6 +8,7 @@ export default function ChatBot() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [typingText, setTypingText] = useState(""); // AI打字中的文字
+  const chatEndRef = useRef<HTMLDivElement | null>(null);
 
   // 从localStorage恢复聊天记录
   useEffect(() => {
@@ -19,6 +20,12 @@ export default function ChatBot() {
   useEffect(() => {
     localStorage.setItem("cybersavvy_chat", JSON.stringify(messages));
   }, [messages]);
+
+  useEffect(() => {
+    if (chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [messages, typingText]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
@@ -42,7 +49,7 @@ export default function ChatBot() {
             {
               role: "system",
               content:
-                "You are CyberSavvy AI, a friendly and helpful cybersecurity assistant for Malaysians. Provide clear, practical advice and examples.",
+                "You are CyberSavvy AI, a friendly and helpful cybersecurity assistant for Malaysians. Provide clear, practical advice and examples. Reply in short, clear, and precise sentences. Avoid long explanations unless asked.",
             },
             { role: "user", content: input },
           ],
@@ -55,18 +62,22 @@ export default function ChatBot() {
         "⚠️ Sorry, I couldn’t generate a reply.";
 
       // 打字机效果
-      let i = 0;
-      const interval = setInterval(() => {
+      let i = -1;
+
+      const typeNext = () => {
         if (i < aiText.length) {
           setTypingText((prev) => prev + aiText[i]);
           i++;
+          setTimeout(typeNext, 20); // 稍微放慢一点以确保空格渲染及时
         } else {
-          clearInterval(interval);
           setMessages((prev) => [...prev, { from: "ai", text: aiText }]);
           setTypingText("");
           setLoading(false);
         }
-      }, 10);
+      };
+
+      setTypingText(""); // 清空旧内容
+      typeNext(); // 启动打字
     } catch (err) {
       console.error(err);
       setMessages((prev) => [
@@ -103,9 +114,8 @@ export default function ChatBot() {
             {messages.map((msg, idx) => (
               <div
                 key={idx}
-                className={`flex items-end ${
-                  msg.from === "user" ? "justify-end" : "justify-start"
-                }`}
+                className={`flex items-end ${msg.from === "user" ? "justify-end" : "justify-start"
+                  }`}
               >
                 {msg.from === "ai" && (
                   <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold mr-2">
@@ -113,18 +123,29 @@ export default function ChatBot() {
                   </div>
                 )}
                 <div
-                  className={`p-3 rounded-2xl max-w-[66%] ${
-                    msg.from === "user"
-                      ? "bg-blue-600 text-white rounded-br-none"
-                      : "bg-gray-200 text-gray-800 rounded-bl-none"
-                  }`}
+                  className={`p-3 rounded-2xl max-w-[66%] ${msg.from === "user"
+                    ? "bg-blue-600 text-white rounded-br-none"
+                    : "bg-gray-200 text-gray-800 rounded-bl-none"
+                    }`}
                 >
                   {msg.text}
+                  <div ref={chatEndRef} />
                 </div>
               </div>
             ))}
 
-            {/* AI 打字中 */}
+            {/* AI Thinking / Typing */}
+            {loading && !typingText && (
+              <div className="flex justify-start items-end space-x-2">
+                <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
+                  🤖
+                </div>
+                <div className="p-2 rounded-2xl max-w-[66%] text-gray-500 bg-gray-200 italic text-left animate-pulse">
+                  Thinking…
+                </div>
+              </div>
+            )}
+
             {typingText && (
               <div className="flex justify-start items-end space-x-2">
                 <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
@@ -152,7 +173,7 @@ export default function ChatBot() {
               disabled={loading}
               className="bg-blue-600 hover:bg-blue-700 text-white rounded-lg px-4 py-2 text-sm transition"
             >
-                ➤
+              ➤
             </button>
           </div>
         </div>
