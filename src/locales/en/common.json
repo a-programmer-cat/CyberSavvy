@@ -1,5 +1,7 @@
 {
   "home": "Home",
+  "skipIntro": "Skip Intro",
+  "replayIntro": "Replay Intro",
   "learning": "Learning Hub",
   "test": "Cyber Test",
   "stories": "Real Stories",
@@ -189,6 +191,15 @@
   },
   "readMore": "Read More",
   "tags": "Tag",
+  "real-stories": {
+    "stories": "Real Scam & Fraud Cases",
+    "comingSoon": "More real stories are coming soon.",
+    "loading": "Loading",
+    "tags": "Tags",
+    "readMore": "Read more",
+    "showMore": "Show more",
+    "showLess": "Show less"
+  },
   "login-page": {
     "login-title": "Login",
     "email": "Email",

@@ -1,5 +1,6 @@
 {
   "home": "Laman Utama",
+  "replayIntro": "Main Semula Pengenalan",
   "learning": "Pusat Pembelajaran",
   "test": "Ujian Siber",
   "stories": "Kisah Benar",
@@ -189,6 +190,15 @@
   },
   "readMore": "Ketahui Lebih Lanjut",
   "tags": "Tag",
+  "real-stories": {
+    "stories": "Kes Sebenar Penipuan & Penyelewengan",
+    "comingSoon": "Lebih banyak kisah sebenar akan datang tidak lama lagi.",
+    "loading": "Memuatkan",
+    "tags": "Tag",
+    "readMore": "Baca lanjut",
+    "showMore": "Tunjuk lebih banyak",
+    "showLess": "Tunjuk kurang"
+  },
   "login-page": {
     "login-title": "Log Masuk",
     "email": "E-mel",

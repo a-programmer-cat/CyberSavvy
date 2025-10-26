@@ -1,5 +1,9 @@
+"use client"
+
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 interface Story {
   id: number
@@ -10,55 +14,99 @@ interface Story {
   summary: string
   content: string
   sources: string[]
+  imageUrl?: string
 }
 
 export const RealStories = () => {
   const { t, i18n } = useTranslation()
   const [stories, setStories] = useState<Story[]>([])
+  const [expandedId, setExpandedId] = useState<number | null>(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const langCode = i18n.language as 'en' | 'zh' | 'ms'
-    fetch(`../../modules/cases/cases.${langCode}.json`)
+    setLoading(true)
+    fetch(`/modules/cases/cases.${langCode}.json`)
       .then(res => res.json())
       .then(data => setStories(data))
       .catch(err => {
         console.error("Failed to load stories:", err)
         setStories([])
       })
+      .finally(() => setLoading(false))
   }, [i18n.language])
 
   return (
-    <div className="container mx-auto px-4 py-8 bg-bg-dark text-text-main min-h-screen">
-      <h1 className="text-3xl font-bold mb-6 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-gradient-start to-gradient-end">
-        {t('stories')}
+    <div className="container mx-auto px-4 py-10 bg-bg-dark text-text-main min-h-screen">
+      <h1 className="text-3xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-gradient-start to-gradient-end">
+        {t('real-stories.stories')}
       </h1>
-      {stories.length === 0 ? (
-        <p className="text-text-secondary">{t('comingSoon')}</p>
+
+      {loading ? (
+        <p className="text-center text-text-secondary animate-pulse">
+          {t('real-stories.loading')}...
+        </p>
+      ) : stories.length === 0 ? (
+        <p className="text-center text-text-secondary">{t('real-stories.comingSoon')}</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {stories.map(story => (
-            <div
+            <motion.div
               key={story.id}
-              className="bg-bg-card border border-bg-border p-4 rounded-lg shadow hover:shadow-lg transition"
+              layout
+              className="bg-bg-card border border-bg-border rounded-xl p-6 shadow hover:shadow-xl transition-all duration-300"
             >
-              <h2 className="text-xl font-semibold mb-2 text-primary">
+              {story.imageUrl && (
+                <img
+                  src={story.imageUrl}
+                  alt={story.title}
+                  className="rounded-lg mb-4 w-full h-48 object-cover"
+                />
+              )}
+              <h2 className="text-xl font-semibold text-primary mb-2">
                 {story.title}
               </h2>
-              <p className="text-text-secondary mb-2">
-                {story.summary}
+              <p className="text-sm text-text-secondary mb-1">
+                📅 {story.date} | 💸 {story.loss}
               </p>
-              <p className="text-sm text-text-secondary">
-                {t('tags')}: {(story.tags || []).join(', ')}
+              <div className="flex flex-wrap gap-2 mb-3">
+                {(story.tags || []).map(tag => (
+                  <span
+                    key={tag}
+                    className="text-xs bg-gradient-to-r from-gradient-start to-gradient-end text-white px-2 py-1 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-text-secondary mb-3">
+                {expandedId === story.id ? story.content : story.summary}
               </p>
-              <a
-                href={story.sources?.[0]}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary-hover underline text-sm"
+
+              <div className="flex flex-col gap-2">
+                {story.sources?.slice(0, 3).map((src, index) => (
+                  <a
+                    key={index}
+                    href={src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-hover text-sm underline flex items-center gap-1"
+                  >
+                    {t('real-stories.readMore')} <FaExternalLinkAlt size={12} />
+                  </a>
+                ))}
+              </div>
+
+              <button
+                onClick={() =>
+                  setExpandedId(expandedId === story.id ? null : story.id)
+                }
+                className="mt-4 text-sm text-primary hover:text-primary-hover underline"
               >
-                {t('readMore')}
-              </a>
-            </div>
+                {expandedId === story.id ? t('real-stories.showLess') : t('real-stories.showMore')}
+              </button>
+            </motion.div>
           ))}
         </div>
       )}

@@ -1,5 +1,6 @@
 {
   "home": "首页",
+  "replayIntro": "重播开场动画",
   "learning": "学习中心",
   "test": "网络安全测试",
   "stories": "真实案例",
@@ -189,6 +190,15 @@
   },
   "readMore": "了解更多",
   "tags": "标签",
+  "real-stories": {
+    "stories": "真实诈骗与欺诈案例",
+    "comingSoon": "更多真实案例即将上线。",
+    "loading": "加载中",
+    "tags": "标签",
+    "readMore": "阅读更多",
+    "showMore": "展开更多",
+    "showLess": "收起"
+  },
   "login-page": {
     "login-title": "登录",
     "email": "电子邮箱",

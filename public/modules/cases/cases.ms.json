@@ -1,106 +1,103 @@
 [
   {
     "id": 1,
-    "title": "Skandal 1MDB (1Malaysia Development Berhad)",
+    "title": "Skandal 1Malaysia Development Berhad (1MDB)",
     "tags": ["Penipuan kewangan berskala besar", "Rasuah", "Pengubahan wang haram antarabangsa"],
-    "date": "2009-2023",
-    "loss": "Berbilion USD",
-    "summary": "Kes penyelewengan dan pengubahan wang haram besar-besaran melibatkan dana kekayaan negara Malaysia 1MDB, yang dikaitkan dengan tokoh politik dan perniagaan berprofil tinggi di dalam dan luar negara.",
-    "content": "Skandal 1MDB melibatkan berbilion dolar yang disalahgunakan daripada dana kekayaan negara Malaysia, melibatkan bekas Perdana Menteri, pegawai kanan, bank pelaburan, dan entiti luar pesisir. Skandal ini berlangsung selama bertahun-tahun: dari 2009 hingga 2014, transaksi dan pinjaman mencurigakan menimbulkan kebimbangan; pada 2015, siasatan antarabangsa bermula; antara 2018–2020, pelbagai keputusan mahkamah dan penyelesaian berlaku; dari 2020 hingga 2023, terdapat sabitan dan pemulihan aset. Jabatan Kehakiman AS dan beberapa negara lain terlibat dalam siasatan selari. Skandal ini memberi kesan mendalam terhadap politik dan kewangan Malaysia.",
+    "date": "2009-2018",
+    "loss": "Berbilion dolar AS",
+    "summary": "Dana berdaulat 1MDB diseleweng secara sistematik melalui rangkaian syarikat palsu antarabangsa, melibatkan pegawai kanan Malaysia dan bank-bank global.",
+    "content": "Antara 2009 hingga 2014, 1MDB mengumpul hutang dan melabur, tetapi dana tersebut akhirnya dikesan dialihkan ke akaun luar pesisir. Pada 2015, siasatan media mendedahkan penyelewengan ini, dan tindakan undang-undang antarabangsa bermula pada 2018. Skandal ini menunjukkan kelemahan dalam tadbir urus dan kawalan pengubahan wang haram.",
     "sources": [
-      "https://www.channelnewsasia.com/news/1mdb-timeline",
-      "https://www.aljazeera.com/news/1mdb-case"
+      "https://www.learnsignal.com/blog/1mdb-scandal-guide-financial-fraud-malaysia",
+      "https://www.imd.org/research-knowledge/finance/articles/swiss-bank-was-toppled-by-a-financial-scandal-in-malaysia/"
     ]
   },
   {
     "id": 2,
-    "title": "Gelombang Penipuan Telefon ‘Macau Scam’",
+    "title": "Penipuan Telefon 'Macau Scam' di Malaysia",
     "tags": ["Penipuan telefon", "Penyamaran pihak berkuasa", "Kejuruteraan sosial"],
-    "date": "Berkelanjutan",
-    "loss": "Sehingga ratusan ribu MYR setiap kes",
-    "summary": "Penipu menyamar sebagai bank, pihak berkuasa atau syarikat kurier untuk menakut-nakutkan mangsa supaya memindahkan wang ke 'akaun selamat'.",
-    "content": "‘Macau Scam’ ialah penipuan telefon biasa di Malaysia di mana penipu menyamar sebagai wakil bank, pendakwa raya, pihak berkuasa, atau syarikat kurier. Mereka menggunakan ugutan dan rasa tergesa-gesa untuk memaksa mangsa memindahkan wang, memberikan OTP, atau memasukkan wang ke 'akaun selamat'. Teknik termasuk pemalsuan ID pemanggil, tekanan psikologi, dan kerjasama dengan pusat panggilan penipuan rentas sempadan. Satu kes boleh melibatkan kerugian sehingga ratusan ribu ringgit.",
+    "date": "Berterusan",
+    "loss": "Ratusan ribu hingga berjuta MYR bagi setiap kes",
+    "summary": "Macau Scam melibatkan pemanggil yang menyamar sebagai syarikat kurier, polis, atau bank untuk menakut-nakutkan mangsa supaya memindahkan wang atau kod OTP ke akaun kononnya selamat.",
+    "content": "Di Malaysia, Macau Scam muncul melalui panggilan atau mesej palsu, di mana mangsa diberitahu mereka disiasat atau mempunyai akaun mencurigakan. Mangsa kemudiannya diarahkan memindahkan wang ke akaun sindiket. Contohnya, seorang petani di Pahang kehilangan kira-kira RM792,669 selepas menerima panggilan sebegini.",
     "sources": [
-      "https://www.astroawani.com/berita-malaysia/macau-scam",
-      "https://www.thestar.com.my/news/nation/2023/..."
+      "https://international.astroawani.com/malaysia-news/macau-scam-all-you-need-to-know-263044",
+      "https://international.astroawani.com/malaysia-news/macau-scam-vegetable-farmer-loses-almost-rm800000-434149"
     ]
   },
   {
     "id": 3,
-    "title": "Warga Malaysia Diperangkap di Pusat Penipuan Peru (2023)",
-    "tags": ["Pemerdagangan manusia", "Pusat penipuan rentas sempadan", "Buruh paksa"],
-    "date": "2023-10",
-    "loss": "Tidak didedahkan (melibatkan ramai mangsa)",
-    "summary": "43 rakyat Malaysia diperdagangkan ke Peru dan dipaksa terlibat dalam penipuan telefon serta dalam talian sebelum diselamatkan oleh polis.",
-    "content": "Pada Oktober 2023, polis Peru menyelamatkan 43 rakyat Malaysia yang dipaksa menyertai penipuan telefon dan dalam talian berhampiran Lima. Kebanyakan mangsa terperangkap melalui tawaran pekerjaan luar negara tetapi kemudiannya dikurung dan dipaksa membuat panggilan penipuan atau menghantar mesej palsu. Mangsa berumur antara 18–36 tahun, termasuk beberapa bawah umur. Kes ini menarik perhatian terhadap sindiket penipuan rentas sempadan dan rangkaian pemerdagangan manusia. Kementerian Luar Negeri dan polis Malaysia membantu dalam pemulangan serta siasatan.",
+    "title": "Penipuan Pelaburan Kripto di Malaysia (2023-2024)",
+    "tags": ["Penipuan kripto", "Platform pelaburan palsu", "Penipuan kewangan"],
+    "date": "2023-2024",
+    "loss": "Jutaan MYR",
+    "summary": "Pihak berkuasa Malaysia menahan suspek yang terlibat dalam platform pelaburan kripto palsu yang menjanjikan pulangan tinggi tetapi mencuri dana dan mencucinya melalui blockchain.",
+    "content": "Pada awal 2024, Polis Diraja Malaysia menahan tiga lelaki kerana menipu lebih AS$2.5 juta melalui skim pelaburan kripto. Antara 2019-2023, lebih 5,500 kes dilaporkan dengan kerugian sekitar RM417 juta.",
     "sources": [
-      "https://apnews.com/article/peru-malaysia-scam-rescue",
-      "https://www.theguardian.com/world/2023/..."
+      "https://www.trmlabs.com/resources/blog/malaysian-police-make-arrests-in-cryptocurrency-fraud-scheme",
+      "https://www.tookitaki.com/afc-thoughts/fraud-cases-in-malaysia"
     ]
   },
   {
     "id": 4,
-    "title": "Penipuan Percintaan & Pelaburan ‘Pig-Butchering’",
-    "tags": ["Penipuan percintaan", "Penipuan pelaburan", "Kejuruteraan sosial jangka panjang"],
-    "date": "Semakin berleluasa",
-    "loss": "Sehingga berjuta MYR setiap kes",
-    "summary": "Penipu membina hubungan romantik melalui platform temu janji dan memujuk mangsa melabur dalam platform palsu untuk mencuri wang dalam jumlah besar.",
-    "content": "Penipuan ‘pig-butchering’ adalah kaedah penipuan di mana penipu mula-mula membina kepercayaan jangka panjang, selalunya melalui aplikasi temu janji atau platform sosial, sebelum membimbing mangsa melabur dalam platform pelaburan palsu. Penipu menggunakan rekod dagangan palsu, pulangan pelaburan rekaan, dan nasihat pakar palsu untuk meyakinkan mangsa bahawa pelaburan itu sah. Sesetengah kes dikaitkan dengan pusat penipuan rentas sempadan dan pemerdagangan manusia, menjadikan siasatan serta pemulihan dana lebih sukar.",
+    "title": "Rakyat Malaysia Dipaksa Bekerja di Pusat Scam di Peru (2023)",
+    "tags": ["Pemerdagangan manusia", "Pusat scam rentas sempadan", "Buruh paksa"],
+    "date": "2023-10",
+    "loss": "Tidak dinyatakan (ramai mangsa)",
+    "summary": "Sekurang-kurangnya 43 rakyat Malaysia diperdagangkan ke Peru dan dipaksa bekerja di pusat panggilan scam sebelum diselamatkan oleh polis.",
+    "content": "Pada Oktober 2023, polis Peru menyerbu sebuah rumah di La Molina, Lima, dan menyelamatkan 43 warga Malaysia berusia antara 18 hingga 36 tahun. Mereka ditipu dengan tawaran kerja palsu dan dipaksa menjalankan panggilan scam. Kes ini menonjolkan kaitan antara jenayah terancang rentas sempadan, pemerdagangan manusia dan penipuan dalam talian.",
     "sources": [
-      "https://www.scmp.com/news/asia/southeast-asia/article/...",
-      "https://www.straitstimes.com/asia/se-asia/..."
+      "https://apnews.com/article/067a8dc748019ecdeb960b69c5e2ad54",
+      "https://apnews.com/article/91e7682024cb599b242cb81793cb68df"
     ]
   },
   {
     "id": 5,
-    "title": "Penipuan Platform Pelaburan Kripto",
-    "tags": ["Penipuan kripto", "Platform dagangan palsu", "Penipuan kewangan"],
-    "date": "Beberapa tahun kebelakangan ini",
-    "loss": "Puluhan ribu hingga berjuta USD",
-    "summary": "Penipu menyamar sebagai platform pelaburan atau bursa kripto, memujuk pelaburan dan memindahkan dana secara haram; beberapa suspek ditangkap di Malaysia.",
-    "content": "Dalam beberapa tahun kebelakangan ini, polis Malaysia telah membongkar banyak penipuan yang menggunakan Bitcoin atau mata wang kripto lain, melibatkan antara muka dagangan palsu, khidmat pelanggan palsu, dan saluran pengubahan wang haram untuk mencuri dana. Pihak berkuasa sering bekerjasama dengan firma forensik blockchain untuk menjejak wang yang dicuri. Mangsa terdiri daripada pelbagai peringkat umur, dan jumlah kerugian berbeza-beza.",
+    "title": "Serbuan Besar Pusat Panggilan Scam di Bangsar South (2025)",
+    "tags": ["Serbuan pusat panggilan", "Pembongkaran sindiket", "Penipuan rentas negara"],
+    "date": "2025-08",
+    "loss": "Dianggarkan ratusan juta MYR (siasatan berterusan)",
+    "summary": "Polis Malaysia menjalankan serbuan terbesar terhadap pusat panggilan scam di Bangsar South, Kuala Lumpur, dan menahan lebih 400 individu pada Ogos 2025.",
+    "content": "Bangunan lima tingkat itu menempatkan lebih 400 pekerja yang menjalankan operasi scam antarabangsa. Kes ini menunjukkan skala besar penipuan yang kini beroperasi di Malaysia dan dikaitkan dengan sindiket fintech global.",
     "sources": [
-      "https://cointelegraph.com/news/malaysia-crypto-scam",
-      "https://www.trmlabs.com/post/crypto-crime-malaysia"
+      "https://www.tookitaki.com/blog/busted-in-bangsar-south-malaysia-scam-call-centre-raid"
     ]
   },
   {
     "id": 6,
-    "title": "Sindiket Penipuan Rentas Sempadan Ditumpaskan di Malaysia",
-    "tags": ["Penipuan rentas sempadan", "Serbuan polis", "Pembubaran sindiket"],
-    "date": "Pelbagai operasi",
-    "loss": "Tidak dinyatakan",
-    "summary": "Polis menumpaskan beberapa pusat sindiket penipuan, menangkap warga tempatan dan asing, serta merampas peralatan dan dokumen palsu.",
-    "content": "Polis Malaysia telah menjalankan beberapa operasi khas untuk membubarkan pusat penipuan di negara ini, termasuk penipuan telefon, pelaburan, dan kripto. Barangan yang dirampas termasuk telefon bimbit, kad SIM, komputer, dan dokumen palsu. Operasi ini sering melibatkan kerjasama dengan imigresen, kementerian luar, dan Interpol untuk membanteras rangkaian penipuan antarabangsa.",
+    "title": "Laporan Kajian & Trend tentang Tadbir Urus Scam di Malaysia (2024-2025)",
+    "tags": ["Penyelidikan", "Cadangan dasar", "Analisis trend"],
+    "date": "2024-2025",
+    "loss": "Tiada (laporan penyelidikan)",
+    "summary": "Institusi akademik dan kerajaan menunjukkan bahawa scam semakin rentas sempadan, didorong oleh teknologi (termasuk AI), dan memerlukan pengukuhan dasar serta kesedaran awam.",
+    "content": "Kajian menunjukkan bahawa scam kini menyumbang sebahagian besar kes penipuan di Malaysia. Satu laporan menganggarkan kerugian sekitar RM54.02 bilion pada 2024, bersamaan 3% KDNK negara. Ia menekankan perlunya reformasi kawal selia dan kerjasama antara sektor telekomunikasi serta fintech.",
     "sources": [
-      "https://cointelegraph.com/news/malaysia-raid-scam-syndicate",
-      "https://www.trmlabs.com/post/scam-network-malaysia"
+      "https://penanginstitute.org/publications/issues/combating-scam-syndicates-in-malaysia-and-southeast-asia/",
+      "https://www.tookitaki.com/afc-thoughts/fraud-cases-in-malaysia"
     ]
   },
   {
     "id": 7,
-    "title": "Laporan Penyelidikan Trend Penipuan & Tadbir Urus",
-    "tags": ["Penyelidikan", "Cadangan dasar", "Analisis trend"],
-    "date": "Berkelanjutan",
-    "loss": "Tiada kerugian langsung",
-    "summary": "Institusi akademik dan kerajaan menerbitkan laporan yang menganalisis trend penipuan dan mencadangkan strategi pencegahan.",
-    "content": "Laporan penyelidikan oleh institusi akademik, badan pemikir, dan organisasi antarabangsa mendedahkan bahawa kaedah penipuan semakin terancang, rentas sempadan, dan berasaskan teknologi (termasuk deepfake dan automasi media sosial). Cadangan termasuk memperkukuh kerjasama undang-undang antarabangsa, mengetatkan peraturan telekomunikasi dan kewangan, serta meningkatkan kesedaran awam.",
+    "title": "Pemulihan Aset Rentas Sempadan & Kerjasama Antarabangsa (Kes 1MDB)",
+    "tags": ["Pemulihan aset", "Kerjasama kehakiman", "Jenayah antarabangsa"],
+    "date": "Berterusan",
+    "loss": "Berbeza mengikut kes",
+    "summary": "Kes besar seperti 1MDB menunjukkan bahawa pemulihan aset memerlukan kerjasama pelbagai negara dan proses undang-undang yang panjang.",
+    "content": "Kes 1MDB melibatkan negara seperti AS, Switzerland, dan Singapura. Tindakan termasuk saman sivil, pembekuan aset, dan pemulangan wang. Ia menyoroti cabaran rumit dalam menangani jenayah kewangan berskala besar.",
     "sources": [
-      "https://www.csis.org/analysis/se-asia-scam-trends",
-      "https://www.unodc.org/southeast-asia-scam-report"
+      "https://www.learnsignal.com/blog/1mdb-scandal-guide-financial-fraud-malaysia"
     ]
   },
   {
     "id": 8,
-    "title": "Kerjasama Antarabangsa & Pemulihan Aset",
-    "tags": ["Pemburuan rentas sempadan", "Pemulihan aset", "Kerjasama kehakiman"],
-    "date": "Berkelanjutan",
-    "loss": "Berbeza mengikut kes",
-    "summary": "Kes penipuan besar dan jenayah kewangan sering memerlukan kerjasama antarabangsa untuk memburu suspek dan memulihkan aset.",
-    "content": "Kes berprofil tinggi seperti 1MDB menunjukkan bahawa tiada satu negara pun mampu menangani penipuan atau jenayah kewangan rentas sempadan berskala besar secara bersendirian. Pemulihan aset melibatkan bantuan undang-undang pelbagai negara, prosiding sivil dan jenayah selari; beberapa suspek utama masih bebas. Topik ini sesuai untuk kemas kini berterusan mengenai perkembangan kes besar.",
+    "title": "Penipuan AI Suara & Deepfake Semakin Meningkat di Malaysia (2025)",
+    "tags": ["Penipuan AI", "Penipuan suara klon", "Penipuan teknologi"],
+    "date": "2025",
+    "loss": "Beribu hingga berpuluh ribu MYR setiap kes (meningkat)",
+    "summary": "Scam menggunakan suara klon AI kini meniru majikan atau individu dipercayai untuk menipu mangsa memindahkan wang.",
+    "content": "Pada Ogos 2025, Malay Mail melaporkan seorang wanita di Selangor kehilangan RM5,000 selepas penipu menggunakan suara majikannya yang diklon dengan AI melalui telefon/WhatsApp. Ini menunjukkan trend baharu penipuan berasaskan AI di Malaysia.",
     "sources": [
-      "https://www.reuters.com/world/asia-pacific/malaysia-asset-recovery-1mdb",
-      "https://www.theguardian.com/world/1mdb-recovery"
+      "https://www.malaymail.com/news/malaysia/2025/08/04/ai-scams-are-getting-real-here-are-the-cases-happening-in-malaysia-that-you-should-know-about/183459"
     ]
   }
 ]

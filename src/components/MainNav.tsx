@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { auth } from "../components/FireBase";
 import { useAuth } from "../components/AuthContext";
-import { useState, useEffect } from "react";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useState } from "react";
+import { signOut } from "firebase/auth";
 import { motion } from 'framer-motion';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
   FaHome,
   FaGraduationCap,
@@ -18,6 +18,7 @@ export const MainNav = () => {
   const { t } = useTranslation();
   const { user } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation(); // ✅ 获取当前路径
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = async () => {
@@ -68,21 +69,31 @@ export const MainNav = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
+          {/* ✅ 桌面导航 */}
           <div className="hidden md:flex space-x-1">
-            {navItems.map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.path}
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${item.color}`}
-              >
-                {item.icon}
-                <span>{item.name}</span>
-              </motion.a>
-            ))}
+            {navItems.map((item, index) => {
+              const isActive = location.pathname === item.path; // ✅ 判断当前是否为激活页
+              return (
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Link
+                    to={item.path}
+                    className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 hover:scale-[1.02] 
+                      ${item.color} 
+                      ${isActive ? 'bg-gray-700/60 border border-gray-600 shadow-inner' : ''}`}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
 
+          {/* ✅ 移动端菜单按钮 */}
           <div className="md:hidden flex items-center">
             <button className="p-2 rounded-md hover:bg-gray-700 focus:outline-none">
               <svg
@@ -102,6 +113,7 @@ export const MainNav = () => {
             </button>
           </div>
 
+          {/* ✅ 用户与语言切换 */}
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
           </div>
@@ -110,14 +122,14 @@ export const MainNav = () => {
             {!user ? (
               <div className="flex items-center space-x-4">
                 <LanguageSwitcher />
-                <motion.a
-                  href="/login"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="hidden md:flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors duration-300"
-                >
-                  <span>{t('login')}</span>
-                </motion.a>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    to="/login"
+                    className="hidden md:flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md"
+                  >
+                    <span>{t('login')}</span>
+                  </Link>
+                </motion.div>
               </div>
             ) : (
               <div className="relative">
@@ -143,18 +155,24 @@ export const MainNav = () => {
           </div>
         </div>
 
+        {/* ✅ 移动端菜单 */}
         <div className="md:hidden pb-4">
           <div className="flex flex-col space-y-2">
-            {navItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.path}
-                className={`flex items-center px-4 py-3 rounded-md transition-colors ${item.color}`}
-              >
-                {item.icon}
-                <span className="ml-3">{item.name}</span>
-              </a>
-            ))}
+            {navItems.map((item, index) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={index}
+                  to={item.path}
+                  className={`flex items-center px-4 py-3 rounded-md transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 hover:scale-[1.02] 
+                    ${item.color} 
+                    ${isActive ? 'bg-gray-700/60 border border-gray-600 shadow-inner' : ''}`}
+                >
+                  {item.icon}
+                  <span className="ml-3">{item.name}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

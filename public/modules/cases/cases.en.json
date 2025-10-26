@@ -1,106 +1,103 @@
 [
   {
     "id": 1,
-    "title": "1MDB (1Malaysia Development Berhad) Scandal",
+    "title": "1Malaysia Development Berhad (1MDB) Scandal",
     "tags": ["Large-scale financial fraud", "Corruption", "International money laundering"],
-    "date": "2009-2023",
+    "date": "2009-2018",
     "loss": "Billions of USD",
-    "summary": "A massive embezzlement and money laundering case involving Malaysia’s sovereign wealth fund 1MDB, linked to high-ranking political and business figures domestically and abroad.",
-    "content": "The 1MDB scandal involved billions of dollars misappropriated from Malaysia’s sovereign wealth fund, implicating former Prime Minister, top officials, investment banks, and offshore entities. The scandal spanned years: from 2009 to 2014, questionable transactions and borrowing raised concerns; in 2015, international investigations began; between 2018–2020, various court rulings and settlements occurred; and from 2020 to 2023, convictions and asset recoveries followed. The U.S. Department of Justice and multiple countries participated in parallel investigations. The scandal had deep impacts on Malaysia’s politics and finance.",
+    "summary": "The sovereign fund 1Malaysia Development Berhad (1MDB) was systematically embezzled via a global web of shell companies, implicating top Malaysian officials and international banks.",
+    "content": "Between 2009 and 2014, 1MDB raised debt and made investments which eventually were found to have been diverted through shell companies and offshore bank accounts. In 2015 media investigations started and by 2018 major legal actions commenced; several countries’ authorities participated. The scandal exposed weaknesses in governance, banking-oversight and international money-laundering controls.",
     "sources": [
-      "https://www.channelnewsasia.com/news/1mdb-timeline",
-      "https://www.aljazeera.com/news/1mdb-case"
+      "https://www.learnsignal.com/blog/1mdb-scandal-guide-financial-fraud-malaysia",
+      "https://www.imd.org/research-knowledge/finance/articles/swiss-bank-was-toppled-by-a-financial-scandal-in-malaysia/"
     ]
   },
   {
     "id": 2,
-    "title": "‘Macau Scam’ Phone Fraud Wave",
+    "title": "“Macau Scam” Telephone Fraud in Malaysia",
     "tags": ["Phone scam", "Impersonation of authorities", "Social engineering"],
     "date": "Ongoing",
-    "loss": "Up to hundreds of thousands of MYR per case",
-    "summary": "Scammers impersonate banks, law enforcement, or courier companies to intimidate victims into transferring funds to 'safe accounts'.",
-    "content": "The 'Macau Scam' is a common phone fraud in Malaysia where scammers pretend to be from banks, prosecutors, law enforcement agencies, or courier companies. They use intimidation and urgency to make victims transfer funds, provide OTPs, or deposit money into so-called 'safe accounts'. Techniques include caller ID spoofing, psychological pressure, and coordination with cross-border scam call centers. Single cases can involve losses of hundreds of thousands of MYR.",
+    "loss": "Hundreds of thousands to millions of MYR per case",
+    "summary": "The so-called Macau Scam involves callers impersonating courier companies, police/law enforcement or banks, intimidating victims into transferring funds or OTPs to so-called safe accounts.",
+    "content": "In Malaysia the Macau Scam appears via spoofed calls or messages, where the victim is told they are under investigation or have items (e.g., credit cards) under their name. They are then coerced to transfer money to accounts controlled by the scammers. For example, a vegetable farmer in Pahang lost about RM792,669 after such a call.",
     "sources": [
-      "https://www.astroawani.com/berita-malaysia/macau-scam",
-      "https://www.thestar.com.my/news/nation/2023/..."
+      "https://international.astroawani.com/malaysia-news/macau-scam-all-you-need-to-know-263044",
+      "https://international.astroawani.com/malaysia-news/macau-scam-vegetable-farmer-loses-almost-rm800000-434149"
     ]
   },
   {
     "id": 3,
-    "title": "Malaysians Trafficked to Peru Scam Centers (2023)",
-    "tags": ["Human trafficking", "Cross-border scam centers", "Forced labor"],
-    "date": "2023-10",
-    "loss": "Not disclosed (involving multiple victims)",
-    "summary": "43 Malaysians were trafficked to Peru and forced to engage in phone and online scams before being rescued by police.",
-    "content": "In October 2023, Peruvian police rescued 43 Malaysian citizens who were forced to participate in phone and online scams near Lima. Most victims were lured by overseas job offers but were then confined and forced to make scam calls or send fraudulent online messages. Victims were aged between 18–36, with some minors. The case drew attention to cross-border scam syndicates and human trafficking networks. Malaysia’s Foreign Ministry and police assisted in repatriation and investigation.",
+    "title": "Cryptocurrency Investment Fraud in Malaysia (2023-2024)",
+    "tags": ["Crypto scams", "Fake trading platforms", "Financial fraud"],
+    "date": "2023-2024",
+    "loss": "Millions of MYR",
+    "summary": "Malaysian authorities arrested suspects linked to fake crypto investment platforms, where victims were promised high returns but funds were stolen and laundered via blockchain. One case involved Malaysian police arresting three men accused of stealing over US$2.5 million via crypto fraud.",
+    "content": "In early 2024, the Royal Malaysia Police (RMP) made arrests in a case where fraudsters offered victims up to 50% returns via a crypto investment scheme; the funds were stolen and traced via blockchain forensics. Between 2019-2023 over 5,500 crypto investment fraud cases with losses totalling around RM417 million were reported.",
     "sources": [
-      "https://apnews.com/article/peru-malaysia-scam-rescue",
-      "https://www.theguardian.com/world/2023/..."
+      "https://www.trmlabs.com/resources/blog/malaysian-police-make-arrests-in-cryptocurrency-fraud-scheme",
+      "https://www.tookitaki.com/afc-thoughts/fraud-cases-in-malaysia"
     ]
   },
   {
     "id": 4,
-    "title": "Romance 'Pig-Butchering' Investment Scam",
-    "tags": ["Romance scam", "Investment scam", "Long-term social engineering"],
-    "date": "Recently prevalent",
-    "loss": "Up to millions of MYR per case",
-    "summary": "Scammers build romantic relationships through dating platforms and lure victims into investing in fake platforms to steal large sums.",
-    "content": "The 'pig-butchering' scam is a fraud method where scammers first build long-term trust, often through dating apps or social platforms, before guiding victims to invest in fake investment platforms. Fraudsters use fake trading records, fabricated returns, and fake expert advice to convince victims the investments are real. Some cases are tied to cross-border scam centers and human trafficking, making investigation and fund recovery difficult.",
+    "title": "Human-Trafficked Malaysians Forced in Scam Centres in Peru (2023)",
+    "tags": ["Human trafficking", "Cross-border scam centres", "Forced labour"],
+    "date": "2023-10",
+    "loss": "Not publicly disclosed (multiple victims)",
+    "summary": "At least 43 Malaysians were trafficked to Peru and forced to work in a tele-scam/online scam centre, before being rescued by police authorities.",
+    "content": "In October 2023, Peruvian police raided a house in La Molina (Lima) and rescued 43 Malaysian citizens aged between 18–36 who were forced to make scam calls or conduct online fraud. The victims had been lured via overseas job offers. This case highlights the link between cross-border organised crime, human trafficking and online fraud syndicates.",
     "sources": [
-      "https://www.scmp.com/news/asia/southeast-asia/article/...",
-      "https://www.straitstimes.com/asia/se-asia/..."
+      "https://apnews.com/article/067a8dc748019ecdeb960b69c5e2ad54",
+      "https://apnews.com/article/91e7682024cb599b242cb81793cb68df"
     ]
   },
   {
     "id": 5,
-    "title": "Cryptocurrency Investment Platform Scams",
-    "tags": ["Crypto scams", "Fake trading platforms", "Financial fraud"],
-    "date": "Recent years",
-    "loss": "Tens of thousands to millions of USD",
-    "summary": "Fraudsters impersonate crypto investment platforms or exchanges, luring investments and illegally transferring funds; some suspects were arrested in Malaysia.",
-    "content": "In recent years, Malaysian police have uncovered numerous scams using Bitcoin or other cryptocurrencies, involving fake trading interfaces, fake customer service, and laundering channels to steal funds. Authorities often cooperate with blockchain forensics firms to trace the stolen money. Victims span a wide age range, and losses vary significantly.",
+    "title": "Large-Scale Scam Call Centre Raid in Bangsar South (2025)",
+    "tags": ["Call centre raid", "Syndicate dismantling", "Cross-border fraud"],
+    "date": "2025-08",
+    "loss": "Estimated hundreds of millions of MYR (investigation ongoing)",
+    "summary": "Malaysian police conducted one of the country’s largest raids of a scam call-centre hub in Bangsar South, Kuala Lumpur, arresting over 400 individuals in August 2025.",
+    "content": "The raid uncovered a five-storey office allegedly housing over 400 staff conducting scam operations targeting victims across multiple countries. The case underscores the industrial-scale fraud operations now operating in Malaysia, linked to fintech and international syndicates.",
     "sources": [
-      "https://cointelegraph.com/news/malaysia-crypto-scam",
-      "https://www.trmlabs.com/post/crypto-crime-malaysia"
+      "https://www.tookitaki.com/blog/busted-in-bangsar-south-malaysia-scam-call-centre-raid"
     ]
   },
   {
     "id": 6,
-    "title": "Cross-border Scam Syndicates Arrested in Malaysia",
-    "tags": ["Cross-border fraud", "Police raids", "Syndicate dismantling"],
-    "date": "Multiple operations",
-    "loss": "Not specified",
-    "summary": "Police busted several scam syndicate hubs, arresting both locals and foreigners, seizing equipment and forged documents.",
-    "content": "Malaysian police have carried out multiple special operations to dismantle scam hubs in the country, including phone fraud, investment scams, and crypto scams. Seized items include mobile phones, SIM cards, computers, and forged documents. These actions often involve cooperation with immigration, foreign ministries, and Interpol to combat transnational scam networks.",
+    "title": "Research & Trend Reports on Scam Governance in Malaysia (2024-2025)",
+    "tags": ["Research", "Policy recommendations", "Trend analysis"],
+    "date": "2024-2025",
+    "loss": "NA (studies rather than individual loss)",
+    "summary": "Academic and government-linked institutions in Malaysia and Southeast Asia have released reports showing that scams are increasingly cross-border, tech-driven (including AI), and that policy/governance responses need strengthening.",
+    "content": "Publications indicate that scams now make up large portions of fraud cases in Malaysia; for example, one study estimated losses of RM54.02 billion (≈US$12.8 billion) in 2024-type data, representing about 3% of Malaysia’s GDP. The reports emphasise the need for regulatory overhaul, telecom/fin-tech cooperation and public awareness.",
     "sources": [
-      "https://cointelegraph.com/news/malaysia-raid-scam-syndicate",
-      "https://www.trmlabs.com/post/scam-network-malaysia"
+      "https://penanginstitute.org/publications/issues/combating-scam-syndicates-in-malaysia-and-southeast-asia/",
+      "https://www.tookitaki.com/afc-thoughts/fraud-cases-in-malaysia"
     ]
   },
   {
     "id": 7,
-    "title": "Scam Trends and Governance Research Reports",
-    "tags": ["Research", "Policy recommendations", "Trend analysis"],
+    "title": "Cross-Border Asset Recovery & International Co-operation (1MDB example)",
+    "tags": ["Asset recovery", "Judicial cooperation", "International crime"],
     "date": "Ongoing",
-    "loss": "No direct loss",
-    "summary": "Academic and government institutions publish reports analyzing scam trends and proposing prevention strategies.",
-    "content": "Research reports by academic institutions, think tanks, and international organizations reveal that scam methods are becoming more organized, cross-border, and technology-driven (including deepfake and automated social media). Recommendations include strengthening cross-border legal cooperation, tightening telecom and financial regulations, and improving public awareness.",
+    "loss": "Varies per case",
+    "summary": "Major fraud cases in Malaysia – such as 1MDB – show that tracing and recovering assets requires multi-country coordination, civil and criminal proceedings, and long time-frames.",
+    "content": "The 1MDB scandal’s global dimension involved countries such as the US, Switzerland, Singapore and others. Legal actions include civil suits, asset freezing and returns. The difficulty and length of recovery underscore the international complexity of large-scale financial crime.",
     "sources": [
-      "https://www.csis.org/analysis/se-asia-scam-trends",
-      "https://www.unodc.org/southeast-asia-scam-report"
+      "https://www.learnsignal.com/blog/1mdb-scandal-guide-financial-fraud-malaysia"
     ]
   },
   {
     "id": 8,
-    "title": "International Cooperation and Asset Recovery",
-    "tags": ["Cross-border pursuit", "Asset recovery", "Judicial cooperation"],
-    "date": "Ongoing",
-    "loss": "Varies by case",
-    "summary": "Major scams and financial crimes often require international cooperation for fugitive pursuit and asset recovery.",
-    "content": "High-profile cases like 1MDB show that no single country can handle large-scale cross-border scams or financial crimes alone. Asset recovery involves multi-country legal assistance, parallel civil and criminal proceedings; some main suspects remain at large. This topic is suitable for continuous updates on major case developments.",
+    "title": "AI-enabled Voice & Deepfake Scams Emerging in Malaysia (2025)",
+    "tags": ["AI scams", "Voice-cloning fraud", "Technology driven fraud"],
+    "date": "2025",
+    "loss": "Thousands to tens of thousands of MYR per case (and rising)",
+    "summary": "Recent reporting shows scams in Malaysia using AI voice-cloning to impersonate employers or trusted persons, tricking victims into transfers.",
+    "content": "In August 2025, a Malay Mail article detailed how a woman in Selangor lost RM5,000 when a caller used AI-cloned voice of her employer via phone/WhatsApp, requesting Touch ‘n Go PINs. The incident indicates the next wave of fraud combining social engineering with AI technology.",
     "sources": [
-      "https://www.reuters.com/world/asia-pacific/malaysia-asset-recovery-1mdb",
-      "https://www.theguardian.com/world/1mdb-recovery"
+      "https://www.malaymail.com/news/malaysia/2025/08/04/ai-scams-are-getting-real-here-are-the-cases-happening-in-malaysia-that-you-should-know-about/183459"
     ]
   }
 ]
