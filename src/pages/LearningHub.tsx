@@ -74,7 +74,7 @@ export const LearningHub = () => {
                 variants={item}
                 whileHover={{ y: -5 }}
               >
-                <CategoryCard 
+                <CategoryCard
                   id={category.id}
                   title={t(`learningHub.categories.${category.id}`)}
                   description={t(`learningHub.categoryDescriptions.${category.id}`)}

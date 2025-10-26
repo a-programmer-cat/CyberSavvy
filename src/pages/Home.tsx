@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { AlertBanner } from '../components/AlertBanner';
 import { FaGraduationCap, FaClipboardCheck, FaUserFriends } from 'react-icons/fa';
 import IntroScreen from "../components/IntroScreen";
-import TargetCursor from '../components/TargetCursor';
 import { CodeRainBackground } from "../components/CodeRainBackground";
 import { motion } from 'framer-motion';
 import { useEffect, useState } from "react";
@@ -170,8 +169,6 @@ export const Home = () => {
       ) : (
         // 主页面
         <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
-          <TargetCursor spinDuration={2} hideDefaultCursor={true} />
-
           <div className="absolute inset-0 z-0">
             <CodeRainBackground />
             <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 via-gray-900/70 to-gray-900/90"></div>

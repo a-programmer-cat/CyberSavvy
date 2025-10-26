@@ -20,7 +20,7 @@ export const LessonCard = ({
   return (
     <motion.div whileHover={{ scale: 1.03 }} className="h-full">
       <Link to={`/learning/${categoryId}/${id}`} className="block h-full">
-        <div className="bg-bg-card border border-bg-border rounded-xl shadow-md overflow-hidden h-full flex flex-col transition-colors hover:border-primary">
+        <div className="bg-bg-card border border-bg-border rounded-xl cursor-target shadow-md overflow-hidden h-full flex flex-col transition-colors hover:border-primary">
           <div className="p-6 flex-grow">
             <h2 className="text-xl font-semibold text-text-main mb-2">{title}</h2>
           </div>

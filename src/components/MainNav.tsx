@@ -64,7 +64,7 @@ export const MainNav = () => {
                 <motion.div key={index} whileHover={{ y: -2 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to={item.path}
-                    className={`flex items-center px-4 py-2 rounded-md transition-all duration-300 
+                    className={`cursor-target flex items-center px-4 py-2 rounded-md transition-all duration-300 
                       ${item.color} 
                       ${isActive ? "bg-gray-700/60 border border-gray-600 shadow-inner" : ""}
                       min-w-[130px] justify-center`}
@@ -83,7 +83,7 @@ export const MainNav = () => {
             <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="flex items-center px-3 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-all duration-300 min-w-[120px] justify-center"
+                className="cursor-target flex items-center px-3 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 transition-all duration-300 min-w-[120px] justify-center"
               >
                 <FaGlobe className="mr-2" />
                 {i18n.language === "zh" ? "中文" : i18n.language === "ms" ? "BM" : "English"}
@@ -94,7 +94,7 @@ export const MainNav = () => {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-2 hover:bg-gray-600 rounded-md ${
+                      className={`cursor-target w-full text-left px-4 py-2 hover:bg-gray-600 rounded-md ${
                         i18n.language === lang.code ? "bg-gray-600 font-semibold" : ""
                       }`}
                     >
@@ -110,7 +110,7 @@ export const MainNav = () => {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   to="/login"
-                  className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-300 shadow-md"
+                  className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-300 shadow-md cursor-target"
                 >
                   {t("login")}
                 </Link>
@@ -119,7 +119,7 @@ export const MainNav = () => {
               <div className="relative">
                 <button
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-hover transition-all"
+                  className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-hover cursor-target transition-all"
                 >
                   {user.displayName || user.email?.split("@")[0] || "User"}
                 </button>
@@ -127,7 +127,7 @@ export const MainNav = () => {
                   <div className="absolute right-0 mt-2 w-40 bg-gray-700 border border-gray-600 rounded-lg shadow-lg">
                     <button
                       onClick={handleLogout}
-                      className="w-full text-left px-4 py-2 hover:bg-gray-600 rounded-md"
+                      className="cursor-target w-full text-left px-4 py-2 hover:bg-gray-600 rounded-md"
                     >
                       {t("nav.logout")}
                     </button>

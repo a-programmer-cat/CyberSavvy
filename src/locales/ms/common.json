@@ -93,6 +93,7 @@
     "counter": "Soalan {{current}}/{{total}}",
     "score": "Skor: {{score}}",
     "nextButton": "Soalan Seterusnya →",
+    "takeQuiz": "Mulakan Kuiz",
     "results": {
       "good": "🎉 Tahniah!",
       "improve": "⚠️ Perlu diperbaiki",

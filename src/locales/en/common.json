@@ -94,6 +94,7 @@
     "counter": "Question {{current}}/{{total}}",
     "score": "Score: {{score}}",
     "nextButton": "Next Question →",
+    "takeQuiz": "Take the quiz",
     "results": {
       "good": "🎉 Well done!",
       "improve": "⚠️ Needs improvement",

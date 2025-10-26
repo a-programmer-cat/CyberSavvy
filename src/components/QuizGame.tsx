@@ -90,7 +90,7 @@ export const QuizGame = ({ quizFile }: { quizFile: string }) => {
             key={index}
             onClick={() => handleAnswer(index)}
             disabled={selectedOption !== null}
-            className={`option-button p-3 rounded-lg border transition-all text-left ${
+            className={`option-button cursor-target p-3 rounded-lg border transition-all text-left ${
               selectedOption === index
                 ? option.correct
                   ? 'bg-success/20 border-success text-success'
@@ -111,12 +111,12 @@ export const QuizGame = ({ quizFile }: { quizFile: string }) => {
           {currentIndex < questions.length - 1 ? (
             <button
               onClick={nextQuestion}
-              className="next-button px-4 py-2 bg-primary text-text-main rounded hover:bg-primary-hover transition-colors"
+              className="cursor-target next-button px-4 py-2 bg-primary text-text-main rounded hover:bg-primary-hover transition-colors"
             >
               {t('quiz.nextButton')}
             </button>
           ) : (
-            <div className="result-card mt-4 p-4 bg-bg-card rounded-lg border border-bg-border">
+            <div className="cursor-target result-card mt-4 p-4 bg-bg-card rounded-lg border border-bg-border">
               <h4 className="text-lg font-bold text-center mb-2">
                 {score >= questions.length / 2
                   ? t('quiz.results.good')

@@ -28,7 +28,7 @@ export const CategoryCard = ({
   return (
     <motion.div whileHover={{ scale: 1.03 }} className="h-full">
       <Link to={to} className="block h-full">
-        <div className="bg-bg-card border border-bg-border rounded-xl shadow-md overflow-hidden h-full flex flex-col transition-colors hover:border-primary">
+        <div className="bg-bg-card border border-bg-border rounded-xl cursor-target shadow-md overflow-hidden h-full flex flex-col transition-colors hover:border-primary">
           <div className={`${color} p-4 text-white`}>
             <div className="flex items-center">
               {icon && <div className="mr-3">{icon}</div>}

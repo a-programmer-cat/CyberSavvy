@@ -10,6 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <AuthProvider>
       <App />
+      <TargetCursor spinDuration={2} hideDefaultCursor={true} />
     </AuthProvider>
   </React.StrictMode>,
 )

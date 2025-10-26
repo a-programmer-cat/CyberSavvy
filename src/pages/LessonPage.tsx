@@ -1,9 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import { SafeMarkdown } from '../components/SafeMarkdown';
 import { modules } from '../constants/modules';
-import { Link } from 'react-router-dom';
 import { parseMarkdownTitle, removeTitleFromContent } from '../utils/markdownUtils';
 
 export const LessonPage = () => {
@@ -14,6 +13,7 @@ export const LessonPage = () => {
   const [title, setTitle] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const selectedCategory = modules.find((mod) => mod.id === category);
   const selectedLesson = selectedCategory?.sections.find(
@@ -62,6 +62,7 @@ export const LessonPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
+      {/* 返回按钮 */}
       <Link
         to={`/learning/${category}`}
         className="inline-flex items-center text-primary mb-6"
@@ -81,10 +82,22 @@ export const LessonPage = () => {
         {t('learningHub.categories.' + category)}
       </Link>
 
+      {/* 标题 */}
       <h1 className="text-3xl font-bold mb-6 text-text-main">{title}</h1>
 
+      {/* 内容 */}
       <div className="prose max-w-none bg-bg-card border border-bg-border rounded-lg shadow-md p-6 text-text-secondary">
         <SafeMarkdown content={content} />
+      </div>
+
+      {/* 底部按钮 */}
+      <div className="text-center mt-8">
+        <button
+          onClick={() => navigate(`/test/${category}`)}
+          className="bg-gradient-to-r from-primary to-primary-hover text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-transform hover:-translate-y-1"
+        >
+          {t('quiz.takeQuiz')}
+        </button>
       </div>
     </div>
   );

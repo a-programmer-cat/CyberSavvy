@@ -93,6 +93,7 @@
     "counter": "题目 {{current}}/{{total}}",
     "score": "得分: {{score}}",
     "nextButton": "下一题 →",
+    "takeQuiz": "开始测验",
     "results": {
       "good": "🎉 表现不错！",
       "improve": "⚠️ 需要加强哦",
