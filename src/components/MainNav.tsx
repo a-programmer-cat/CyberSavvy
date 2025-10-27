@@ -11,7 +11,9 @@ import {
   FaClipboardCheck,
   FaBookOpen,
   FaQuestionCircle,
-  FaGlobe
+  FaGlobe,
+  FaBars,
+  FaTimes
 } from 'react-icons/fa';
 
 export const MainNav = () => {
@@ -21,6 +23,7 @@ export const MainNav = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleLogout = async () => {
     await signOut(auth);
@@ -52,11 +55,30 @@ export const MainNav = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-gradient-to-r from-gray-900 to-gray-800 text-white shadow-lg sticky top-0 z-50 backdrop-blur-md"
+      className="bg-gradient-to-r from-gray-900/90 to-gray-800/90 text-white shadow-lg sticky top-0 z-50 backdrop-blur-md"
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* ✅ 左边导航 */}
+
+          {/* ✅ 左侧 LOGO + 名称 */}
+          <Link
+            to="/"
+            className="flex items-center space-x-3 group"
+          >
+            {/* Logo 图片 */}
+            <img
+              src="/logo.png"
+              alt="CyberSavvy Logo"
+              className="w-10 h-10 rounded-full shadow-md group-hover:scale-110 transition-transform duration-300"
+              onError={(e) => { (e.target as HTMLImageElement).src = "/logo.ico"; }}
+            />
+            {/* 网站名 */}
+            <span className="text-2xl font-extrabold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+              CyberSavvy
+            </span>
+          </Link>
+
+          {/* ✅ 桌面导航 */}
           <div className="hidden md:flex space-x-2">
             {navItems.map((item, index) => {
               const isActive = location.pathname === item.path;
@@ -66,7 +88,7 @@ export const MainNav = () => {
                     to={item.path}
                     className={`cursor-target flex items-center px-4 py-2 rounded-md transition-all duration-300 
                       ${item.color} 
-                      ${isActive ? "bg-gray-700/60 border border-gray-600 shadow-inner" : ""}
+                      ${isActive ? "bg-gradient-to-r from-blue-600/60 to-purple-600/60 border border-gray-600 shadow-inner" : ""}
                       min-w-[130px] justify-center`}
                   >
                     {item.icon}
@@ -77,9 +99,9 @@ export const MainNav = () => {
             })}
           </div>
 
-          {/* ✅ 右边：语言选择 + 用户 */}
-          <div className="flex items-center space-x-4">
-            {/* 🌐 语言切换下拉菜单 */}
+          {/* ✅ 右侧：语言 + 用户 */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* 🌐 语言切换下拉 */}
             <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
@@ -119,7 +141,7 @@ export const MainNav = () => {
               <div className="relative">
                 <button
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary-hover cursor-target transition-all"
+                  className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg cursor-target transition-all"
                 >
                   {user.displayName || user.email?.split("@")[0] || "User"}
                 </button>
@@ -136,7 +158,63 @@ export const MainNav = () => {
               </div>
             )}
           </div>
+
+          {/* 📱 移动端菜单按钮 */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 rounded-md hover:bg-gray-700 transition-all duration-200"
+            >
+              {mobileOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
         </div>
+
+        {/* 📱 移动端菜单 */}
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden pb-4 space-y-2"
+          >
+            {navItems.map((item, index) => {
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={index}
+                  to={item.path}
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex items-center px-4 py-3 rounded-md transition-all duration-300 
+                    ${item.color} 
+                    ${isActive ? "bg-blue-800/60 border border-blue-500" : ""} justify-center`}
+                >
+                  {item.icon}
+                  <span className="ml-2">{item.name}</span>
+                </Link>
+              );
+            })}
+            <div className="flex flex-col items-center space-y-2 mt-2">
+              {!user ? (
+                <Link
+                  to="/login"
+                  onClick={() => setMobileOpen(false)}
+                  className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white transition-all duration-300"
+                >
+                  {t("login")}
+                </Link>
+              ) : (
+                <button
+                  onClick={handleLogout}
+                  className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-white transition-all duration-300"
+                >
+                  {t("nav.logout")}
+                </button>
+              )}
+            </div>
+          </motion.div>
+        )}
       </div>
     </motion.nav>
   );
