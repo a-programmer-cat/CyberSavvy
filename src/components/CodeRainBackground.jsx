@@ -55,7 +55,7 @@ export const CodeRainBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full z-0"
+      className="pointer-events-none absolute inset-0 w-full h-full z-0"
     />
   );
 };

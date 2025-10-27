@@ -10,7 +10,7 @@ import { FaGraduationCap, FaClipboardCheck, FaUserFriends } from "react-icons/fa
 
 const FIRST_ACCESS_KEY = "cybersavvy_firstTimeAccess";
 const COOKIE_NAME = "cybersavvy_firstTimeAccess";
-const COOKIE_EXPIRE_DAYS = 365;
+const COOKIE_EXPIRE_DAYS = 365; // cookie 过期时间（如需要 cookie 回退）
 
 function setCookie(name: string, value: string, days: number) {
   const expires = new Date(Date.now() + days * 864e5).toUTCString();
@@ -32,20 +32,75 @@ export const Home = () => {
   const [showIntro, setShowIntro] = useState(false);
   const [isChecking, setIsChecking] = useState(true);
   const [introKey, setIntroKey] = useState(0); // 👈 用于强制重新挂载
+
   useEffect(() => {
-    const visited =
-      localStorage.getItem(FIRST_ACCESS_KEY) === "true" || getCookie(COOKIE_NAME) === "true";
+    // 检查 localStorage -> cookie 回退
+    const checkFirstAccess = () => {
+      try {
+        const localVal = localStorage.getItem(FIRST_ACCESS_KEY);
+        if (localVal === "true") return true;
+
+        // 回退检查 cookie（若你在别处设置过 cookie）
+        const cookieVal = getCookie(COOKIE_NAME);
+        if (cookieVal === "true") {
+          // 如果 cookie 存在但 localStorage 没有，帮忙同步到 localStorage
+          try {
+            localStorage.setItem(FIRST_ACCESS_KEY, "true");
+          } catch (e) {
+            /* ignore */
+          }
+          return true;
+        }
+
+        return false;
+      } catch (e) {
+        // 如果 localStorage 被禁用，尝试 cookie 作为唯一方法
+        const cookieVal = getCookie(COOKIE_NAME);
+        return cookieVal === "true";
+      }
+    };
+
+    const visited = checkFirstAccess();
     if (!visited) {
-      setShowIntro(true);
-      localStorage.setItem(FIRST_ACCESS_KEY, "true");
-      setCookie(COOKIE_NAME, "true", COOKIE_EXPIRE_DAYS);
+      setShowIntro(true); // 首次访问，显示动画
+      // 先标记（写入 localStorage + cookie），避免多 tab 重复触发动画
+      try {
+        localStorage.setItem(FIRST_ACCESS_KEY, "true");
+      } catch (e) {
+        // localStorage 写入失败 -> fallback to cookie
+        setCookie(COOKIE_NAME, "true", COOKIE_EXPIRE_DAYS);
+      }
+    } else {
+      setShowIntro(false);
     }
     setIsChecking(false);
   }, []);
 
+  // 用户主动跳过 intro
+  const handleSkipIntro = () => {
+    setIntroDone(true);
+    setShowIntro(false);
+  };
+
+  // 让 Intro 播放结束时调用
   const handleIntroFinish = () => {
     setIntroDone(true);
     setShowIntro(false);
+  };
+
+  // 供调试或用户重看使用：清除首次访问标志（localStorage + cookie）
+  const clearFirstAccessFlag = () => {
+    try {
+      localStorage.removeItem(FIRST_ACCESS_KEY);
+    } catch (e) {
+      /* ignore */
+    }
+    clearCookie(COOKIE_NAME);
+    // 同时把状态重置为未观看，这会在下一次刷新或手动触发时播放 intro
+    setIntroDone(false);
+    setShowIntro(false);
+    // 可选：短暂提示用户已清除
+    alert(t('introResetDone') || "Intro reset. It will play on next visit.");
   };
 
   if (isChecking) return <div className="min-h-screen bg-black" />;
@@ -78,21 +133,21 @@ export const Home = () => {
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {showIntro && !introDone ? (
         <>
-          <IntroScreen key={introKey} onFinish={handleIntroFinish} /> {/* 👈 强制重新挂载 */}
+          <IntroScreen key={introKey} onFinish={handleIntroFinish} />
+          {/* Skip 按钮（右上角） */}
           <button
-            onClick={handleIntroFinish}
-            className="fixed top-4 right-4 z-[300] px-3 py-1 text-sm bg-black/50 text-white rounded-md backdrop-blur-sm hover:bg-black/70 transition"
+            onClick={handleSkipIntro}
+            className="fixed top-4 right-4 z-[300] px-3 py-1 text-sm bg-black/50 text-white rounded-md backdrop-blur-sm hover:bg-black/70"
           >
             {t('skipIntro') || 'Skip Intro'}
           </button>
         </>
-
       ) : (
         <>
           {/* 背景层 */}
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 pointer-events-none">
             <CodeRainBackground />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90 pointer-events-none" />
           </div>
 
           {/* 内容 */}
@@ -189,13 +244,13 @@ export const Home = () => {
           {/* Replay Intro 左下角 */}
           <button
             onClick={() => {
-              localStorage.removeItem(FIRST_ACCESS_KEY);
+              try { localStorage.removeItem(FIRST_ACCESS_KEY); } catch (e) { }
               clearCookie(COOKIE_NAME);
               setIntroDone(false);
+              setIntroKey(prev => prev + 1); // 👈 强制刷新 IntroScreen
               setShowIntro(true);
-              setIntroKey(prev => prev + 1); // 👈 强制重新挂载
             }}
-            className="fixed bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/20 text-gray-300 px-4 py-2 rounded-xl hover:bg-white/20 transition-all text-sm"
+            className="fixed bottom-6 left-6 z-[1000] bg-white/10 backdrop-blur-md border border-white/20 text-gray-300 px-4 py-2 rounded-xl hover:bg-white/20 transition-all text-sm"
           >
             {t("replayIntro") || "Replay Intro"}
           </button>
