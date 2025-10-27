@@ -1,13 +1,12 @@
 "use client";
 
-import { useTranslation } from 'react-i18next';
-import { AlertBanner } from '../components/AlertBanner';
-import { FaGraduationCap, FaClipboardCheck, FaUserFriends } from 'react-icons/fa';
-import IntroScreen from "../components/IntroScreen";
-import { CodeRainBackground } from "../components/CodeRainBackground";
-import { motion } from 'framer-motion';
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { CodeRainBackground } from "../components/CodeRainBackground";
+import IntroScreen from "../components/IntroScreen";
+import { FaGraduationCap, FaClipboardCheck, FaUserFriends } from "react-icons/fa";
 
 const FIRST_ACCESS_KEY = "cybersavvy_firstTimeAccess";
 const COOKIE_NAME = "cybersavvy_firstTimeAccess";
@@ -17,14 +16,12 @@ function setCookie(name: string, value: string, days: number) {
   const expires = new Date(Date.now() + days * 864e5).toUTCString();
   document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/; Secure; SameSite=Lax`;
 }
-
 function getCookie(name: string) {
   return document.cookie.split("; ").reduce((r, v) => {
     const parts = v.split("=");
     return parts[0] === name ? decodeURIComponent(parts.slice(1).join("=")) : r;
   }, "");
 }
-
 function clearCookie(name: string) {
   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
 }
@@ -34,223 +31,175 @@ export const Home = () => {
   const [introDone, setIntroDone] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
   const [isChecking, setIsChecking] = useState(true);
-
+  const [introKey, setIntroKey] = useState(0); // 👈 用于强制重新挂载
   useEffect(() => {
-    const checkFirstAccess = () => {
-      try {
-        const localVal = localStorage.getItem(FIRST_ACCESS_KEY);
-        if (localVal === "true") return true;
-        const cookieVal = getCookie(COOKIE_NAME);
-        if (cookieVal === "true") {
-          try {
-            localStorage.setItem(FIRST_ACCESS_KEY, "true");
-          } catch (e) {}
-          return true;
-        }
-        return false;
-      } catch {
-        const cookieVal = getCookie(COOKIE_NAME);
-        return cookieVal === "true";
-      }
-    };
-
-    const visited = checkFirstAccess();
+    const visited =
+      localStorage.getItem(FIRST_ACCESS_KEY) === "true" || getCookie(COOKIE_NAME) === "true";
     if (!visited) {
       setShowIntro(true);
-      try {
-        localStorage.setItem(FIRST_ACCESS_KEY, "true");
-      } catch {
-        setCookie(COOKIE_NAME, "true", COOKIE_EXPIRE_DAYS);
-      }
-    } else {
-      setShowIntro(false);
+      localStorage.setItem(FIRST_ACCESS_KEY, "true");
+      setCookie(COOKIE_NAME, "true", COOKIE_EXPIRE_DAYS);
     }
     setIsChecking(false);
   }, []);
-
-  const handleSkipIntro = () => {
-    setIntroDone(true);
-    setShowIntro(false);
-  };
 
   const handleIntroFinish = () => {
     setIntroDone(true);
     setShowIntro(false);
   };
 
-  const clearFirstAccessFlag = () => {
-    try {
-      localStorage.removeItem(FIRST_ACCESS_KEY);
-    } catch {}
-    clearCookie(COOKIE_NAME);
-    setIntroDone(false);
-    setShowIntro(false);
-    alert(t('introResetDone') || "Intro reset. It will play on next visit.");
-  };
-
-  if (isChecking) return <div className="min-h-screen bg-gray-900" />;
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.15 } }
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-  };
+  if (isChecking) return <div className="min-h-screen bg-black" />;
 
   const cards = [
     {
-      icon: <FaGraduationCap className="text-4xl mb-5 text-blue-400" />,
-      title: t('quickStart'),
-      description: t('startLearning'),
+      icon: <FaGraduationCap className="text-5xl mb-6 text-blue-400" />,
+      title: t("quickStart"),
+      desc: t("startLearning"),
       link: "/learning",
-      buttonText: t('getStarted'),
-      color: "bg-blue-500 hover:bg-blue-600"
+      color: "from-blue-400 to-cyan-400",
     },
     {
-      icon: <FaClipboardCheck className="text-4xl mb-5 text-green-400" />,
-      title: t('takeTest'),
-      description: t('testYourKnowledge'),
+      icon: <FaClipboardCheck className="text-5xl mb-6 text-green-400" />,
+      title: t("takeTest"),
+      desc: t("testYourKnowledge"),
       link: "/test",
-      buttonText: t('startTest'),
-      color: "bg-green-500 hover:bg-green-600"
+      color: "from-green-400 to-emerald-400",
     },
     {
-      icon: <FaUserFriends className="text-4xl mb-5 text-purple-400" />,
-      title: t('readStories'),
-      description: t('learnFromOthers'),
+      icon: <FaUserFriends className="text-5xl mb-6 text-purple-400" />,
+      title: t("readStories"),
+      desc: t("learnFromOthers"),
       link: "/stories",
-      buttonText: t('viewStories'),
-      color: "bg-purple-500 hover:bg-purple-600"
-    }
+      color: "from-purple-400 to-pink-400",
+    },
   ];
 
   return (
-    <div className="relative">
+    <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {showIntro && !introDone ? (
         <>
-          <IntroScreen onFinish={handleIntroFinish} />
+          <IntroScreen key={introKey} onFinish={handleIntroFinish} /> {/* 👈 强制重新挂载 */}
           <button
-            onClick={handleSkipIntro}
+            onClick={handleIntroFinish}
             className="fixed top-4 right-4 z-[300] px-3 py-1 text-sm bg-black/50 text-white rounded-md backdrop-blur-sm hover:bg-black/70 transition"
           >
             {t('skipIntro') || 'Skip Intro'}
           </button>
         </>
+
       ) : (
-        <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
+        <>
           {/* 背景层 */}
           <div className="absolute inset-0 z-0">
             <CodeRainBackground />
-            <div className="absolute inset-0 bg-gradient-to-b from-gray-900/95 via-gray-900/80 to-gray-900/95" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/90" />
           </div>
 
-          {/* 内容层 */}
-          <div className="relative z-10 container mx-auto px-6 py-16">
-            {/* Hero Section */}
+          {/* 内容 */}
+          <div className="relative z-10 flex flex-col items-center px-6 py-24 md:py-32">
+            {/* Logo & Hero Section */}
             <motion.div
-              initial={{ opacity: 0, y: -40 }}
+              initial={{ opacity: 0, y: -30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.5 }}
               className="text-center mb-20"
             >
-              <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400">
-                  {t('welcome')}
-                </span>
+              <img
+                src="/logo.png"
+                alt="CyberSavvy"
+                className="w-20 h-20 mx-auto mb-6 drop-shadow-xl"
+              />
+              <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent mb-5">
+                {t("welcome")}
               </h1>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto tracking-wide">
-                {t('subtitle')}
+              <p className="text-gray-300 text-lg max-w-2xl mx-auto leading-relaxed">
+                {t("subtitle")}
               </p>
             </motion.div>
 
-            {/* Alert Banner */}
+            {/* 三个卡片区 */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="mb-16 max-w-4xl mx-auto"
-            >
-              <AlertBanner />
-            </motion.div>
-
-            {/* 功能卡片 */}
-            <motion.div
-              variants={container}
               initial="hidden"
               animate="show"
-              className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto"
+              variants={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.1 },
+                },
+              }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-6xl mb-28"
             >
-              {cards.map((card, index) => (
+              {cards.map((c, i) => (
                 <motion.div
-                  key={index}
-                  variants={item}
-                  whileHover={{ y: -6, scale: 1.03 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 12 }}
-                  className="bg-gray-800/60 backdrop-blur-md border border-gray-700 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 text-center"
+                  key={i}
+                  variants={{
+                    hidden: { opacity: 0, y: 40 },
+                    show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+                  }}
+                  whileHover={{ y: -6, scale: 1.02 }}
+                  className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 shadow-xl hover:shadow-cyan-500/20 transition-all"
                 >
-                  <div className="flex justify-center">{card.icon}</div>
-                  <h2 className="text-2xl font-semibold text-white mb-4">{card.title}</h2>
-                  <p className="text-gray-300 mb-8">{card.description}</p>
-                  <Link
-                    to={card.link}
-                    className={`${card.color} px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg`}
-                  >
-                    {card.buttonText}
-                  </Link>
+                  <div className="flex flex-col items-center text-center">
+                    {c.icon}
+                    <h2 className="text-2xl font-semibold mb-3">{c.title}</h2>
+                    <p className="text-gray-400 mb-6">{c.desc}</p>
+                    <Link
+                      to={c.link}
+                      className={`px-6 cursor-target py-3 rounded-xl font-medium bg-gradient-to-r ${c.color} hover:opacity-90 transition-all duration-200`}
+                    >
+                      {t("explore")}
+                    </Link>
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
 
-            {/* Why Choose Us Section */}
+            {/* 特性展示区 */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.7 }}
-              className="mt-28 text-center"
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="w-full max-w-5xl text-center pb-16"
             >
-              <h3 className="text-3xl font-semibold text-white mb-10">
-                <span className="border-b-2 border-blue-500 pb-2">
-                  {t('whyChooseUs')}
-                </span>
+              <h3 className="text-3xl font-bold mb-12 text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text">
+                {t("whyChooseUs")}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                  { emoji: "📊", title: t('feature1'), desc: t('feature1Desc'), color: "text-blue-400" },
-                  { emoji: "🛡️", title: t('feature2'), desc: t('feature2Desc'), color: "text-green-400" },
-                  { emoji: "🌐", title: t('feature3'), desc: t('feature3Desc'), color: "text-purple-400" },
-                ].map((feature, i) => (
+                  { emoji: "🧠", title: t("feature1"), desc: t("feature1Desc") },
+                  { emoji: "🔒", title: t("feature2"), desc: t("feature2Desc") },
+                  { emoji: "🌍", title: t("feature3"), desc: t("feature3Desc") },
+                ].map((f, i) => (
                   <motion.div
                     key={i}
-                    whileHover={{ y: -6 }}
-                    className="bg-gray-800/60 backdrop-blur-md border border-gray-700 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+                    whileHover={{ scale: 1.04 }}
+                    transition={{ duration: 0.25 }}
+                    className="p-8 rounded-2xl bg-gradient-to-b from-white/10 to-white/5 border border-white/10 backdrop-blur-sm"
                   >
-                    <div className={`${feature.color} text-4xl mb-5`}>{feature.emoji}</div>
-                    <h4 className="font-semibold text-white mb-3">{feature.title}</h4>
-                    <p className="text-gray-300 text-sm">{feature.desc}</p>
+                    <div className="text-4xl mb-4">{f.emoji}</div>
+                    <h4 className="text-lg font-semibold mb-2">{f.title}</h4>
+                    <p className="text-gray-400 text-sm">{f.desc}</p>
                   </motion.div>
                 ))}
               </div>
             </motion.div>
-
-            {/* Replay Intro */}
-            <div className="mt-16 text-center">
-              <button
-                onClick={() => {
-                  try { localStorage.removeItem(FIRST_ACCESS_KEY); } catch {}
-                  clearCookie(COOKIE_NAME);
-                  setIntroDone(false);
-                  setShowIntro(true);
-                }}
-                className="px-5 py-2 bg-gray-700 text-gray-200 rounded-lg hover:bg-gray-600 transition-all duration-200 shadow-md"
-              >
-                {t('replayIntro') || 'Replay Intro'}
-              </button>
-            </div>
           </div>
-        </div>
+
+          {/* Replay Intro 左下角 */}
+          <button
+            onClick={() => {
+              localStorage.removeItem(FIRST_ACCESS_KEY);
+              clearCookie(COOKIE_NAME);
+              setIntroDone(false);
+              setShowIntro(true);
+              setIntroKey(prev => prev + 1); // 👈 强制重新挂载
+            }}
+            className="fixed bottom-6 left-6 bg-white/10 backdrop-blur-md border border-white/20 text-gray-300 px-4 py-2 rounded-xl hover:bg-white/20 transition-all text-sm"
+          >
+            {t("replayIntro") || "Replay Intro"}
+          </button>
+        </>
       )}
     </div>
   );
