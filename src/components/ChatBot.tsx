@@ -7,29 +7,24 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<{ from: string; text: string }[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [typingText, setTypingText] = useState(""); // AI打字中的文字
+  const [typingText, setTypingText] = useState("");
   const chatEndRef = useRef<HTMLDivElement | null>(null);
 
-  // 从localStorage恢复聊天记录
   useEffect(() => {
     const saved = localStorage.getItem("cybersavvy_chat");
     if (saved) setMessages(JSON.parse(saved));
   }, []);
 
-  // 保存聊天记录
   useEffect(() => {
     localStorage.setItem("cybersavvy_chat", JSON.stringify(messages));
   }, [messages]);
 
   useEffect(() => {
-    if (chatEndRef.current) {
-      chatEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, typingText]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
-
     const userMsg = { from: "user", text: input };
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
@@ -61,14 +56,12 @@ export default function ChatBot() {
         data.choices?.[0]?.message?.content ||
         "⚠️ Sorry, I couldn’t generate a reply.";
 
-      // 打字机效果
       let i = -1;
-
       const typeNext = () => {
         if (i < aiText.length) {
           setTypingText((prev) => prev + aiText[i]);
           i++;
-          setTimeout(typeNext, 20); // 稍微放慢一点以确保空格渲染及时
+          setTimeout(typeNext, 20);
         } else {
           setMessages((prev) => [...prev, { from: "ai", text: aiText }]);
           setTypingText("");
@@ -76,8 +69,8 @@ export default function ChatBot() {
         }
       };
 
-      setTypingText(""); // 清空旧内容
-      typeNext(); // 启动打字
+      setTypingText("");
+      typeNext();
     } catch (err) {
       console.error(err);
       setMessages((prev) => [
@@ -90,32 +83,44 @@ export default function ChatBot() {
 
   return (
     <div>
-      {/* 右下角悬浮按钮 */}
+      {/* 💬 悬浮按钮 */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed z-[100] bottom-6 right-6 bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center text-2xl"
+        className="fixed z-[100] bottom-5 right-5 bg-blue-600 text-white w-14 h-14 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center text-2xl sm:w-16 sm:h-16"
       >
         💬
       </button>
 
-      {/* 聊天窗口 */}
+      {/* 🪟 聊天窗口 */}
       {isOpen && (
-        <div className="fixed z-[9999] bottom-24 right-6 w-96 bg-white border border-gray-300 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div
+          className="
+            fixed z-[9999] bottom-20 right-4 
+            w-[95vw] max-w-md 
+            bg-white border border-gray-300 rounded-2xl shadow-2xl 
+            flex flex-col overflow-hidden 
+            sm:bottom-24 sm:right-6
+          "
+        >
           {/* Header */}
           <div className="bg-blue-600 text-white text-lg font-semibold px-4 py-3 flex justify-between items-center">
             {t("chatbot.title")}
-            <button onClick={() => setIsOpen(false)} className="text-sm">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-sm hover:text-gray-200 transition"
+            >
               ✖
             </button>
           </div>
 
           {/* Chat area */}
-          <div className="flex-1 p-4 overflow-y-auto space-y-3 max-h-[60vh]">
+          <div className="flex-1 p-4 overflow-y-auto space-y-3 max-h-[60vh] sm:max-h-[70vh]">
             {messages.map((msg, idx) => (
               <div
                 key={idx}
-                className={`flex items-end ${msg.from === "user" ? "justify-end" : "justify-start"
-                  }`}
+                className={`flex items-end ${
+                  msg.from === "user" ? "justify-end" : "justify-start"
+                }`}
               >
                 {msg.from === "ai" && (
                   <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold mr-2">
@@ -123,10 +128,11 @@ export default function ChatBot() {
                   </div>
                 )}
                 <div
-                  className={`p-3 rounded-2xl max-w-[66%] ${msg.from === "user"
-                    ? "bg-blue-600 text-white rounded-br-none"
-                    : "bg-gray-200 text-gray-800 rounded-bl-none"
-                    }`}
+                  className={`p-3 rounded-2xl max-w-[75%] ${
+                    msg.from === "user"
+                      ? "bg-blue-600 text-white rounded-br-none"
+                      : "bg-gray-200 text-gray-800 rounded-bl-none"
+                  }`}
                 >
                   {msg.text}
                   <div ref={chatEndRef} />
@@ -134,7 +140,7 @@ export default function ChatBot() {
               </div>
             ))}
 
-            {/* AI Thinking / Typing */}
+            {/* Typing indicator */}
             {loading && !typingText && (
               <div className="flex justify-start items-end space-x-2">
                 <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
@@ -151,7 +157,7 @@ export default function ChatBot() {
                 <div className="w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">
                   🤖
                 </div>
-                <div className="p-2 rounded-2xl max-w-[66%] text-gray-800 bg-gray-200 text-left">
+                <div className="p-2 rounded-2xl max-w-[75%] text-gray-800 bg-gray-200 text-left break-words">
                   {typingText}
                 </div>
               </div>
@@ -159,7 +165,7 @@ export default function ChatBot() {
           </div>
 
           {/* Input area */}
-          <div className="p-3 border-t border-gray-200 flex items-center space-x-2">
+          <div className="p-3 border-t border-gray-200 flex items-center space-x-2 bg-white">
             <input
               type="text"
               value={input}
