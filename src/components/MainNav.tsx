@@ -61,18 +61,13 @@ export const MainNav = () => {
         <div className="flex justify-between items-center h-16">
 
           {/* ✅ 左侧 LOGO + 名称 */}
-          <Link
-            to="/"
-            className="flex items-center space-x-3 group"
-          >
-            {/* Logo 图片 */}
+          <Link to="/" className="flex items-center space-x-3 group">
             <img
               src="/logo.png"
               alt="CyberSavvy Logo"
               className="w-10 h-10 rounded-full shadow-md group-hover:scale-110 transition-transform duration-300"
               onError={(e) => { (e.target as HTMLImageElement).src = "/logo.ico"; }}
             />
-            {/* 网站名 */}
             <span className="text-2xl font-extrabold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
               CyberSavvy
             </span>
@@ -195,6 +190,28 @@ export const MainNav = () => {
                 </Link>
               );
             })}
+
+            {/* 🌐 语言切换移动版 */}
+            <div className="flex justify-center space-x-2 mt-4">
+              {languages.map(lang => (
+                <button
+                  key={lang.code}
+                  onClick={() => {
+                    changeLanguage(lang.code);
+                    setMobileOpen(false);
+                  }}
+                  className={`px-3 py-2 rounded-md border text-sm ${
+                    i18n.language === lang.code
+                      ? "bg-blue-600 border-blue-500 text-white"
+                      : "bg-gray-700 border-gray-600 text-gray-200 hover:bg-gray-600"
+                  }`}
+                >
+                  {lang.label}
+                </button>
+              ))}
+            </div>
+
+            {/* 👤 登录或登出 */}
             <div className="flex flex-col items-center space-y-2 mt-2">
               {!user ? (
                 <Link
