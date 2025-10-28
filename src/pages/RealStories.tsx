@@ -84,6 +84,15 @@ export const RealStories = () => {
                 {expandedId === story.id ? story.content : story.summary}
               </p>
 
+              <button
+                onClick={() =>
+                  setExpandedId(expandedId === story.id ? null : story.id)
+                }
+                className="mt-4 text-sm text-primary hover:text-primary-hover underline"
+              >
+                {expandedId === story.id ? t('real-stories.showLess') : t('real-stories.showMore')}
+              </button>
+
               <div className="flex flex-col gap-2">
                 {story.sources?.slice(0, 3).map((src, index) => (
                   <a
@@ -97,15 +106,6 @@ export const RealStories = () => {
                   </a>
                 ))}
               </div>
-
-              <button
-                onClick={() =>
-                  setExpandedId(expandedId === story.id ? null : story.id)
-                }
-                className="mt-4 text-sm text-primary hover:text-primary-hover underline"
-              >
-                {expandedId === story.id ? t('real-stories.showLess') : t('real-stories.showMore')}
-              </button>
             </motion.div>
           ))}
         </div>
