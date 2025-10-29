@@ -80,7 +80,7 @@ export default function IntroScreen({ onFinish }: { onFinish: () => void }) {
         )}
 
         {step === 1 && (
-          <div className="text-2xl font-bold text-green-400 text-left space-y-3">
+          <div className="text-lg md:text-2xl font-bold text-green-400 text-left space-y-3 px-3 md:px-0 max-w-[90vw] md:max-w-none mx-auto leading-relaxed-">
             <p>
               IP Address:{" "}
               <DecryptedText
