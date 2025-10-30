@@ -116,18 +116,18 @@ export const Home = () => {
 
   const cards = [
     {
-      icon: <FaGraduationCap className="text-5xl mb-6 text-blue-400" />,
-      title: t("quickStart"),
-      desc: t("startLearning"),
-      link: "/learning",
-      color: "from-blue-400 to-cyan-400",
-    },
-    {
       icon: <FaClipboardCheck className="text-5xl mb-6 text-green-400" />,
       title: t("takeTest"),
       desc: t("testYourKnowledge"),
       link: "/test",
       color: "from-green-400 to-emerald-400",
+    },
+    {
+      icon: <FaGraduationCap className="text-5xl mb-6 text-blue-400" />,
+      title: t("quickStart"),
+      desc: t("startLearning"),
+      link: "/learning",
+      color: "from-blue-400 to-cyan-400",
     },
     {
       icon: <FaUserFriends className="text-5xl mb-6 text-purple-400" />,
@@ -201,8 +201,9 @@ export const Home = () => {
                     hidden: { opacity: 0, y: 40 },
                     show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
                   }}
-                  whileHover={{ y: -6, scale: 1.02 }}
-                  className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 shadow-xl hover:shadow-cyan-500/20 transition-all"
+                  whileHover={{ y: -6, scale: i === 1 ? 1.15 : 1.05 }}
+                  style={{ scale: i === 1 ? 1.15 : 1 }}  // 👈 这行是关键！
+                  className="relative transform-gpu bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 shadow-xl hover:shadow-cyan-500/20 transition-transform duration-300"
                 >
                   <div className="flex flex-col items-center text-center">
                     {c.icon}
@@ -210,7 +211,7 @@ export const Home = () => {
                     <p className="text-gray-400 mb-6">{c.desc}</p>
                     <Link
                       to={c.link}
-                      className={`px-6 cursor-target py-3 rounded-xl font-medium bg-gradient-to-r ${c.color} hover:opacity-90 transition-all duration-200`}
+                      className={`px-6 py-3 rounded-xl font-medium bg-gradient-to-r ${c.color} hover:opacity-90 transition-all duration-200`}
                     >
                       {t("explore")}
                     </Link>
