@@ -233,5 +233,13 @@
   "chatbot": {
     "title": "Pembantu AI Celik Siber CyberSavvy 🤖",
     "hint": "Tanya tentang keselamatan dalam talian..."
+  },
+  "youAreNotAlone": {
+    "title": "Anda Tidak Bersendirian",
+    "exploreMore": "Lihat Lagi Kisah Sebenar"
+  },
+  "realStories": {
+    "needSupport": "Dah cukup membaca? Jika anda atau seseorang yang anda kenali perlukan bantuan, kami sedia membantu.",
+    "helpReportButton": "Dapatkan Bantuan atau Laporkan Penipuan"
   }
 }

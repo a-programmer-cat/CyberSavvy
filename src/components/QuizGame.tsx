@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 interface QuizQuestion {
   id: string;
@@ -21,6 +22,7 @@ export const QuizGame = ({ quizFile }: { quizFile: string }) => {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [score, setScore] = useState(0);
   const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
   useEffect(() => {
     const loadQuiz = async () => {
@@ -90,13 +92,12 @@ export const QuizGame = ({ quizFile }: { quizFile: string }) => {
             key={index}
             onClick={() => handleAnswer(index)}
             disabled={selectedOption !== null}
-            className={`option-button cursor-target p-3 rounded-lg border transition-all text-left ${
-              selectedOption === index
+            className={`option-button cursor-target p-3 rounded-lg border transition-all text-left ${selectedOption === index
                 ? option.correct
                   ? 'bg-success/20 border-success text-success'
                   : 'bg-error/20 border-error text-error'
                 : 'hover:bg-bg-card border-bg-border'
-            }`}
+              }`}
           >
             {option.text}
           </button>
@@ -116,7 +117,7 @@ export const QuizGame = ({ quizFile }: { quizFile: string }) => {
               {t('quiz.nextButton')}
             </button>
           ) : (
-            <div className="cursor-target result-card mt-4 p-4 bg-bg-card rounded-lg border border-bg-border">
+            <div className="result-card mt-4 p-4 bg-bg-card rounded-lg border border-bg-border">
               <h4 className="text-lg font-bold text-center mb-2">
                 {score >= questions.length / 2
                   ? t('quiz.results.good')
@@ -128,15 +129,23 @@ export const QuizGame = ({ quizFile }: { quizFile: string }) => {
                   total: questions.length
                 })}
               </p>
-              <p className={`mt-2 text-center ${
-                score >= questions.length / 2
+              <p className={`mt-2 text-center ${score >= questions.length / 2
                   ? 'text-success'
                   : 'text-error'
-              }`}>
+                }`}>
                 {score >= questions.length / 2
                   ? t('quiz.results.riskLow')
                   : t('quiz.results.riskHigh')}
               </p>
+              {/* 底部按钮 */}
+              <div className="text-center mt-8">
+                <button
+                  onClick={() => navigate(`/stories`)}
+                  className="cursor-target bg-gradient-to-r from-primary to-primary-hover text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-transform hover:-translate-y-1"
+                >
+                  {t('youAreNotAlone.exploreMore')}
+                </button>
+              </div>
             </div>
           )}
         </div>

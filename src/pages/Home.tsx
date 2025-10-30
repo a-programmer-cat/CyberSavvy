@@ -27,11 +27,20 @@ function clearCookie(name: string) {
 }
 
 export const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [introDone, setIntroDone] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
   const [isChecking, setIsChecking] = useState(true);
   const [introKey, setIntroKey] = useState(0); // 👈 用于强制重新挂载
+  const [stories, setStories] = useState<any[]>([]);
+
+  useEffect(() => {
+    const langCode = i18n.language as "en" | "zh" | "ms";
+    fetch(`/modules/cases/cases.${langCode}.json`)
+      .then((res) => res.json())
+      .then((data) => setStories(data))
+      .catch(() => setStories([]));
+  }, [i18n.language]);
 
   useEffect(() => {
     // 检查 localStorage -> cookie 回退
@@ -208,6 +217,50 @@ export const Home = () => {
                   </div>
                 </motion.div>
               ))}
+            </motion.div>
+
+            {/* You Are Not Alone Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="w-full max-w-6xl text-center pb-20"
+            >
+              <h3 className="text-3xl font-bold mb-12 text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text">
+                {t("youAreNotAlone.title")}
+              </h3>
+
+              {/** 显示前 3 个故事 */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {stories
+                  .sort(() => Math.random() - 0.5) // 随机打乱顺序
+                  .slice(0, 3)                     // 取前3个
+                  .map((story) => (
+                    <motion.div
+                      key={story.id}
+                      whileHover={{ scale: 1.03 }}
+                      transition={{ duration: 0.25 }}
+                      className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-lg text-left flex flex-col justify-between"
+                    >
+                      <div>
+                        <h4 className="text-lg font-semibold mb-2 text-gradient-to-r from-pink-400 to-purple-400">
+                          {story.title}
+                        </h4>
+                        <p className="text-gray-400 text-sm mb-4">
+                          {story.summary.length > 120
+                            ? story.summary.slice(0, 120) + "..."
+                            : story.summary}
+                        </p>
+                      </div>
+                      <Link
+                        to="/stories"
+                        className="mt-auto inline-block text-sm text-pink-400 hover:text-purple-400 underline"
+                      >
+                        {t("youAreNotAlone.exploreMore")}
+                      </Link>
+                    </motion.div>
+                  ))}
+              </div>
             </motion.div>
 
             {/* 特性展示区 */}

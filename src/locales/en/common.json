@@ -234,5 +234,13 @@
   "chatbot": {
     "title": "CyberSavvy AI Assistant 🤖",
     "hint": "Ask about online safety..."
+  },
+  "youAreNotAlone": {
+    "title": "You Are Not Alone",
+    "exploreMore": "Explore More Real Stories"
+  },
+  "realStories": {
+    "needSupport": "Seen enough? If you or someone you know needs help, we’re here for you.",
+    "helpReportButton": "Get Help or Report a Scam"
   }
 }

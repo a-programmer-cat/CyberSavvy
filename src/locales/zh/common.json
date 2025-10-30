@@ -233,5 +233,13 @@
   "chatbot": {
     "title": "CyberSavvy网络安全智能助手 🤖",
     "hint": "询问有关网络安全的问题……"
+  },
+  "youAreNotAlone": {
+    "title": "你不是一个人",
+    "exploreMore": "查看更多真实故事"
+  },
+  "realStories": {
+    "needSupport": "看完这些案例了吗？如果你或你认识的人需要帮助，我们随时在这里。",
+    "helpReportButton": "寻求帮助或举报诈骗"
   }
 }

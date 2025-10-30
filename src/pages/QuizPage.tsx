@@ -1,11 +1,12 @@
 import { QuizGame } from '../components/QuizGame';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate} from 'react-router-dom';
 
 export const QuizPage = () => {
   const { category } = useParams();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const lang = i18n.language as 'en' | 'ms' | 'zh';
+  const navigate = useNavigate();
   
   const quizFile = `../../modules/${category}/quiz.${lang}.json`;
   console.log('Final quiz path:', quizFile);

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaExternalLinkAlt } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom';
 
 interface Story {
   id: number
@@ -22,6 +23,7 @@ export const RealStories = () => {
   const [stories, setStories] = useState<Story[]>([])
   const [expandedId, setExpandedId] = useState<number | null>(null)
   const [loading, setLoading] = useState(true)
+  const navigate = useNavigate();
 
   useEffect(() => {
     const langCode = i18n.language as 'en' | 'zh' | 'ms'
@@ -73,7 +75,7 @@ export const RealStories = () => {
                 {(story.tags || []).map(tag => (
                   <span
                     key={tag}
-                    className="text-xs bg-gradient-to-r from-gradient-start to-gradient-end text-white px-2 py-1 rounded-full"
+                    className="text-xs bg-gradient-to-r from-gradient-start to-gradient-end text-black px-2 py-1 rounded-full"
                   >
                     {tag}
                   </span>
@@ -110,6 +112,18 @@ export const RealStories = () => {
           ))}
         </div>
       )}
+      {/* 底部按钮 */}
+      <div className="text-center mt-12">
+        <p className="text-text-secondary mb-4 text-lg">
+          {t('realStories.needSupport')}
+        </p>
+        <button
+          onClick={() => navigate(`/help`)}
+          className="cursor-target bg-gradient-to-r from-red-500 to-red-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-transform hover:-translate-y-1"
+        >
+          {t('realStories.helpReportButton')}
+        </button>
+      </div>
     </div>
   )
 }
