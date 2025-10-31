@@ -2,34 +2,6 @@
 
 export const modules = [
   {
-    "id": "business",
-    "basePath": "/modules/business/",
-    "sections": [
-      {
-        "id": "01-Common-Types-of-Cyber-Threats-to-Businesses",
-        "titleGuess": "Common Types Of Cyber Threats To Businesses"
-      },
-      {
-        "id": "02-Information-Protection-&-Regulatory-Compliance",
-        "titleGuess": "Information Protection & Regulatory Compliance"
-      }
-    ]
-  },
-  {
-    "id": "parents",
-    "basePath": "/modules/parents/",
-    "sections": [
-      {
-        "id": "01-Family-Online-Risk-Overview",
-        "titleGuess": "Family Online Risk Overview"
-      },
-      {
-        "id": "02-Social-Media-and-Child-Behavior-Management",
-        "titleGuess": "Social Media And Child Behavior Management"
-      }
-    ]
-  },
-  {
     "id": "seniors",
     "basePath": "/modules/seniors/",
     "sections": [
@@ -62,6 +34,34 @@ export const modules = [
       {
         "id": "03-Secure-Passwords-&-MFA-Tips",
         "titleGuess": "Secure Passwords & MFA Tips"
+      }
+    ]
+  },
+  {
+    "id": "parents",
+    "basePath": "/modules/parents/",
+    "sections": [
+      {
+        "id": "01-Family-Online-Risk-Overview",
+        "titleGuess": "Family Online Risk Overview"
+      },
+      {
+        "id": "02-Social-Media-and-Child-Behavior-Management",
+        "titleGuess": "Social Media And Child Behavior Management"
+      }
+    ]
+  },
+  {
+    "id": "business",
+    "basePath": "/modules/business/",
+    "sections": [
+      {
+        "id": "01-Common-Types-of-Cyber-Threats-to-Businesses",
+        "titleGuess": "Common Types Of Cyber Threats To Businesses"
+      },
+      {
+        "id": "02-Information-Protection-&-Regulatory-Compliance",
+        "titleGuess": "Information Protection & Regulatory Compliance"
       }
     ]
   }
