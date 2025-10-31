@@ -34,7 +34,7 @@ export const Home = () => {
   const [introKey, setIntroKey] = useState(0); // 👈 用于强制重新挂载
   const [stories, setStories] = useState<any[]>([]);
   const [isMobile, setIsMobile] = useState(
-    typeof window !== "undefined" && window.innerWidth < 768
+    typeof window !== "undefined" && window.innerWidth < 1025
   );
 
    // ✅ 自动检测屏幕宽度变化
