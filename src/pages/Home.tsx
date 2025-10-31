@@ -33,6 +33,19 @@ export const Home = () => {
   const [isChecking, setIsChecking] = useState(true);
   const [introKey, setIntroKey] = useState(0); // 👈 用于强制重新挂载
   const [stories, setStories] = useState<any[]>([]);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" && window.innerWidth < 768
+  );
+
+   // ✅ 自动检测屏幕宽度变化
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
   useEffect(() => {
     const langCode = i18n.language as "en" | "zh" | "ms";
@@ -138,6 +151,9 @@ export const Home = () => {
     },
   ];
 
+   const displayCards = isMobile ? [cards[1], cards[0], cards[2]] : cards;
+
+
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       {showIntro && !introDone ? (
@@ -194,30 +210,34 @@ export const Home = () => {
               }}
               className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full max-w-6xl mb-28"
             >
-              {cards.map((c, i) => (
-                <motion.div
-                  key={i}
-                  variants={{
-                    hidden: { opacity: 0, y: 40 },
-                    show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
-                  }}
-                  whileHover={{ y: -6, scale: i === 1 ? 1.15 : 1.05 }}
-                  style={{ scale: i === 1 ? 1.15 : 1 }}  // 👈 这行是关键！
-                  className="relative transform-gpu bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 shadow-xl hover:shadow-cyan-500/20 transition-transform duration-300"
-                >
-                  <div className="flex flex-col items-center text-center">
-                    {c.icon}
-                    <h2 className="text-2xl font-semibold mb-3">{c.title}</h2>
-                    <p className="text-gray-400 mb-6">{c.desc}</p>
-                    <Link
-                      to={c.link}
-                      className={`px-6 py-3 rounded-xl font-medium bg-gradient-to-r ${c.color} hover:opacity-90 transition-all duration-200`}
-                    >
-                      {t("explore")}
-                    </Link>
-                  </div>
-                </motion.div>
-              ))}
+              {displayCards.map((c, i) => {
+                const isCenterCard = !isMobile && i === 1; // 仅桌面端中间放大
+
+                return (
+                  <motion.div
+                    key={i}
+                    variants={{
+                      hidden: { opacity: 0, y: 40 },
+                      show: { opacity: 1, y: 0, transition: { duration: 0.45 } },
+                    }}
+                    whileHover={{ y: -6, scale: isCenterCard ? 1.15 : 1.05 }}
+                    style={{ scale: isCenterCard ? 1.15 : 1 }}
+                    className="relative transform-gpu bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-10 shadow-xl hover:shadow-cyan-500/20 transition-transform duration-300"
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      {c.icon}
+                      <h2 className="text-2xl font-semibold mb-3">{c.title}</h2>
+                      <p className="text-gray-400 mb-6">{c.desc}</p>
+                      <Link
+                        to={c.link}
+                        className={`px-6 py-3 rounded-xl font-medium bg-gradient-to-r ${c.color} hover:opacity-90 transition-all duration-200`}
+                      >
+                        {t("explore")}
+                      </Link>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </motion.div>
 
             {/* You Are Not Alone Section */}
